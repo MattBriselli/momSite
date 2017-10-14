@@ -1,0 +1,73 @@
+a:link,a:active
+{
+    FONT-WEIGHT: normal;
+    COLOR: #6666FF;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+a:visited
+{
+    FONT-WEIGHT: normal;
+    COLOR: #9966CC;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+a.nav
+{
+    FONT-WEIGHT: normal;
+    COLOR: #6666FF;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: none
+}
+
+a:visited.nav
+{
+    FONT-WEIGHT: normal;
+    COLOR: #9966CC;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: none
+}
+
+TD
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: charcoal, verdana, arial, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.subHeader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.monospace
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: courier new, courier, mono;
+    background-color:#CCCCCC
+}
+
+.small
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #000000;
+    FONT-FAMILY: verdana, arial, sans-serif;
+    TEXT-DECORATION: none
+}
+
+input
+{
+    BACKGROUND-COLOR: #ffffff
+}
+
+
