@@ -1,4 +1,9 @@
-a:link,a:active
+
+.headRow {
+    display: inline-block;
+}
+
+/*a:link,a:active
 {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
@@ -71,3 +76,4 @@ input
 }
 
 
+*/
