@@ -1,0 +1,27 @@
+.centerCol {
+    padding: 0px 45px !important;
+}
+
+.repBody ul, .repBody li {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: charcoal, verdana, arial, sans-serif;
+    width: auto;
+}
+
+.repBody ul {
+    font-weight: bold;   
+    text-transform: uppercase;
+}
+
+.repBody li {
+    display: block;
+    font-weight: normal;
+    text-indent: 3%;
+    text-transform: none;
+    
+}
+
+a.nav-link {
+    font-size: 12px;
+}
