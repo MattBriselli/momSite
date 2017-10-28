@@ -17,8 +17,6 @@ function searchFilter(key) {
     var indexes = $(".repBody ul").each(function() {
         var target = $(this),
             dKey = target.data("key").toLowerCase();
-
-        console.log(dKey.indexOf(key), dKey, key);
         if (dKey.indexOf(key) == -1) {
             target.find("li").each(function() {
                 var text = $(this).text().toLowerCase();
