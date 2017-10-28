@@ -1,6 +1,14 @@
 
-.headRow {
-    display: inline-block;
+.headerRow {
+    .header {
+        display: inline-block;
+    }
+}
+
+.bodyRow {
+    .centerCol {
+        padding-top: 25px;
+    }
 }
 
 /*a:link,a:active
