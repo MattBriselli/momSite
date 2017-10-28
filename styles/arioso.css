@@ -1,18 +1,19 @@
 
-.headerRow {
-    .header {
-        display: inline-block;
-    }
+.headerRow .header {
+    display: inline-block;
 }
 
-.bodyRow {
-    .centerCol {
-        padding-top: 25px;
-        background-color: #eee !important;
-    }
+
+.bodyRow .centerCol {
+    padding-top: 25px;
+    background-color: #eee !important;
 }
 
-/*a:link,a:active
+a {
+    font-size: 12px;
+}
+
+a:link,a:active
 {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
@@ -85,4 +86,3 @@ input
 }
 
 
-*/

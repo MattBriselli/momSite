@@ -1,8 +1,10 @@
-.centerCol {
-    padding: 0px 45px !important;
+.repBody {
+    height: 80%;
+    overflow-y: scroll;
+    background-color: lightblue;
 }
 
-.repBody ul, .repBody li {
+ul, li {
     font-size: 11px;
     font-weight: bold;
     font-family: charcoal, verdana, arial, sans-serif;
@@ -19,9 +21,51 @@
     font-weight: normal;
     text-indent: 3%;
     text-transform: none;
-    
+}
+
+.box {
+    width: 100%;
+    height: auto;
+
+}
+
+.box h4 {
+    width: 100%;
+    float: left;
+}
+
+.repBody .leftList, .repBody .rightList {
+    width: 50%;
+    display: inline-block;
+}
+
+.repBody .leftList {
+    float: left;
+}
+
+.repBody .rightList {
+    float: right;
 }
 
 a.nav-link {
     font-size: 12px;
+    padding: 5px;
+    display: inline-block;
+}
+
+a.nav-link.search {
+    padding-right: 2px;
+}
+
+.searchBar {
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.searchBar i {
+    margin-left: -20px;
+    position: relative;
+    display: inline-block;
+    color: darkgrey;
 }
