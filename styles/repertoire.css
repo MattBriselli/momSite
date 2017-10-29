@@ -58,6 +58,10 @@ nav {
     float: right;
 }
 
+li.nav-item {
+    width: 100%;
+}
+
 a.nav-link {
     font-size: 12px;
     padding: 5px;
