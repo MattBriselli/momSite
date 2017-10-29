@@ -1,14 +1,25 @@
-.repBody {
-    height: 80%;
-    overflow-y: scroll;
-    background-color: lightblue;
-}
-
 ul, li {
     font-size: 11px;
     font-weight: bold;
     font-family: charcoal, verdana, arial, sans-serif;
     width: auto;
+}
+
+nav {
+    width: 25%;
+    float: left;
+    display: inline-block;
+    border: 1px solid black;
+    height: 80%;
+}
+
+.repBody {
+    display: inline-block;
+    height: 80%;
+    overflow-y: scroll;
+    background-color: lightblue;
+    width: 75%;
+    float: right;
 }
 
 .repBody ul {
@@ -58,9 +69,12 @@ a.nav-link.search {
 }
 
 .searchBar {
-    float: right;
-    position: absolute;
-    right: 0;
+    width: 100%;
+}
+
+.searchBar input {
+    width: 95%;
+    margin: 2.5%;
 }
 
 .searchBar i {
