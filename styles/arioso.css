@@ -1,3 +1,6 @@
+.row {
+    width: 100%;
+}
 
 .headerRow .header {
     display: inline-block;
