@@ -3,5 +3,7 @@ $(document).ready(function() {
 });
 
 function toolbarStyler() {
-	console.log(window.location.href);
+	var location = window.location.href.split("/");
+    location = location[location.length-1];
+    $("a[href='"+location+"']").css("background-color", "blue");
 }
