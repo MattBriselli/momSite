@@ -10,12 +10,13 @@ nav {
     float: left;
     display: inline-block;
     border: 1px solid black;
-    height: 80%;
+    height: 85%;
+    overflow-y: scroll;
 }
 
 .repBody {
     display: inline-block;
-    height: 80%;
+    height: 85%;
     overflow-y: scroll;
     background-color: lightblue;
     width: 75%;
