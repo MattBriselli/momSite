@@ -1,12 +1,24 @@
 $(document).ready(function() {
     tmplLoad();
-    toolbarStyler();
 });
 
 function tmplLoad() {
-    $(".headerRow").load("tmpl/header.html");
-    $(".leftCol").load("tmpl/leftCol.html");
-    $(".footerRow").load("tmpl/footer.html");
+    $.when(
+        $.get('tmpl/header.html', function(data) {
+            $('.headerRow').html(data);
+        }),
+        $.get('tmpl/leftCol.html', function(data) {
+            $('.leftCol').html(data);
+        }),
+        $.get('tmpl/footer.html', function(data) {
+            $('.footerRow').html(data);
+        }),
+        $.Deferred(function(deferred) {
+            $(deferred.resolve);
+        })
+    ).done(function() {
+        toolbarStyler();
+    });
 }
 
 function toolbarStyler() {
