@@ -1,3 +1,9 @@
+body {
+    background-image: url("../img/coverPhoto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .row {
     width: 100%;
 }
@@ -12,12 +18,20 @@
     background-color: #eee !important;
 }
 
-a {
+.header a {
     font-size: 12px;
 }
 
 a.active {
     font-size: 16px;
+}
+
+.leftCol > div, .rightCol > div {
+    padding-top: 20px;
+}
+
+img.ariosoLogo, img.handLogo {
+    background-color: white;
 }
 
 a:link,a:active {
@@ -47,18 +61,14 @@ a:visited.nav {
     TEXT-DECORATION: none
 }
 
-TD {
-    FONT-WEIGHT: normal;
-    FONT-SIZE: 11px;
-    COLOR: #000000;
-    FONT-FAMILY: charcoal, verdana, arial, sans-serif;
-    TEXT-DECORATION: none
+span {
+    color: lightgray;
 }
 
 .subHeader {
     FONT-WEIGHT: bold;
     FONT-SIZE: 11px;
-    COLOR: #000000;
+    COLOR: lightgray;
     FONT-FAMILY: verdana, arial, sans-serif;
     TEXT-DECORATION: none
 }
@@ -66,7 +76,7 @@ TD {
 .monospace {
     FONT-WEIGHT: normal;
     FONT-SIZE: 11px;
-    COLOR: #000000;
+    COLOR: lightgray;
     FONT-FAMILY: courier new, courier, mono;
     background-color:#CCCCCC
 }
@@ -74,7 +84,7 @@ TD {
 .small {
     FONT-WEIGHT: normal;
     FONT-SIZE: 10px;
-    COLOR: #000000;
+    COLOR: lightgray;
     FONT-FAMILY: verdana, arial, sans-serif;
     TEXT-DECORATION: none
 }
