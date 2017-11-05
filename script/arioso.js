@@ -1,12 +1,11 @@
 $(document).ready(function() {
     tmplLoad();
-    
 });
 
 function tmplLoad() {
     $.when(
         $.get('tmpl/header.html', function(data) {
-            $('.headerRow').html(data);
+            $('body').prepend(data);
         }),
         $.get('tmpl/leftCol.html', function(data) {
             $('.bodyRow').prepend(data);
@@ -26,6 +25,10 @@ function toolbarStyler() {
     var location = window.location.href.split("/");
     location = location[location.length-1];
     !location ?
-        $("a[href='index.html']").addClass("active") :
-        $("a[href='"+location+"']").addClass("active");
+        $(".headerRow a[href='index.html']").addClass("active") :
+        $(".headerRow a[href='"+location+"']").addClass("active");
+
+    $(".mobileHead .fa-bars").click(function() {
+        $(".mobileMenu").toggleClass("open");
+    })
 }
