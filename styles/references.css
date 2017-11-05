@@ -1,3 +1,11 @@
-.thumbtack .fa-star {
+.pageTitle {
+    font-size: 24px;
+    font-family: cursive;
+}
+
+.review .fa-star {
     color: #ff9f02;
+}
+.review .title {
+    font-size: 18px;
 }
