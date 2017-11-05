@@ -14,18 +14,17 @@ body {
     width: 100%;
 }
 
-.headerRow .header {
-    display: inline-block;
+.headerRow img {
+    background-color: white;
+}
+.header a {
+    font-size: 12px;
 }
 
 
 .bodyRow .centerCol {
     padding-top: 25px;
     background-color: #eee !important;
-}
-
-.header a {
-    font-size: 12px;
 }
 
 a.active {

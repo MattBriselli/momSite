@@ -1,5 +1,6 @@
 $(document).ready(function() {
     tmplLoad();
+    
 });
 
 function tmplLoad() {
