@@ -9,6 +9,18 @@ body {
         display: none;
     }
 }
+@media (max-width: 775px) {
+    .bodyRow {
+        width: 100%;
+    }
+    .leftCol {
+        display: none;
+    }
+    .centerCol {
+        width: 100% !important;
+        margin: 0 1% 0 10% !important;
+    }
+}
 
 .row {
     width: 100%;
