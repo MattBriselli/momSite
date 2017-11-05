@@ -9,7 +9,7 @@ function tmplLoad() {
             $('.headerRow').html(data);
         }),
         $.get('tmpl/leftCol.html', function(data) {
-            $('.leftCol').html(data);
+            $('.bodyRow').prepend(data);
         }),
         $.get('tmpl/footer.html', function(data) {
             $('.footerRow').html(data);
