@@ -44,6 +44,10 @@ img.ariosoLogo, img.handLogo {
     width: 75px;
 }
 
+i.fa {
+    font-family: FontAwesome;
+}
+
 a:link,a:active {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
