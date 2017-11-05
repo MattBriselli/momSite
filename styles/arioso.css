@@ -27,12 +27,18 @@ body {
     background-color: #eee !important;
 }
 
-a.active {
-    font-size: 16px;
-}
-
 .leftCol > div, .rightCol > div {
     padding-top: 20px;
+}
+.leftCol > div {
+    color: lightgray;
+    display: inline-block;
+}
+.leftCol div {
+    font-size: 14px;
+}
+.leftCol .video {
+    margin-top: 20px;
 }
 
 img.ariosoLogo, img.handLogo {
@@ -48,6 +54,9 @@ i.fa {
     font-family: FontAwesome;
 }
 
+a.active {
+    font-size: 16px;
+}
 a:link,a:active {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
