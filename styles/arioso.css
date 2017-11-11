@@ -86,6 +86,10 @@ body {
 .leftCol .video {
     margin-top: 20px;
 }
+.pageTitle {
+    font-size: 26px;
+    font-family: cursive;
+}
 
 img.ariosoLogo, img.handLogo {
     background-color: white !important;
