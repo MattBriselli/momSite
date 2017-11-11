@@ -25,7 +25,7 @@
 .bioRow .left {
     display: inline-block;
 }
-@media (max-width: 900px) {
+@media (max-width: 925px) {
     .bioRow {
         width: 100%;
     }
@@ -39,7 +39,7 @@
         margin-bottom: 20px;
     }
 }
-@media (min-width: 900px) {
+@media (min-width: 925px) and (max-width: 1069px) {
     .bioRow {
         width: 48% !important;
         display: inline-block;
@@ -47,6 +47,24 @@
     }
     .bioRow .left {
         width: 60%;
+    }
+    .bioRow img {
+        width: 122px !important;
+        height: 184px !important;
+    }
+}
+@media (min-width: 1070px) {
+    .bioRow {
+        width: 48% !important;
+        display: inline-block;
+
+    }
+    .bioRow .left {
+        width: 60%;
+    }
+    .bioRow img {
+        width: 143px !important;
+        height: 216px !important;
     }
 }
 
