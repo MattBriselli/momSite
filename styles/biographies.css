@@ -18,6 +18,10 @@
     display: inline-block;
     font-size: 12px;
 }
+.bioRow {
+    margin-bottom: 10px;
+    vertical-align: text-top;
+}
 .bioRow .left {
     display: inline-block;
 }
@@ -26,19 +30,23 @@
         width: 100%;
     }
     .bioRow, .pageTitle {
-        margin-left: 1% !important;
+        margin-left: 5% !important;
     }
     .bioRow .left {
         width: 49% !important;
+    }
+    .bioRow:last-of-type {
+        margin-bottom: 20px;
     }
 }
 @media (min-width: 900px) {
     .bioRow {
         width: 48% !important;
         display: inline-block;
+
     }
     .bioRow .left {
-        width: 65%;
+        width: 60%;
     }
 }
 
@@ -46,6 +54,6 @@
     display: inline-block;
     vertical-align: top;
     margin-top: 30px;
-    width: 159px;
-    height: 240px;
+    width: 143px;
+    height: 216px;
 }
