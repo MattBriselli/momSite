@@ -1,7 +1,6 @@
 .pageTitle {
     font-size: 26px;
     font-family: cursive;
-    margin-left: 5%;
 }
 
 .rowTitle, .rowSubtitle {
@@ -15,15 +14,17 @@
     font-size: 16px;
     width: 100%;
 }
-.bioRow {
-    display: inline-block;
-    margin-left: 5%;
-}
 .bioBody {
     display: inline-block;
     font-size: 12px;
 }
-@media (max-width: 630px) {
+.bioRow .left {
+    display: inline-block;
+}
+@media (max-width: 900px) {
+    .bioRow {
+        width: 100%;
+    }
     .bioRow, .pageTitle {
         margin-left: 1% !important;
     }
@@ -31,9 +32,14 @@
         width: 49% !important;
     }
 }
-.bioRow .left {
-    width: 70%;
-    display: inline-block;
+@media (min-width: 900px) {
+    .bioRow {
+        width: 48% !important;
+        display: inline-block;
+    }
+    .bioRow .left {
+        width: 65%;
+    }
 }
 
 .bioRow img {
