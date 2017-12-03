@@ -1,6 +1,13 @@
 $(document).ready(function() {
     $(".bottom img").tipsy({ gravity: "s" });
 
+    var d = new Date(),
+        dY = d.getFullYear(),
+        dM = ("0" + (d.getMonth() + 1)).slice(-2),
+        dD = ("0" + d.getDate()).slice(-2),
+        dForm = dY+"-"+dM+"-"+dD;
+    $(".form input[name='date']").val(dForm);
+
     $("button.submit").on("click", function() {
         $(".bottom .form").ajaxSubmit({
             type: "POST",
