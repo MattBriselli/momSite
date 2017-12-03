@@ -1,14 +1,12 @@
 $(document).ready(function() {
-    console.log($(".bottom img"))
-    $(".bottom img").tipsy({
-        gravity: "s"
-    });
+    $(".bottom img").tipsy({ gravity: "s" });
 
     $("button.submit").on("click", function() {
-        $(form).ajaxSubmit({
-            type:"POST",
-            data: $(form).serialize(),
-            url:"process.php",
+        console.log($(".bottom .form").serialize());
+        $.ajax({
+            type: "POST",
+            data: $(".bottom .form").serialize(),
+            url: "process.php",
             success: function() {
                 $('#contact :input').attr('disabled', 'disabled');
                 $('#contact').fadeTo( "slow", 0.15, function() {
