@@ -1,0 +1,19 @@
+.centerCol .bottom {
+    width: 100%;
+}
+.bottom .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.bottom .tile {
+    width: 50%;
+    float: left;
+}
+.bottom .tile img {
+    width: 100%;
+    cursor: pointer;
+}
+.bottom .form {
+    width: 50%;
+    float: right;
+}
