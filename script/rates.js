@@ -2,8 +2,7 @@ $(document).ready(function() {
     $(".bottom img").tipsy({ gravity: "s" });
 
     $("button.submit").on("click", function() {
-        console.log($(".bottom .form").serialize());
-        $.ajax({
+        $(".bottom .form").ajaxSubmit({
             type: "POST",
             data: $(".bottom .form").serialize(),
             url: "process.php",
