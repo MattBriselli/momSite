@@ -1,10 +1,6 @@
 .centerCol .bottom {
     width: 100%;
 }
-.bottom .subtitle {
-    font-size: 16px;
-    font-weight: bold;
-}
 .bottom .tile {
     width: 50%;
     float: left;
@@ -17,6 +13,11 @@
     width: 50%;
     float: right;
     border: 1px solid #888;
+}
+.bottom .form .subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 37%;
 }
 .form .field {
     width: 90%;
