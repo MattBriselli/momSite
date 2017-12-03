@@ -60,6 +60,6 @@
 .form button.submit {
     background-color: lightblue;
     width: 80%;
-    margin-left: 10%;
+    margin: 10px 0 10px 10%;
     border-radius: 6px;
 }
