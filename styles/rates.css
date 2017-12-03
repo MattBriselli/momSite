@@ -41,6 +41,22 @@
 .form .field textarea {
     resize: none;
 }
+
+.form .field .subfield {
+    display: inline-block;
+    width: 100%;
+}
+.form .field .subfield div {
+    display: inline-block;
+    width: auto;
+}
+.form .field .subfield input {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
 .form button.submit {
     background-color: lightblue;
     width: 80%;
