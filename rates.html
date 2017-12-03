@@ -53,11 +53,6 @@
                         <input type="address" name="postal" placeholder="Zipcode" autocomplete="on" class="half right">
                     </div>
                     <div class="field">
-                        <div class="subject">Date Interested</div>
-                        <input type="date" name="date" class="half">
-                        <input type="time" name="time" value="18:00" class="half right">
-                    </div>
-                    <div class="field">
                         <div class="subject">Preferred Group(s)</div>
                         <div class="subfield">
                             <input type="checkbox" value="duet" name="group">
@@ -77,8 +72,21 @@
                         </div>
                     </div>
                     <div class="field">
-                        <div class="subject">Name</div>
-                        <textarea></textarea>
+                        <div class="subject">Event Date</div>
+                        <input type="date" name="date" class="half">
+                        <input type="time" name="time" value="18:00" class="half right">
+                    </div>
+                    <div class="field">
+                        <div class="subject">Event Location</div>
+                        <input type="text" name="venue">
+                    </div>
+                    <div class="field">
+                        <div class="subject">Event Description</div>
+                        <textarea name="description"></textarea>
+                    </div>
+                    <div class="field">
+                        <div class="subject">How did you hear about Arioso Quartet</div>
+                        <textarea name="hear"></textarea>
                     </div>
                     <div class="field">
                         <button type="submit" class="submit">Submit</button>
