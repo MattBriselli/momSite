@@ -24,9 +24,9 @@ function tmplLoad() {
 function toolbarStyler() {
     var location = window.location.href.split("/");
     location = location[location.length-1];
-    !location ?
-        $(".headerRow a[href='index.html']").addClass("active") :
-        $(".headerRow a[href='"+location+"']").addClass("active");
+    location ?
+        $(".headerRow a[href='"+location+"']").addClass("active") :
+        $(".headerRow a[href='index.html']").addClass("active");
 
     $(".mobileHead .fa-bars").click(function() {
         $(".mobileMenu").toggleClass("open");
