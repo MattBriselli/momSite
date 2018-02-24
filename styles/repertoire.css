@@ -16,7 +16,7 @@ nav {
 
 .repBody {
     display: inline-block;
-    height: 85%;
+    height: 100%;
     overflow-y: scroll;
     background-color: #ECF5FA;
     width: 75%;
