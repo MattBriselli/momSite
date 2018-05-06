@@ -9,6 +9,18 @@ body {
         display: none !important;
     }
 }
+@media (min-width: 768px) {
+    .rightCol {
+    /*hiding the right column on medium size*/
+        display: inline-block;
+    }
+}
+@media (max-width: 768px) {
+    .rightCol {
+    /*hiding the right column on medium size*/
+        display: none;
+    }
+}
 @media (max-width: 775px) {
     .bodyRow {
         width: 100%;
@@ -28,12 +40,18 @@ body {
         width: 100% !important;
         margin: 0 1% 0 10% !important;
     }
-    .rightCol {
-        display: none;
-    }
     .mobileMenu.open ~ .centerCol {
         display: inline-block;
     }
+}
+
+.bodyRow {
+    max-height: 85%;
+    overflow: hidden;
+}
+
+.centerCol {
+    overflow-y: scroll;
 }
 
 .row {
