@@ -20,11 +20,13 @@ $(document).ready(function() {
                     $(this).find('label').css('cursor','default');
                     $('#success').fadeIn();
                 });
+                console.log('success');
             },
             error: function() {
                 $('#contact').fadeTo( "slow", 0.15, function() {
                     $('#error').fadeIn();
                 });
+                console.log('error');
             }
         });
     });
