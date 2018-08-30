@@ -8,7 +8,10 @@ app.use(express.static(path.join(__dirname, 'public')))
     .set('view engine', 'ejs')
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-app.get('/', (req, res) => res.render('pages/index'));
-app.get("/biographies.html", (req, res) => res.render('pages/biographies'));
-app.get("/repertoire.html", (req, res) => res.render('pages/repertoire'));
-app.get("/samples.html", (req, res) => res.render('pages/samples'));
+app.get(["/", "/index", "/index.html"], (req, res) => res.render('pages/index'));
+app.get(["/biographies.html", "/biographies"], (req, res) => res.render('pages/biographies'));
+app.get(["/FAQ.html", "/faq", "/FAQ", "/faq.html"], (req, res) => res.render('pages/FAQ'));
+app.get(["/rates.html", "rates"], (req, res) => res.render('pages/rates'));
+app.get(["/repertoire.html", "/repertoire"], (req, res) => res.render('pages/repertoire'));
+app.get(["/samples.html", "samples"], (req, res) => res.render('pages/samples'));
+app.get(["/testimonials.html", "testimonials"], (req, res) => res.render('pages/testimonials'));
