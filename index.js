@@ -8,10 +8,8 @@ app.use(express.static(path.join(__dirname, 'public')))
     .set('view engine', 'ejs')
     .listen('9000', () => console.log(`Listening on 9000`))
 
-app.get('/', (req, res) => {
-    res.render('pages/index', {});
-});
-app.get("/index.html", (req, res) => res.redirect('/'));
+app.get('/', (req, res) => res.render('pages/index'));
+// app.get("/index.html", (req, res) => res.redirect('/'));
 app.get("/biographies.html", (req, res) => res.render('pages/biographies'));
 app.get("/repertoire.html", (req, res) => res.render('pages/repertoire'));
 app.get("/samples.html", (req, res) => res.render('pages/samples'));
