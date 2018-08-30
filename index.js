@@ -11,7 +11,10 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
     res.render('pages/index', {});
 });
-// app.get("/stock", (req, res) => res.render('pages/stock'));
+app.get("/index.html", (req, res) => res.redirect('/'));
+app.get("/biographies.html", (req, res) => res.render('pages/biographies'));
+app.get("/repertoire.html", (req, res) => res.render('pages/repertoire'));
+
 // app.get("/profile", (req, res) => res.render('pages/profile'));
 // app.get("/tile", (req, res) => res.redirect('http://www.tinyurl.com/tabtiles'))
 // app.get("/*", (req, res) => res.redirect('http://www.tinyurl.com/tabtiles'))
