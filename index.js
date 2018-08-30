@@ -14,7 +14,4 @@ app.get('/', (req, res) => {
 app.get("/index.html", (req, res) => res.redirect('/'));
 app.get("/biographies.html", (req, res) => res.render('pages/biographies'));
 app.get("/repertoire.html", (req, res) => res.render('pages/repertoire'));
-
-// app.get("/profile", (req, res) => res.render('pages/profile'));
-// app.get("/tile", (req, res) => res.redirect('http://www.tinyurl.com/tabtiles'))
-// app.get("/*", (req, res) => res.redirect('http://www.tinyurl.com/tabtiles'))
+app.get("/samples.html", (req, res) => res.render('pages/samples'));
