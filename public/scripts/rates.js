@@ -12,7 +12,7 @@ $(document).ready(function() {
     console.log(data);
 
     $("button.submit").on("click", function() {
-        $(".bottom .form").ajax({
+        $.ajax({
             type: "POST",
             data: data,
             url: "process.php",
