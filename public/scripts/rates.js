@@ -8,10 +8,10 @@ $(document).ready(function() {
         dForm = dY+"-"+dM+"-"+dD;
     $(".form input[name='date']").val(dForm);
 
-    var data = $(".bottom .form").serialize();
-    console.log(data);
-
     $("button.submit").on("click", function() {
+        var data = $(".bottom .form").serialize();
+        console.log(data);
+
         $.ajax({
             type: "POST",
             data: data,
