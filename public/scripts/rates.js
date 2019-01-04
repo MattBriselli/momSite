@@ -8,10 +8,13 @@ $(document).ready(function() {
         dForm = dY+"-"+dM+"-"+dD;
     $(".form input[name='date']").val(dForm);
 
+    var data = $(".bottom .form").serialize();
+    console.log(data);
+
     $("button.submit").on("click", function() {
-        $(".bottom .form").ajaxSubmit({
+        $(".bottom .form").ajax({
             type: "POST",
-            data: $(".bottom .form").serialize(),
+            data: data,
             url: "process.php",
             success: function() {
                 $('#contact :input').attr('disabled', 'disabled');
