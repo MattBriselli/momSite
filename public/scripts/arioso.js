@@ -1,7 +1,8 @@
 $(document).ready(function() {
     toolbarStyler();
-    heightSetter();
     $(window).resize(heightSetter);
+    $(window).trigger("resize");
+    // setTimeout(function() {$(window).trigger("resize")}, 1000);
 });
 
 function toolbarStyler() {
@@ -18,10 +19,21 @@ function toolbarStyler() {
 }
 
 function heightSetter() {
-    var winHeight = $(window).height(),
-        footHeight = $(".footerRow").height(),
-        headHeight = 45,
-        buffer = 30,
-        total = winHeight - (footHeight == null ? 0 : footHeight) - headHeight - buffer;
+    var winHeight = $(document).height(),
+        // May be 0 on pages that don't have a footerRow
+        footHeight = $(".footerRow:not(.mock)").outerHeight(),
+        headRow = $(".headerRow").height(),
+        mobileHeadRow = $(".mobileHead").height(),
+        buffer = 50;
+
+    var headHeight = (headRow == undefined || headRow == null || headRow == 0) 
+        ? mobileHeadRow : headRow;
+    footHeight = footHeight == undefined ? 50 : footHeight;
+
+    var total = winHeight - footHeight - headHeight - buffer;
+    console.log('win', winHeight, $(document).height());
+    console.log('foot', footHeight);
+    console.log('head', headHeight);
+    console.log('total', total);
     $(".bodyRow").height(total);
 }
