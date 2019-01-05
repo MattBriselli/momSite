@@ -5,7 +5,7 @@ ul, li {
     width: auto;
 }
 
-nav {
+.leftRep {
     width: 25%;
     float: left;
     display: inline-block;
@@ -19,6 +19,7 @@ nav {
     background-color: #ECF5FA;
     width: 75%;
     float: right;
+    height: 100%;
 }
 
 .repBody ul {

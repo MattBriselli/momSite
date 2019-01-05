@@ -51,6 +51,7 @@ body {
 
 .bodyRow {
     overflow: hidden;
+    min-height: 460px;
 }
 
 .centerCol {
