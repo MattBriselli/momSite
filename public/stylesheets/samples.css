@@ -2,13 +2,16 @@
     padding-top: 25px;
 }
 .musicBody > div {
-    width: 33%;
+    width: 50%;
     display: inline-block;
     vertical-align: top;
+}
+audio {
+    width: 100%;
 }
 .left {
     float: left;
 }
 .right {
-    float: middle;
+    float: right;
 }
