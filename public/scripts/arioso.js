@@ -1,5 +1,7 @@
 $(document).ready(function() {
     toolbarStyler();
+    heightSetter();
+    $(window).resize(heightSetter);
 });
 
 function toolbarStyler() {
@@ -13,4 +15,9 @@ function toolbarStyler() {
         $(".mobileMenu").toggleClass("open");
         $(".centerCol").toggleClass("col-sm-8 col-sm-11");
     })
+}
+
+function heightSetter() {
+    var h2 = $(window).height();
+    $(".bodyRow").height(h2 - 75);
 }

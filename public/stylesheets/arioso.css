@@ -92,11 +92,12 @@ body {
 
 .bodyRow .centerCol {
     padding-top: 25px;
+    top: 25px;
     background-color: #eee !important;
 }
 
 .leftCol > div, .rightCol > div {
-    padding-top: 20px;
+    padding-top: 25px;
 }
 .leftCol > div {
     color: lightgray;
