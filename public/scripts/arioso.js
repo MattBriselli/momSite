@@ -19,12 +19,12 @@ function toolbarStyler() {
 }
 
 function heightSetter() {
-    var winHeight = $(document).height(),
+    var winHeight = $(window).height(),
         // May be 0 on pages that don't have a footerRow
         footHeight = $(".footerRow:not(.mock)").outerHeight(),
         headRow = $(".headerRow").height(),
         mobileHeadRow = $(".mobileHead").height(),
-        buffer = 50;
+        buffer = 100;
 
     var headHeight = (headRow == undefined || headRow == null || headRow == 0) 
         ? mobileHeadRow : headRow;
