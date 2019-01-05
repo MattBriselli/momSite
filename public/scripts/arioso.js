@@ -2,7 +2,6 @@ $(document).ready(function() {
     toolbarStyler();
     $(window).resize(heightSetter);
     $(window).trigger("resize");
-    // setTimeout(function() {$(window).trigger("resize")}, 1000);
 });
 
 function toolbarStyler() {
@@ -24,16 +23,12 @@ function heightSetter() {
         footHeight = $(".footerRow:not(.mock)").outerHeight(),
         headRow = $(".headerRow").height(),
         mobileHeadRow = $(".mobileHead").height(),
-        buffer = 100;
+        buffer = 30;
 
     var headHeight = (headRow == undefined || headRow == null || headRow == 0) 
         ? mobileHeadRow : headRow;
     footHeight = footHeight == undefined ? 50 : footHeight;
-
     var total = winHeight - footHeight - headHeight - buffer;
-    console.log('win', winHeight, $(document).height());
-    console.log('foot', footHeight);
-    console.log('head', headHeight);
-    console.log('total', total);
+
     $(".bodyRow").height(total);
 }
