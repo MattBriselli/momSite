@@ -18,6 +18,10 @@ function toolbarStyler() {
 }
 
 function heightSetter() {
-    var h2 = $(window).height();
-    $(".bodyRow").height(h2 - 75);
+    var winHeight = $(window).height(),
+        footHeight = $(".footerRow").height(),
+        headHeight = 45,
+        buffer = 30,
+        total = winHeight - (footHeight == null ? 0 : footHeight) - headHeight - buffer;
+    $(".bodyRow").height(total);
 }
