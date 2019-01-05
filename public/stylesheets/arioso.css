@@ -119,7 +119,7 @@ img.ariosoLogo, img.handLogo {
     background-color: white !important;
 }
 .footerRow {
-    padding: 10px 0;
+    padding-top: 20px;
 }
 
 .footerRow img {

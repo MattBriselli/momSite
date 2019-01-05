@@ -1,0 +1,14 @@
+.musicBody {
+    padding-top: 25px;
+}
+.musicBody > div {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+.left {
+    float: left;
+}
+.right {
+    float: middle;
+}
