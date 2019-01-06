@@ -8,13 +8,13 @@ body {
 
 @media (min-width: 768px) {
     .rightCol {
-    /*hiding the right column on medium size*/
+    /* hiding the right column on medium size */
         display: inline-block;
     }
 }
 @media (max-width: 768px) {
     .rightCol {
-    /*hiding the right column on medium size*/
+    /* hiding the right column on medium size */
         display: none;
     }
 }
@@ -80,9 +80,20 @@ body {
 .header {
     width: 100%;
     text-align: center;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+.headCol {
+    width: 100%;
+}
+.header .headBar {
+    width: auto;
+    background-color: darkgrey;
 }
 .header .headLink {
     display: inline-block;
+    padding: 2px 20px;
 }
 .header a {
     font-size: 12px;
@@ -98,14 +109,18 @@ body {
 .row {
     width: 100%;
 }
-.bodyRow .centerCol {
-    padding-top: 25px;
+.bodyRow .lowerBody {
     top: 25px;
     height: 100%;
+    padding: 0;
     background-color: #eee !important;
     overflow-y: scroll;
 }
-
+.bodyRow .centerl
+.bodyRow .lowerBody {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .leftCol > div, .rightCol > div {
     padding-top: 25px;
 }
@@ -146,28 +161,24 @@ a.active {
 a:link,a:active {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: underline;
     cursor: pointer;
 }
 a:visited {
     FONT-WEIGHT: normal;
     COLOR: #9966CC;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: underline;
 }
 
 a.nav {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: none;
 }
 
 a:visited.nav {
     FONT-WEIGHT: normal;
     COLOR: #9966CC;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: none;
 }
 
@@ -179,7 +190,6 @@ span {
     FONT-WEIGHT: bold;
     FONT-SIZE: 11px;
     COLOR: lightgray;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: none
 }
 
@@ -187,7 +197,6 @@ span {
     FONT-WEIGHT: normal;
     FONT-SIZE: 11px;
     COLOR: lightgray;
-    /*FONT-FAMILY: courier new, courier, mono;*/
     background-color:#CCCCCC
 }
 
@@ -195,6 +204,5 @@ span {
     FONT-WEIGHT: normal;
     FONT-SIZE: 10px;
     COLOR: lightgray;
-    /*FONT-FAMILY: verdana, arial, sans-serif;*/
     TEXT-DECORATION: none
 }
