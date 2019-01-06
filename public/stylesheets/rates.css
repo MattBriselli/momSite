@@ -1,25 +1,35 @@
-.centerCol .bottom {
+.centerCol {
     width: 100%;
+    /*height: inherit !important;*/
+    overflow: hidden;
 }
-.bottom .tile {
+.tile {
     width: 50%;
     float: left;
 }
-.bottom .tile img {
+.tile img {
     width: 100%;
     cursor: pointer;
 }
-.bottom .form {
+.info {
+    width: 50%;
+    display: inline-block;
+    float: right;
+    padding: 0 20px;
+    overflow-y: scroll;
+    height: inherit;
+}
+/*.bottom .form {
     width: 50%;
     float: right;
     border: 1px solid #888;
-}
+}*/
 @media (max-width: 800px) {
     .bottom .form, .bottom .tile {
         width: 100%;
     }
 }
-.bottom .form .subtitle {
+/*.bottom .form .subtitle {
     font-size: 16px;
     font-weight: bold;
     margin-left: 37%;
@@ -62,4 +72,4 @@
     width: 80%;
     margin: 10px 0 10px 10%;
     border-radius: 6px;
-}
+}*/
