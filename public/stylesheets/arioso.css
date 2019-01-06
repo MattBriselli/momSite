@@ -55,10 +55,6 @@ body {
 /* END RESIZING STYLES */
 /* HEADER STYLES */
 
-.mobileHead, .headerRow {
-    background-color: black;
-    margin-left: 0 !important;
-}
 .mobileHead img, .headerRow img {
     background-color: white;
 }
@@ -78,8 +74,12 @@ body {
     height: 100%;
     padding-left: 5px;
 }
+.mobileHead, .headerRow {
+    margin-left: 0 !important;
+}
 .header {
-
+    width: 100%;
+    text-align: center;
 }
 .header .headLink {
     display: inline-block;
