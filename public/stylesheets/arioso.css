@@ -95,7 +95,6 @@ body {
     display: inline-block;
 }
 .header .headLink {
-    display: inline-block;
     padding: 2px 20px;
     width: auto;
 }
@@ -105,11 +104,11 @@ body {
 .active .headLink a {
     font-size: 16px;
     color: white;
-    text-decoration: none;
     font-weight: 500;
 }
 .header a {
-    font-size: 12px;
+    font-size: 14px;
+    text-decoration: none !important;
 }
 
 /* END HEADER STYLES */
