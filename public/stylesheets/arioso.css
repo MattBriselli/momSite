@@ -139,7 +139,8 @@ body {
 }
 .leftCol > div {
     color: lightgray;
-    display: inline-block;
+    display: block;
+    margin: auto;
 }
 .leftCol div {
     font-size: 14px;
