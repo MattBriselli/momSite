@@ -121,6 +121,9 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.centerCol {
+    padding-top: 25px;
+}
 .leftCol > div, .rightCol > div {
     padding-top: 25px;
 }

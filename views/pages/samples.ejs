@@ -13,62 +13,64 @@
         <script src="scripts/samples.js" type="text/javascript"></script>
     </head>
     <body>
-        <% include ../partials/header.ejs %>
         <div class="row bodyRow">
             <% include ../partials/leftCol.ejs %>
             <div class="centerCol col-lg-9 col-md-9 col-sm-11">
-                <div class="pageTitle">
-                    Music Samples
-                </div>
-                <div class="textBody">
-                    <p>The ten songs below are some of Arioso's most frequently performed pieces, which also provide a sampling of the wide musical variety in their repertoire. Each piece is approximately fifteen seconds in length, which gives you a glimse of the full beauty of the music. The Mozart is a more lengthy selection.</p>
-                </div>
-                <div class="musicBody">
-                    <div class="left">
-                        <label>Mozart - Eine Kleine Nachtmusik</label>
-                        <audio controls>
-                            <source src="../audio/01_MozartNachtmusik.wav" type="audio/wav">
-                        </audio>
-                        <label>Pachelbel - Canon in D</label>
-                        <audio controls>
-                            <source src="../audio/02_PachelbelCanon.wav" type="audio/wav">
-                        </audio>
-                        <label>Mendelssohn - Wedding March</label>
-                        <audio controls>
-                            <source src="../audio/03_MendelssohnWeddingMarch.wav" type="audio/wav">
-                        </audio>
-                        <label>Wagner - Bridal Chorus</label>
-                        <audio controls>
-                            <source src="../audio/04_WagnerBridalChorus.wav" type="audio/wav">
-                        </audio>
-                        <!-- </div>
-                            <div class="middle"> -->
-                        <label>Bach - Two Gavottes</label>
-                        <audio controls>
-                            <source src="../audio/05_BachTwoGavottes.wav" type="audio/wav">
-                        </audio>
+                <% include ../partials/header.ejs %>
+                <div class="lowerBody">
+                    <div class="pageTitle">
+                        Music Samples
                     </div>
-                    <div class="right">
-                        <label>Boccherini - Minuet</label>
-                        <audio controls>
-                            <source src="../audio/06_BoccheriniMinuet.wav" type="audio/wav">
-                        </audio>
-                        <label>Bach - Arioso</label>
-                        <audio controls>
-                            <source src="../audio/07_BachArioso.wav" type="audio/wav">
-                        </audio>
-                        <label>Bach - Jesu, Joy of Man's Desiring</label>
-                        <audio controls>
-                            <source src="../audio/08_BachJesuJoy.wav" type="audio/wav">
-                        </audio>
-                        <label>Handel - Water Music</label>
-                        <audio controls>
-                            <source src="../audio/09_HandelWaterMusic.wav" type="audio/wav">
-                        </audio>
-                        <label>Joplin - The Entertainer</label>
-                        <audio controls>
-                            <source src="../audio/10_JoplinEntertainer.wav" type="audio/wav">
-                        </audio>
+                    <div class="textBody">
+                        <p>The ten songs below are some of Arioso's most frequently performed pieces, which also provide a sampling of the wide musical variety in their repertoire. Each piece is approximately fifteen seconds in length, which gives you a glimse of the full beauty of the music. The Mozart is a more lengthy selection.</p>
+                    </div>
+                    <div class="musicBody">
+                        <div class="left">
+                            <label>Mozart - Eine Kleine Nachtmusik</label>
+                            <audio controls>
+                                <source src="../audio/01_MozartNachtmusik.wav" type="audio/wav">
+                            </audio>
+                            <label>Pachelbel - Canon in D</label>
+                            <audio controls>
+                                <source src="../audio/02_PachelbelCanon.wav" type="audio/wav">
+                            </audio>
+                            <label>Mendelssohn - Wedding March</label>
+                            <audio controls>
+                                <source src="../audio/03_MendelssohnWeddingMarch.wav" type="audio/wav">
+                            </audio>
+                            <label>Wagner - Bridal Chorus</label>
+                            <audio controls>
+                                <source src="../audio/04_WagnerBridalChorus.wav" type="audio/wav">
+                            </audio>
+                            <!-- </div>
+                                <div class="middle"> -->
+                            <label>Bach - Two Gavottes</label>
+                            <audio controls>
+                                <source src="../audio/05_BachTwoGavottes.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="right">
+                            <label>Boccherini - Minuet</label>
+                            <audio controls>
+                                <source src="../audio/06_BoccheriniMinuet.wav" type="audio/wav">
+                            </audio>
+                            <label>Bach - Arioso</label>
+                            <audio controls>
+                                <source src="../audio/07_BachArioso.wav" type="audio/wav">
+                            </audio>
+                            <label>Bach - Jesu, Joy of Man's Desiring</label>
+                            <audio controls>
+                                <source src="../audio/08_BachJesuJoy.wav" type="audio/wav">
+                            </audio>
+                            <label>Handel - Water Music</label>
+                            <audio controls>
+                                <source src="../audio/09_HandelWaterMusic.wav" type="audio/wav">
+                            </audio>
+                            <label>Joplin - The Entertainer</label>
+                            <audio controls>
+                                <source src="../audio/10_JoplinEntertainer.wav" type="audio/wav">
+                            </audio>
+                        </div>
                     </div>
                 </div>
             </div>
