@@ -23,7 +23,7 @@ function heightSetter() {
         footHeight = $(".footerRow:not(.mock)").outerHeight(),
         headRow = $(".headerRow").height(),
         mobileHeadRow = $(".mobileHead").height(),
-        buffer = 55;
+        buffer = 30;
 
     var headHeight = (headRow == undefined || headRow == null || headRow == 0) 
         ? mobileHeadRow : headRow;
