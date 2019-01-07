@@ -87,13 +87,26 @@ body {
 .headCol {
     width: 100%;
 }
-.header .headBar {
+.header {
     width: auto;
     background-color: darkgrey;
+}
+.header > div {
+    display: inline-block;
 }
 .header .headLink {
     display: inline-block;
     padding: 2px 20px;
+    width: auto;
+}
+.active {
+    background-color: purple;
+}
+.active .headLink a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 .header a {
     font-size: 12px;
@@ -115,7 +128,6 @@ body {
     background-color: #eee !important;
     overflow-y: scroll;
 }
-.bodyRow .centerl
 .bodyRow .lowerBody {
     padding-left: 15px;
     padding-right: 15px;
@@ -157,9 +169,6 @@ i.fa {
     font-family: FontAwesome;
 }
 
-a.active {
-    font-size: 16px;
-}
 a:link,a:active {
     FONT-WEIGHT: normal;
     COLOR: #6666FF;

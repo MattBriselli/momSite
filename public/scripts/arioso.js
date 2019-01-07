@@ -8,8 +8,8 @@ function toolbarStyler() {
     var location = window.location.href.split("/");
     location = location[location.length-1];
     location ?
-        $(".headerRow a[href='"+location+"']").addClass("active") :
-        $(".headerRow a[href='index.html']").addClass("active");
+        $(".headerRow a[href='"+location+"']").parent().parent().addClass("active") :
+        $(".headerRow a[href='index.html']").parent().parent().addClass("active");
 
     $(".mobileHead .fa-bars").click(function() {
         $(".mobileMenu").toggleClass("open");
