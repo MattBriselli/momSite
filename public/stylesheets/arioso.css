@@ -79,7 +79,9 @@ body {
 }
 .header {
     width: 100%;
+    height: 35px;
     text-align: center;
+    background-color: darkgrey;
     margin: auto;
     padding-left: 0;
     padding-right: 0;
@@ -87,16 +89,20 @@ body {
 .headCol {
     width: 100%;
 }
-.header {
-    width: auto;
-    background-color: darkgrey;
-}
 .header > div {
+    height: 100%;
     display: inline-block;
+    border-radius: 6px;
 }
 .header .headLink {
     padding: 2px 20px;
     width: auto;
+}
+.header a {
+    /* text of the header */
+    font-size: 14px;
+    vertical-align: middle;
+    text-decoration: none !important;
 }
 .active {
     background-color: purple;
@@ -105,10 +111,6 @@ body {
     font-size: 16px;
     color: white;
     font-weight: 500;
-}
-.header a {
-    font-size: 14px;
-    text-decoration: none !important;
 }
 
 /* END HEADER STYLES */
