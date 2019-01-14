@@ -1,6 +1,6 @@
 $(document).ready(function() {
     
-    // $(".bottom img").tipsy({ gravity: "s" });
+    $(".lowerBody img").tipsy({ gravity: "se" });
 
     // var d = new Date(),
     //     dY = d.getFullYear(),
