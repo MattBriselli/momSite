@@ -1,15 +1,12 @@
-p {
-    margin-bottom: 6px !important;
-}
-.left, .right {
+.l, .r {
     width: 50%;
     display: inline-block;
 }
 
-.left {
+.l {
     float: left;
 }
 
-.right {
+.r {
     float: right;
 }
