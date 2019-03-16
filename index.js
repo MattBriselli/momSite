@@ -15,3 +15,4 @@ app.get(["/rates.html", "rates"], (req, res) => res.render('pages/rates'));
 app.get(["/repertoire.html", "/repertoire"], (req, res) => res.render('pages/repertoire'));
 app.get(["/samples.html", "samples"], (req, res) => res.render('pages/samples'));
 app.get(["/testimonials.html", "testimonials"], (req, res) => res.render('pages/testimonials'));
+app.get(["/venues.html", "/venues", "venues"], (req, res) => res.render('pages/venues'));
