@@ -30,4 +30,5 @@ function heightSetter() {
     var total = winHeight - footHeight - buffer;
 
     $(".bodyRow").height(total);
+    $(".lowerBody").height(total - 35);
 }

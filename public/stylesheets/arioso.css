@@ -131,6 +131,7 @@ body {
 }
 .centerCol {
     padding-top: 25px;
+    height: inherit;
 }
 .leftCol > div, .rightCol > div {
     padding-top: 25px;

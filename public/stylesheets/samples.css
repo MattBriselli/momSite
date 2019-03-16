@@ -1,5 +1,6 @@
 .musicBody {
     padding-top: 25px;
+    height: 500px;
 }
 .musicBody > div {
     width: 50%;
@@ -9,6 +10,10 @@
 audio {
     width: 100%;
 }
+.left, .right {
+    padding-bottom: 30px;
+}
+
 .left {
     float: left;
 }
