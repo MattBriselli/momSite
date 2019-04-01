@@ -1,7 +1,10 @@
 .centerCol {
     width: 100%;
     /*height: inherit !important;*/
-    overflow: hidden;
+}
+
+.centerCol .lowerBody {
+    overflow-y: hidden;
 }
 .tile {
     width: 50%;
