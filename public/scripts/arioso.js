@@ -19,9 +19,9 @@ function toolbarStyler() {
 
 function heightSetter() {
     var winHeight = $(window).height(),
+        winWidth = $(window).width(),
         // May be 0 on pages that don't have a footerRow
-        footHeight = $(".footerRow:not(.mock)").outerHeight(),
-        mobileHeadRow = $(".mobileHead").height(),
+        footHeight = $("div:not(.hidden) .footerRow:not(.mock)").outerHeight(),
         buffer = footHeight == undefined ? 20 : 30;
 
     footHeight = footHeight == undefined ? 50 : footHeight;
@@ -32,11 +32,20 @@ function heightSetter() {
 
     if ($(".active .headLink a[href='index.html']").length == 1) {
         $(".lowerBody").height(total - 75);
+        if (winWidth <= 950) {
+            console.log(winWidth);
+            $(".footerRow").css("display", "flex");
+            $(".footerRow").parent().addClass("shown").removeClass("hidden");
+        } else {
+            $(".footerRow").hide();
+            $(".footerRow").parent().removeClass("shown").addClass("hidden");
+        }
     }
 
     var centerWid = $(".centerCol").width();
     var centerAdj = Math.min(400, centerWid - 40);
     var heightRange = centerAdj / 313;
+
 
     $(".mobileHead img").width(centerAdj);
     $(".mobileHead img").height(heightRange * 45);

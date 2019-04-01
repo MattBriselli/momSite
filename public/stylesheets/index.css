@@ -6,3 +6,6 @@
 .rightCol img.handLogo {
     margin-left: 10%;
 }
+.footerRow.justify-content-center {
+    display: none;
+}
