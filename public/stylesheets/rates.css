@@ -32,6 +32,12 @@
         width: 100%;
     }
 }
+
+@media (max-width: 950px) {
+    .lowerBody .info {
+        width: 100%;
+    }
+}
 /*.bottom .form .subtitle {
     font-size: 16px;
     font-weight: bold;
