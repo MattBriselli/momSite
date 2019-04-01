@@ -6,21 +6,30 @@
 .centerCol .lowerBody {
     overflow-y: hidden;
 }
-.tile {
-    width: 50%;
-    float: left;
-}
 .tile img {
     width: 100%;
     cursor: pointer;
 }
-.info {
+.left, .right {
     width: 50%;
     display: inline-block;
-    float: right;
-    padding: 0 20px;
-    overflow-y: scroll;
     height: inherit;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.info {
+    padding: 0 20px;
+    overflow: hidden;
+    height: inherit;
+}
+.infoInner {
+    padding-top: 39px;
+    height: 100%;
+    overflow-y: scroll;
 }
 /*.bottom .form {
     width: 50%;

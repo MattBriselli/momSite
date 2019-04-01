@@ -21,8 +21,8 @@ function heightSetter() {
     var winHeight = $(window).height(),
         winWidth = $(window).width(),
         // May be 0 on pages that don't have a footerRow
-        footHeight = $("div:not(.hidden) .footerRow:not(.mock)").outerHeight(),
-        buffer = footHeight == undefined ? 20 : 30;
+        footHeight = $(".footerRow:not(.mock)").outerHeight(),
+        buffer = 20;
 
     footHeight = footHeight == undefined ? 50 : footHeight;
     var total = winHeight - footHeight - buffer;
