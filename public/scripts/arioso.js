@@ -24,11 +24,20 @@ function heightSetter() {
         mobileHeadRow = $(".mobileHead").height(),
         buffer = footHeight == undefined ? 20 : 30;
 
-    console.log(buffer);
-
     footHeight = footHeight == undefined ? 50 : footHeight;
     var total = winHeight - footHeight - buffer;
 
     $(".bodyRow").height(total);
     $(".lowerBody").height(total - 60);
+
+    if ($(".active .headLink a[href='index.html']").length == 1) {
+        $(".lowerBody").height(total - 75);
+    }
+
+    var centerWid = $(".centerCol").width();
+    var centerAdj = Math.min(400, centerWid - 40);
+    var heightRange = centerAdj / 313;
+
+    $(".mobileHead img").width(centerAdj);
+    $(".mobileHead img").height(heightRange * 45);
 }
