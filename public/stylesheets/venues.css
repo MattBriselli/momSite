@@ -10,3 +10,9 @@
 .right {
     float: right;
 }
+
+@media (max-width: 800px) {
+    .left, .right {
+        width: 100%;
+    }
+}
