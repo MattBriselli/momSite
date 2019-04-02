@@ -14,6 +14,7 @@ function toolbarStyler() {
     $(".mobileHead .fa-bars").click(function() {
         $(".mobileMenu").toggleClass("open");
         $(".centerCol").toggleClass("col-sm-8 col-sm-11");
+        $(".footerRow").toggle();
     });
 }
 

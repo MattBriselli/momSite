@@ -25,9 +25,8 @@ body {
 }
 @media (max-width: 950px) {
     .mobileMenu.open {
-        height: 90%;
+        height: 100%;
         display: inline-block;
-        max-width: 18% !important;
         vertical-align: bottom;
     }
     .mobileHead {
