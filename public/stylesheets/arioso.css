@@ -54,6 +54,9 @@ body {
     .mobileMenu.open ~ .centerCol {
         display: inline-block;
     }
+    .footerRow a:first-child {
+        padding-left: 30px;
+    }
 }
 
 /* END RESIZING STYLES */
