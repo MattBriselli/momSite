@@ -20,3 +20,9 @@ audio {
 .right {
     float: right;
 }
+
+@media (max-width: 950px) {
+    .left, .right {
+        width: 100% !important;
+    }
+}
