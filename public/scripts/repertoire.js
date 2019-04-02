@@ -4,14 +4,16 @@ $(document).ready(function() {
 
 function searcher() {
     $(".searchBar input").on("keyup", function(e) {
+        console.log('now');
         var target = $(e.currentTarget),
             term = target.val();
-        target.val().length != 0 ? searchFilter(term) : $("ul, li").show();
+        target.val().length != 0 ? searchFilter(term) : $(".box, ul, li").show();
     });
 }
 
 function searchFilter(key) {
     key = key.toLowerCase();
+    $(".repBody .box, ul, li").show();
     var indexes = $(".repBody ul").each(function() {
         var target = $(this),
             dKey = target.data("key").toLowerCase();
@@ -26,11 +28,11 @@ function searchFilter(key) {
         }
         target.find("li:visible").length == 0 ? target.hide() : target.show();
         if (target.parents(".box").find("li:visible").length == 0) {
-            console.log("hiding: " + target.parents(".box"));
+            // console.log("hiding: " + target.parents(".box"));
             target.parents(".box").hide();
         } else {
-            console.log("else: " + target.parents(".box"));
-            console.log(target.parents(".box").find("li:visible"));
+            // console.log("else: " + target.parents(".box"));
+            // console.log(target.parents(".box").find("li:visible"));
             target.parents(".box").show();
         }
     });
