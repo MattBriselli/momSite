@@ -1,12 +1,12 @@
-.l, .r {
+.left, .right {
     width: 50%;
     display: inline-block;
 }
 
-.l {
+.left {
     float: left;
 }
 
-.r {
+.right {
     float: right;
 }
