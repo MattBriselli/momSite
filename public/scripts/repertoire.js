@@ -4,7 +4,6 @@ $(document).ready(function() {
 
 function searcher() {
     $(".searchBar input").on("keyup", function(e) {
-        console.log('now');
         var target = $(e.currentTarget),
             term = target.val();
         target.val().length != 0 ? searchFilter(term) : $(".box, ul, li").show();
