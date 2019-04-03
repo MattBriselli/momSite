@@ -7,6 +7,9 @@ $(document).ready(function() {
 function toolbarStyler() {
     var location = window.location.href.split("/");
     location = location[location.length-1];
+    if (location.includes("#")) {
+        location = location.split("#")[0];
+    }
     location ?
         $(".headerRow a[href='"+location+"']").parent().parent().addClass("active") :
         $(".headerRow a[href='index.html']").parent().parent().addClass("active");
