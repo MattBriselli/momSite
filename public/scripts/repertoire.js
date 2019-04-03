@@ -1,5 +1,6 @@
 $(document).ready(function() {
     searcher();
+
 });
 
 function searcher() {
