@@ -41,6 +41,11 @@ ul, li {
 .box h4 {
     width: 100%;
     float: left;
+    padding: 10px 0 10px 40px;
+    text-indent: 1%;
+}
+h4 {
+    margin: auto;
 }
 
 .repBody .leftList, .repBody .rightList {

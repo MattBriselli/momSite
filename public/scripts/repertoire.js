@@ -1,6 +1,5 @@
 $(document).ready(function() {
     searcher();
-
 });
 
 function searcher() {
@@ -28,11 +27,8 @@ function searchFilter(key) {
         }
         target.find("li:visible").length == 0 ? target.hide() : target.show();
         if (target.parents(".box").find("li:visible").length == 0) {
-            // console.log("hiding: " + target.parents(".box"));
             target.parents(".box").hide();
         } else {
-            // console.log("else: " + target.parents(".box"));
-            // console.log(target.parents(".box").find("li:visible"));
             target.parents(".box").show();
         }
     });
