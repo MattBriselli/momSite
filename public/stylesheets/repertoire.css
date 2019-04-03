@@ -76,12 +76,12 @@ a.nav-link.search {
 }
 
 .searchBar {
-    width: 100%;
+    width: 95%;
+    margin: 4.5% 5%;
 }
 
 .searchBar input {
-    width: 95%;
-    margin: 2.5%;
+    width: 100%;
 }
 
 .searchBar i {
