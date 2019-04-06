@@ -5,10 +5,40 @@ ul, li {
     width: auto;
 }
 
+@media (max-width: 860px) {
+    .leftRep {
+        display: none;
+    }
+    .repBody {
+        width: 100%;
+    }
+    .leftRep .searchBar {
+        display: none;
+    }
+    .repBody .searchBar {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 860px) {
+    .leftRep {
+        display: inline-block;
+    }
+    .repBody {
+        width: 75%;
+    }
+    .leftRep .searchBar {
+        display: block;
+    }
+    .repBody .searchBar {
+        display: none;
+    }
+}
+
 .leftRep {
     width: 25%;
+    height: 88%;
     float: left;
-    display: inline-block;
     border: 1px solid black;
     overflow-y: scroll;
 }
@@ -17,7 +47,6 @@ ul, li {
     display: inline-block;
     overflow-y: scroll;
     background-color: #ECF5FA;
-    width: 75%;
     float: right;
     height: 88%;
 }
@@ -80,8 +109,13 @@ a.nav-link.search {
     padding-right: 2px;
 }
 
-.searchBar {
-    width: 90%;
+.repBody .searchBar { 
+    width: 100%;
+    padding: 20px 20%;
+}
+
+.leftRep .searchBar {
+    width: 90%;  
     margin: 4.5% 5%;
 }
 
