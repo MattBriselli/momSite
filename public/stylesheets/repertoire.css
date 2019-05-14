@@ -59,7 +59,7 @@ ul, li {
 .repBody li {
     display: block;
     font-weight: normal;
-    text-indent: 3%;
+    padding-left: 3%;
     text-transform: none;
 }
 
