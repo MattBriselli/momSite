@@ -28,8 +28,11 @@ function heightSetter() {
         footHeight = $(".footerRow:not(.mock)").outerHeight(),
         buffer = 20;
 
+    console.log(footHeight);
+
     footHeight = footHeight == undefined ? 50 : footHeight;
     var total = winHeight - footHeight - buffer;
+
 
     $(".bodyRow").height(total);
     $(".lowerBody").height(total - 60);
