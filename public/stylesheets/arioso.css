@@ -171,6 +171,10 @@ img.ariosoLogo, img.handLogo {
 .footerRow {
     padding-top: 20px;
 }
+.footerRow .imgs {
+    margin: auto;
+    width: auto;
+}
 
 .footerRow img {
     height: 75px;
