@@ -28,8 +28,6 @@ function heightSetter() {
         footHeight = $(".footerRow:not(.mock)").outerHeight(),
         buffer = 20;
 
-    console.log(footHeight);
-
     footHeight = footHeight == undefined ? 50 : footHeight;
     var total = winHeight - footHeight - buffer;
 
@@ -40,7 +38,7 @@ function heightSetter() {
     if ($(".active .headLink a[href='index.html']").length == 1) {
         $(".lowerBody").height(total - 75);
         if (winWidth <= 950) {
-            console.log(winWidth);
+        
             $(".footerRow").css("display", "flex");
             $(".footerRow").parent().addClass("shown").removeClass("hidden");
         } else {
