@@ -38,7 +38,6 @@ function heightSetter() {
     if ($(".active .headLink a[href='index.html']").length == 1) {
         $(".lowerBody").height(total - 75);
         if (winWidth <= 950) {
-        
             $(".footerRow").css("display", "flex");
             $(".footerRow").parent().addClass("shown").removeClass("hidden");
         } else {
