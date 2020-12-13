@@ -21,7 +21,9 @@
   },
   "devDependencies": {
     "request": "^2.81.0",
-    "tape": "^4.10.1"
+    "tape": "^4.10.1",
+    "websocket-extensions": ">=0.1.4",
+    "acorn": ">=6.4.1"
   },
   "repository": {
     "type": "git",
