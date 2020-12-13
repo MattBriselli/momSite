@@ -21,9 +21,12 @@
   },
   "devDependencies": {
     "acorn": ">=6.4.1",
+    "minimist": ">=1.2.3",
+    "node-fetch": ">=2.6.1",
     "request": "^2.81.0",
     "tape": "^4.10.1",
-    "websocket-extensions": ">=0.1.4"
+    "websocket-extensions": ">=0.1.4",
+    "yargs-parser": ">=5.0.0-security.0"
   },
   "repository": {
     "type": "git",
