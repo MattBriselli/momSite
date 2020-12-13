@@ -20,10 +20,10 @@
     "underscore": "^1.9.1"
   },
   "devDependencies": {
+    "acorn": ">=6.4.1",
     "request": "^2.81.0",
     "tape": "^4.10.1",
-    "websocket-extensions": ">=0.1.4",
-    "acorn": ">=6.4.1"
+    "websocket-extensions": ">=0.1.4"
   },
   "repository": {
     "type": "git",
