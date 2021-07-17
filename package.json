@@ -16,7 +16,7 @@
     "ejs-lint": "^0.3.0",
     "express": "^4.16.4",
     "firebase": "^5.10.1",
-    "@firebase/util": "^1.1.0",
+    "@firebase/util": ">=0.3.4",
     "pg": "^7.10.0",
     "underscore": "^1.9.1"
   },
