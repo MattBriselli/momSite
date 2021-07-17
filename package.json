@@ -28,7 +28,7 @@
     "request": "^2.81.0",
     "tape": "^4.10.1",
     "websocket-extensions": ">=0.1.4",
-    "yargs-parser": ">=5.0.0-security.0"
+    "yargs-parser": ">=5.0.1"
   },
   "repository": {
     "type": "git",
