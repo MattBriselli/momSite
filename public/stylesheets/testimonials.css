@@ -4,6 +4,11 @@
     float: right;
 }
 
+.pageTitle .footerRow.mock img {
+    width: 100px;
+    height: 100px;
+}
+
 .centerCol {
     max-height: 90%;
 }
