@@ -16,10 +16,13 @@
     "ejs-lint": "^0.3.0",
     "express": "^4.16.4",
     "firebase": "^5.10.1",
+    "grpc": ">=1.24.4",
+    "hosted-git-info": ">=2.8.9",
     "@firebase/util": ">=0.3.4",
+    "path-parse": ">=1.0.7",
     "pg": "^7.10.0",
     "underscore": ">=1.12.1",
-    "y18n": ">=3.2.2",
+    "y18n": ">=3.2.2"
   },
   "devDependencies": {
     "acorn": ">=6.4.1",
