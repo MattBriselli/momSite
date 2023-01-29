@@ -6,29 +6,48 @@ body {
 
 /* RESIZING STYLES */
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .rightCol {
     /* hiding the right column on medium size */
         display: inline-block;
     }
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .rightCol {
     /* hiding the right column on medium size */
         display: none;
     }
 }
-@media (min-width: 950px) {
+@media only screen and (min-width: 950px) {
     .mobileMenu, .mobileHead {
         display: none !important;
     }
 }
-@media (max-width: 950px) {
+@media only screen and (min-width: 1200px) {
+    .header .headLink {
+        padding: 2px 6px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .header .headLink {
+        padding: 2px 2px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .header .headLink {
+        padding: 2px 15px;
+    }
+}
+@media only screen and (max-width: 950px) {
     .mobileMenu.open {
         height: 100%;
         display: inline-block;
         vertical-align: bottom;
     }
+    .header .headLink {
+        padding: 2px 20px;
+    }
+/*   FIX ME!!!! */
     .mobileHead {
         display: block;
         margin-bottom: 20px;
@@ -40,7 +59,7 @@ body {
         display: none;
     }
 }
-@media (max-width: 775px) {
+@media only screen and (max-width: 775px) {
     .bodyRow {
         width: 100%;
     }
@@ -57,21 +76,29 @@ body {
     .footerRow a:first-child {
         padding-left: 35px;
     }
+    .headPad {
+        display: none;
+    }
 }
 
 /* END RESIZING STYLES */
 /* HEADER STYLES */
-
+.mobileHead {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 2px;
+}
 .mobileHead img, .headerRow img {
     background-color: white;
+    border-radius: 5px;
 }
 .mobileHead .fa-bars {
-    color: gray;
+    color: slategray;
     font-size: 22px;
     cursor: pointer;
     position: absolute;
-    top: 35px;
-    left: 15px;
+    top: 50px;
+    left: 30px;
 }
 .mobileHead a {
     width: 90%;
@@ -105,11 +132,8 @@ body {
 .header > div {
     height: 100%;
     display: inline-block;
-    border-radius: 6px;
-}
-.header .headLink {
-    padding: 2px 20px;
-    width: auto;
+    border-radius: 11px;
+    padding-top: 1px;
 }
 .header a {
     /* text of the header */
@@ -166,6 +190,9 @@ body {
 
 img.ariosoLogo, img.handLogo {
     background-color: white !important;
+}
+.headPad {
+    height: 5px;
 }
 .footerRow {
     padding-top: 20px;
