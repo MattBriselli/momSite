@@ -14,6 +14,9 @@ function searcher() {
             $(".leftList").show();
         }
     });
+    // let's load the right section, if possible
+    var urlSuffix = window.location.href.split("#")[1];
+    $("a[href~='#" + urlSuffix + "']")[0].click();
 }
 
 function showEmAll() {
