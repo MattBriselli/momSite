@@ -26,7 +26,11 @@ function heightSetter() {
         winWidth = $(window).width(),
         // May be 0 on pages that don't have a footerRow
         footHeight = $(".footerRow:not(.mock)").outerHeight() + $(".mobileHead").outerHeight() - 50,
-        buffer = 20;
+        buffer = 20,
+        onHomePage = document.URL.indexOf("index.html") > -1;
+
+    console.log(footHeight);
+    console.log("winHeigth: " + winHeight);
 
     // make sure that at least one of these is visible
     footHeight = footHeight <= 0 || footHeight >= 0 ? footHeight : 0;
@@ -34,10 +38,10 @@ function heightSetter() {
 
 
     $(".bodyRow").height(total);
-    $(".lowerBody").height(total - 60);
+    // $(".lowerBody").height(onHomePage ? total : total - 60);
 
     if ($(".active .headLink a[href='index.html']").length == 1) {
-        $(".lowerBody").height(total - 120);
+        $(".lowerBody").height(total - 150);
         if (winWidth <= 950) {
             $(".footerRow").css("display", "flex");
             $(".footerRow").parent().addClass("shown").removeClass("hidden");
