@@ -38,7 +38,7 @@ function heightSetter() {
 
 
     $(".bodyRow").height(onHomePage ? total : total - 60);
-    // $(".lowerBody").height(onHomePage ? total : total - 60);
+    $(".lowerBody").height(onHomePage ? total : total - 60);
 
     if ($(".mobileHead a[href='index.html']").length == 1) {
         $(".lowerBody").height(total - 150);

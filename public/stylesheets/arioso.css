@@ -163,15 +163,14 @@ body {
     width: 100%;
 }
 .bodyRow .lowerBody {
-    padding: 0 15px 15px 15px;
     height: 100%;
+    padding: 0 15px 15px 15px;
+    background-color: #eee !important;
+    overflow-y: scroll;
 }
 .centerCol {
-    height: 100%;
-    overflow-y: scroll;
-    background-color: #eee !important;
     padding-top: 25px;
-/*    height: inherit;*/
+    height: inherit;
 }
 .leftCol > div, .rightCol > div {
     padding-top: 25px;
