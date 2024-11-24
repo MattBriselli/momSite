@@ -37,12 +37,13 @@ function heightSetter() {
     var total = winHeight - footHeight - buffer;
 
 
-    $(".bodyRow").height(total);
+    $(".bodyRow").height(onHomePage ? total : total - 60);
     // $(".lowerBody").height(onHomePage ? total : total - 60);
 
-    if ($(".active .headLink a[href='index.html']").length == 1) {
+    if ($(".mobileHead a[href='index.html']").length == 1) {
         $(".lowerBody").height(total - 150);
         if (winWidth <= 950) {
+            $(".bodyRow").height(onHomePage ? total : total - 20);
             $(".footerRow").css("display", "flex");
             $(".footerRow").parent().addClass("shown").removeClass("hidden");
         } else {
