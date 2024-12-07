@@ -117,6 +117,9 @@ body {
     height: 100%;
     padding-left: 5px;
 }
+.mobileMenu.open li {
+    padding: 3px 0;
+}
 .mobileHead, .headerRow {
     margin-left: 0 !important;
 }
