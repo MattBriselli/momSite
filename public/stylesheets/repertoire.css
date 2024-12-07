@@ -43,6 +43,16 @@ ul, li {
     overflow-y: scroll;
 }
 
+.repHeader {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.repHeader .pageTitle {
+    display: inline-block;
+}
+
 .repBody {
     display: inline-block;
     overflow-y: scroll;
@@ -109,9 +119,10 @@ a.nav-link.search {
     padding-right: 2px;
 }
 
-.repBody .searchBar { 
-    width: 100%;
-    padding: 20px 20%;
+.lowerBody .searchBar { 
+    width: 69%;
+    display: inline-block;
+    padding: 20px 0 0 25px;
 }
 
 .leftRep .searchBar {

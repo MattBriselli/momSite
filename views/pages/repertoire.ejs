@@ -21,11 +21,13 @@
             <div class="centerCol col-lg-9 col-md-9 col-sm-11">
                 <%- include('../partials/header.ejs') %>
                 <div class="lowerBody">
-                    <div class="pageTitle">Repertoire</div>
-                    <div class="leftRep">
+                    <div class="repHeader">
+                        <div class="pageTitle">Repertoire</div>
                         <div class="searchBar">
                             <input type="text" name="search" placeholder="Search...">
                         </div>
+                    </div>
+                    <div class="leftRep">
                         <ul>
                             <li class="nav-item">
                                 <a class="nav-link active" href="#classical">Classical Music</a>
@@ -72,9 +74,6 @@
                         </ul>
                     </div>
                     <div class="repBody" data-spy="scroll">
-                        <div class="searchBar">
-                                <input type="text" name="search" placeholder="Search...">
-                            </div>
                         <div class="box">
                             <h4 id="classical">Classical Music</h4>
                             <div class="leftList">
