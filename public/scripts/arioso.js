@@ -53,7 +53,7 @@ function heightSetter() {
     }
 
     var centerWid = $(".centerCol").width();
-    var centerAdj = Math.min(400, centerWid - 40);
+    var centerAdj = Math.min(400, centerWid - 55);
     var heightRange = centerAdj / 313;
 
 
