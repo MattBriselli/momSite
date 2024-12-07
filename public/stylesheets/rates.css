@@ -26,7 +26,7 @@
     height: inherit;
 }
 .infoInner {
-    padding-top: 39px;
+    padding: 19px 0;
     height: 100%;
     overflow-y: scroll;
 }
