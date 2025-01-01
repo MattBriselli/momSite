@@ -9,10 +9,10 @@ app.use(express.static(path.join(__dirname, 'public')))
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 app.get(["/", "/index", "/index.html"], (req, res) => res.render('pages/index'));
-app.get(["/biographies.html", "/biographies"], (req, res) => res.render('pages/biographies'));
-app.get(["/FAQ.html", "/faq", "/FAQ", "/faq.html"], (req, res) => res.render('pages/FAQ'));
-app.get(["/rates.html", "rates"], (req, res) => res.render('pages/rates'));
-app.get(["/repertoire.html", "/repertoire"], (req, res) => res.render('pages/repertoire'));
-app.get(["/samples.html", "samples"], (req, res) => res.render('pages/samples'));
-app.get(["/testimonials.html", "testimonials"], (req, res) => res.render('pages/testimonials'));
-app.get(["/venues.html", "/venues", "venues"], (req, res) => res.render('pages/venues'));
+app.get(["/biographies", "/biographies.html"], (req, res) => res.render('pages/biographies'));
+app.get(["/FAQ", "/faq", "/FAQ", "/faq.html"], (req, res) => res.render('pages/FAQ'));
+app.get(["/rates", "/rates.html"], (req, res) => res.render('pages/rates'));
+app.get(["/repertoire", "/repertoire.html"], (req, res) => res.render('pages/repertoire'));
+app.get(["/samples", "/samples.html"], (req, res) => res.render('pages/samples'));
+app.get(["/testimonials", "/testimonials.html"], (req, res) => res.render('pages/testimonials'));
+app.get(["/venues", "/venues.html", "venues"], (req, res) => res.render('pages/venues'));
