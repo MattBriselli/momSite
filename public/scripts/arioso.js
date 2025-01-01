@@ -10,6 +10,9 @@ function toolbarStyler() {
     if (location.includes("#")) {
         location = location.split("#")[0];
     }
+    if (location.includes(".html")) {
+        location = location.split(".html")[0];
+    }
     location ?
         $(".headerRow a[href='"+location+"']").parent().parent().addClass("active") :
         $(".headerRow a[href='index.html']").parent().parent().addClass("active");
