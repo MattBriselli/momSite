@@ -265,3 +265,6 @@ span {
     COLOR: lightgray;
     TEXT-DECORATION: none
 }
+.none {
+    display: none;
+}
