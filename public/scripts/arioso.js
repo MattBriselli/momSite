@@ -28,7 +28,7 @@ function heightSetter() {
     var winHeight = $(window).height(),
         winWidth = $(window).width(),
         // May be 0 on pages that don't have a footerRow
-        footHeight = $(".footerRow:not(.mock)").outerHeight() + $(".mobileHead").outerHeight() - 50,
+        footHeight = $(".footerRow:not(.mock)").outerHeight() + $(".mobileHead").outerHeight() - 10,
         buffer = 20,
         onHomePage = document.URL.indexOf("index.html") > -1;
 
