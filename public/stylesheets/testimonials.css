@@ -3,10 +3,13 @@
     width: auto;
     float: right;
 }
+.pageTitle {
+    display: contents;
+}
 
 .pageTitle .footerRow.mock img {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 .centerCol {

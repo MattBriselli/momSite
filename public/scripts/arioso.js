@@ -39,19 +39,20 @@ function heightSetter() {
     footHeight = footHeight <= 0 || footHeight >= 0 ? footHeight : 0;
     var total = winHeight - footHeight - buffer;
 
-
-    $(".bodyRow").height(onHomePage ? total : total - 60);
-    $(".lowerBody").height(onHomePage ? total : total - 60);
+    $(".bodyRow").height(onHomePage ? total : total);
+    $(".lowerBody").height(onHomePage ? total : total * .85);
 
     if ($(".mobileHead a[href='index.html']").length == 1) {
-        $(".lowerBody").height(total - 150);
+        $(".lowerBody").height(total);
         if (winWidth <= 950) {
             $(".bodyRow").height(onHomePage ? total : total - 20);
             $(".footerRow").css("display", "flex");
             $(".footerRow").parent().addClass("shown").removeClass("hidden");
+            console.log('here 1')
         } else {
             $(".footerRow").hide();
             $(".footerRow").parent().removeClass("shown").addClass("hidden");
+            console.log('here 2')
         }
     }
 
