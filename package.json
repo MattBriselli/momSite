@@ -19,7 +19,7 @@
     "json-schema": ">=0.4.0",
     "path-parse": ">=1.0.7",
     "pg": "^8.12.0",
-    "underscore": ">=1.12.1",
+    "underscore": ">=1.13.8",
     "y18n": ">=3.2.2"
   },
   "devDependencies": {
