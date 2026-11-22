@@ -1,13 +1,14 @@
 {
   "name": "arioso",
   "version": "0.0.1",
-  "description": "A sample Node.js app using Express 4",
+  "description": "Arioso String Quartet — Philadelphia Wedding & Event Musicians",
   "engines": {
-    "node": "8.9.1"
+    "node": ">=18.0.0"
   },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "node build-static.js",
     "test": "node test.js"
   },
   "dependencies": {

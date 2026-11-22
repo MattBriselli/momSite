@@ -1,47 +1,118 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Rates &amp; Availability</title>
-   <meta name="keywords" content="arioso, string quartet, philadelphia area quartet, musicians, wedding, violins, viola, cello, carol briselli, carol, igor, szwec, igor szwec, barbara jaffe, vivian barton, matt briselli, matt, briselli, brslli">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="icon" href="img/hand_logo_white.jpg">
-   <link rel="stylesheet" href="stylesheets/arioso.css" type="text/css">
-   <link rel="stylesheet" href="stylesheets/rates.css" type="text/css">
-   <link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css">
-   <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
-   <link rel="stylesheet" href="stylesheets/tipsy.css" type="text/css">
-   <script src="scripts/jquery.js" type="text/javascript"></script>
-   <script src="scripts/jquery.tipsy.js" type="text/javascript"></script>
-   <script src="scripts/jquery.form.js" type="text/javascript"></script>
-   <script src="scripts/arioso.js" type="text/javascript"></script>
-   <script src="scripts/rates.js" type="text/javascript"></script>
+    <%- include('../partials/head.ejs', {
+        pageTitle: 'Rates & Availability',
+        pageDescription: 'Check wedding and event pricing and date availability for the Arioso String Quartet, String Trio, and String Duo in Greater Philadelphia.'
+    }) %>
 </head>
 <body>
-   <div class="row bodyRow">
-      <%- include('../partials/leftCol.ejs') %>
-      <div class="centerCol col-lg-9 col-md-9 col-sm-11">
-         <%- include('../partials/header.ejs') %>
-         <div class="lowerBody">
-            <div class="left">
-               <div class="pageTitle">Rates &#x26; Availability</div>
-               <div class="tile">
-                  <a target="_blank" href="mailto:carolbriselli@verizon.net">
-                  <img title="Email Arioso Quartet" src="../img/playing-2.jpeg">
-                  </a>
-               </div>
+    <%- include('../partials/header.ejs', { activePage: 'rates' }) %>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-kicker">Transparent Pricing &amp; Booking</span>
+                <h1 class="page-heading">Rates &amp; Availability</h1>
+                <p class="page-intro">
+                    Arioso often books dates over a year in advance. We schedules performances in half-hour increments with a one-hour minimum, and offer significantly reduced rates for additional playing time beyond the first hour.
+                </p>
             </div>
-            <div class="right">
-               <div class="info">
-                  <div class="infoInner">
-                     Arioso often books dates over a year in advance. Therefore, due to the busy nature of Arioso's schedule, we recommend that you contact Carol Briselli via <a href="mailto:carolbriselli@verizon.net">email</a> or by phone (<a href="tel:+14848416445">484-841-6445</a>) to determine whether the date in which you are interested is still available. 
-                     Arioso schedules performances in half-hour increments, with a one hour minimum. Rates differ for trios and quartets, and depend on the length of the performance. The rates for the quartet (two violins, viola and cello) start at $1075, and for the trio (violin, viola and cello) they begin at $850 for weddings starting in 2025. There is no additional fee for substituting a flute for one of the violins in either group. Arioso would be happy to add a trumpet and/or singer of our choice or yours to any wedding ceremony. Please be aware that contracted rates for additional playing time beyond one hour for quartet or trio are significantly lower than the initial hour.
-                     Please <a href="mailto:carolbriselli@verizon.net">contact Carol Briselli</a> for a quote tailored to your specific requirements.
-                  </div>
-               </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="pricing-grid">
+                    <article class="pricing-card pricing-card-featured">
+                        <div class="pricing-badge">Signature Ensemble</div>
+                        <h2 class="pricing-title">String Quartet</h2>
+                        <p class="pricing-instruments">Two Violins, Viola &amp; Cello</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-label">Starting at</span>
+                            <span class="pricing-value">$1,075</span>
+                            <span class="pricing-period">first hour minimum</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Full, resonant four-part harmony ideal for ceremonies, cocktail hours &amp; receptions</li>
+                            <li>Optional flute substitution for one violin at <strong>no additional charge</strong></li>
+                            <li>Significantly lower contracted rates for additional half-hour increments beyond one hour</li>
+                            <li>Includes personal music consultation with Carol Briselli</li>
+                        </ul>
+                        <a href="mailto:carolbriselli@verizon.net?subject=Arioso%20String%20Quartet%20Availability%20Inquiry" class="btn btn-primary btn-block">Check Date &amp; Request Quote</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-badge">Intimate Ensemble</div>
+                        <h2 class="pricing-title">String Trio</h2>
+                        <p class="pricing-instruments">Violin, Viola &amp; Cello</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-label">Starting at</span>
+                            <span class="pricing-value">$850</span>
+                            <span class="pricing-period">first hour minimum</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>Rich, balanced chamber sound tailored for intimate venues and ceremonies</li>
+                            <li>Optional flute substitution for the violin at <strong>no additional charge</strong></li>
+                            <li>Significantly lower contracted rates for additional playing time beyond the initial hour</li>
+                            <li>String Duo (Violin &amp; Cello) also available upon request</li>
+                        </ul>
+                        <a href="mailto:carolbriselli@verizon.net?subject=Arioso%20String%20Trio%20Availability%20Inquiry" class="btn btn-secondary btn-block">Check Date &amp; Request Quote</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-badge">Custom Additions</div>
+                        <h2 class="pricing-title">Ceremony Enhancements</h2>
+                        <p class="pricing-instruments">Flute, Trumpet &amp; Vocalists</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-label">Tailored to</span>
+                            <span class="pricing-value">Your Event</span>
+                            <span class="pricing-period">half-hour increments</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><strong>Flute Substitution:</strong> Included at no extra fee in either quartet or trio</li>
+                            <li><strong>Trumpet &amp; Singer:</strong> Add a festive trumpet and/or vocalist (of our choice or yours) to any wedding ceremony</li>
+                            <li><strong>Multi-Location Events:</strong> Seamless transition from ceremony to reception venue</li>
+                            <li><strong>Custom Arrangements:</strong> Special song requests arranged for your ceremony</li>
+                        </ul>
+                        <a href="tel:+14848416445" class="btn btn-secondary btn-block">Call (484) 841-6445 to Discuss</a>
+                    </article>
+                </div>
+
+                <!-- Detailed Info & Direct Contact Card -->
+                <div class="rates-detail-panel">
+                    <div class="rates-photo-col">
+                        <a href="mailto:carolbriselli@verizon.net">
+                            <img
+                                src="/img/playing-2.jpeg"
+                                alt="Arioso String Quartet performing live indoors"
+                                width="640"
+                                height="428"
+                                fetchpriority="high"
+                                class="rates-photo"
+                            >
+                        </a>
+                    </div>
+                    <div class="rates-copy-col">
+                        <h2>How Booking &amp; Quotes Work</h2>
+                        <p>
+                            Due to the busy nature of Arioso's schedule, we recommend that you contact <strong>Carol Briselli</strong> via <a href="mailto:carolbriselli@verizon.net">email</a> or by phone at <a href="tel:+14848416445">(484) 841-6445</a> as early as possible to determine whether your preferred date is available.
+                        </p>
+                        <p>
+                            Arioso schedules performances in half-hour increments, with a one-hour minimum. Rates differ for trios and quartets and depend on the total length of the performance. Please be aware that contracted rates for additional playing time beyond one hour for quartet or trio are significantly lower than the initial hour.
+                        </p>
+                        <p>
+                            Please <a href="mailto:carolbriselli@verizon.net">contact Carol Briselli</a> with your event date, venue location, and approximate timeframe for a quote tailored to your specific requirements.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="mailto:carolbriselli@verizon.net" class="btn btn-primary">Email carolbriselli@verizon.net</a>
+                            <a href="tel:+14848416445" class="btn btn-secondary">Call (484) 841-6445</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-   </div>
-   <%- include('../partials/footer.ejs') %>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>

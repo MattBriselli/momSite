@@ -1,79 +1,86 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Repertoire</title>
-        <meta name="keywords" content="arioso, string quartet, repertoire, classical music, wedding ceremony music, hymns, catholic mass music, jewish music, popular music, philadelphia area quartet, musicians, wedding, violins, viola, cello, carol briselli, carol, igor, szwec, igor szwec, barbara jaffe, vivian barton, matt briselli, matt, briselli, brslli">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="img/hand_logo_white.jpg">
-        <link rel="stylesheet" href="stylesheets/arioso.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/repertoire.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
-        <script type="text/javascript" src="scripts/jquery.js"></script>
-        <script type="text/javascript" src="scripts/popper.js"></script>
-        <script type="text/javascript" src="scripts/bootstrap.js"></script>
-        <script type="text/javascript" src="scripts/repertoire.js"></script>
-        <script type="text/javascript" src="scripts/arioso.js"></script>
-    </head>
-    <body>
-        <div class="row bodyRow">
-            <%- include('../partials/leftCol.ejs') %>
-            <div class="centerCol col-lg-9 col-md-9 col-sm-11">
-                <%- include('../partials/header.ejs') %>
-                <div class="lowerBody">
-                    <div class="repHeader">
-                        <div class="pageTitle">Repertoire</div>
-                        <div class="searchBar">
-                            <input type="text" name="search" placeholder="Search...">
-                        </div>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs', {
+        pageTitle: 'Complete Repertoire',
+        pageDescription: 'Browse and search the complete musical repertoire of the Arioso String Quartet: Classical, Wedding Ceremony, Catholic Mass, Jazz, Pop, Broadway/Film, Beatles, Jewish, Italian, and Hymns.'
+    }) %>
+    <script src="/scripts/repertoire.js" defer></script>
+</head>
+<body>
+    <%- include('../partials/header.ejs', { activePage: 'repertoire' }) %>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-kicker">Hundreds of Selections</span>
+                <h1 class="page-heading">Musical Repertoire</h1>
+                <p class="page-intro">
+                    Explore our repertoire across 14 genres below, or search by song title, composer, or artist. Don't see your favorite song? We are happy to play special requests and custom-arrange music for your ceremony or event.
+                </p>
+
+                <div class="repertoire-search-bar searchBar">
+                    <div class="search-input-wrap">
+                        <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
+                        <input type="search" id="repertoire-search" name="search" class="search-input" placeholder="Search by song, composer, or artist (e.g., Bach, Canon, Sinatra, Beatles, Hora)..." aria-label="Search repertoire by song, composer, or artist">
+                        <button type="button" id="repertoire-clear" class="search-clear-btn" hidden aria-label="Clear search">Clear</button>
                     </div>
-                    <div class="leftRep">
-                        <ul>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#classical">Classical Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#wedding">Wedding Ceremony Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#catholic">Catholic Mass Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#jazz">Jazz Classics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#popular">Pop Tunes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#showtunes">Show/Movie Tunes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#beatles">The Beatles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#jewish">Jewish Songs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#italian">Italian Songs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#hymns">Hymns</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#joplin">Joplin Rags</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#tangos">Tangos by Michael McLean</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#waltzes">Waltzes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#christmas">Christmas Music</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="repBody" data-spy="scroll">
+                    <div id="repertoire-status" class="repertoire-status" role="status" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section repertoire-section">
+            <div class="container repertoire-layout">
+                <aside class="leftRep" aria-label="Repertoire categories">
+                    <div class="rep-nav-title">Categories</div>
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#classical">Classical Music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#wedding">Wedding Ceremony</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catholic">Catholic Mass</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jazz">Jazz Classics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#popular">Pop Tunes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#showtunes">Show &amp; Movie Tunes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#beatles">The Beatles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jewish">Jewish Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#italian">Italian Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hymns">Hymns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#joplin">Joplin Rags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tangos">Tangos (McLean)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#waltzes">Waltzes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#christmas">Christmas Music</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="repBody" id="rep-body">
                         <div class="box">
                             <h4 id="classical">Classical Music</h4>
                             <div class="leftList">
@@ -936,10 +943,14 @@
                                 </ul>
                             </div>
                         </div>
+                        <p id="repertoire-no-results" class="empty-state" hidden>
+                            No pieces in our online list matched your search—however, we are constantly adding new music and are happy to play or custom-arrange special requests! <a href="mailto:carolbriselli@verizon.net">Contact Carol Briselli</a> to inquire about your song.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>

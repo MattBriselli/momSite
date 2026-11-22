@@ -1,71 +1,217 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Arioso String Quartet</title>
-        <meta name="keywords" content="arioso, string quartet, philadelphia area quartet, musicians, wedding, violins, viola, cello, carol briselli, carol, igor, szwec, igor szwec, barbara jaffe, vivian barton, matt briselli, matt, briselli, brslli">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="img/hand_logo_white.jpg">
-        <link rel="stylesheet" href="stylesheets/arioso.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/index.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
-        <script src="scripts/jquery.js" type="text/javascript"></script>
-        <script src="scripts/arioso.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div class="row bodyRow">
-            <%- include('../partials/leftCol.ejs') %>
-            <div class="centerCol col-lg-8 col-md-9 col-sm-10">
-                <%- include('../partials/header.ejs') %>
-                <div class="lowerBody">
-                    <img class="homepageImg" src="img/welcome.gif" width="313" height="45">
-                    <div class="headPad"></div>
-                    <br>
-                    The Arioso String Quartet is based in the Philadelphia area and includes southern New Jersey and Delaware. We travel up to 80 miles from center city Philadelphia. Arioso offers the standard string quartet (two violins, viola and cello), a string trio (violin, viola and cello) and a string duo (violin and cello).  You may substitute a flute for one violin in any group for no additional charge, or add a trumpet for your wedding ceremony.
-                    <br/><br/>
-                    <a href="biographies">Arioso members</a> are experienced professional musicians, and are among the highest caliber in the area. Please read our biographies to learn more about us!  We play with Opera Philadelphia, the Philadelphia Ballet and the Chamber Orchestra of Philadelphia among many other groups.  Arioso plays weddings, Bar/Bat Mitzvahs, private parties and concerts at any location.  Take a glance at some of the <a href="venues">venues</a> we have played.
-                    Our dress is formal black attire: long black dresses for women and tuxedos for men.
-                    We are experts at ceremonies and have played weddings of every denomination.  We play for full Catholic Masses (with or without singers).  Our repertoire is extensive so please take a look at it.  We are constantly adding new music and are happy to play special requests.  We will gladly help you in choosing the right music for your special event, and will arrange music which is not in our <a href="repertoire">repertoire</a>.
-                    <br/><br/>
-                    <table cellspacing="0" cellpadding="5" border="0">
-                        <tr>
-                            <td>
-                                <a href="repertoire#classical">Classical Music</a><br>
-                                <a href="repertoire#wedding">Wedding Ceremony Music</a><br>
-                                <a href="repertoire#jazz">Jazz Classics</a><br>
-                            </td>
-                            <td>
-                                <a href="repertoire#catholic">Catholic Mass Music</a><br>
-                                <a href="repertoire#jewish">Jewish Songs</a><br>
-                                <a href="repertoire#popular">Popular Songs &amp; Show Tunes</a><br>
-                            </td>
-                            <td>
-                                <a href="repertoire#beatles">The Beatles</a><br>
-                                <a href="repertoire#italian">Italian Songs</a><br>
-                                <a href="repertoire#hymns">Hymns</a><br>
-                            </td>
-                        </tr>
-                    </table>
-                    <br>
-                    To listen to some examples of our work, please visit our <a href="samples">music samples</a> page.
-                    <br/><br/>
-                    Any questions or comments you may have can be directed to us via email, <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a>.
-                    <br><br>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs', {
+        pageTitle: 'Philadelphia Wedding & Event String Musicians',
+        pageDescription: 'The Arioso String Quartet offers world-class live string quartet, trio, and duo music for weddings, ceremonies, cocktail hours, and events across Philadelphia, Southern NJ, and Delaware.'
+    }) %>
+</head>
+<body>
+    <%- include('../partials/header.ejs', { activePage: 'index' }) %>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="eyebrow-badge">
+                        <span>Greater Philadelphia &bull; Southern NJ &bull; Delaware</span>
+                    </div>
+                    <h1 class="hero-title">Timeless Live String Music for Your Most Memorable Occasions</h1>
+                    <p class="hero-lead">
+                        Members of the Arioso String Quartet perform with <strong>Opera Philadelphia</strong>, the <strong>Philadelphia Ballet</strong>, and the <strong>Chamber Orchestra of Philadelphia</strong>—bringing conservatory artistry and over 20 years of seamless ceremony experience to weddings, cocktail hours, Bar/Bat Mitzvahs, and private events.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="samples" class="btn btn-primary">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7L8 5Z"/></svg>
+                            <span>Listen to Music Samples</span>
+                        </a>
+                        <a href="rates" class="btn btn-secondary">Check Rates &amp; Availability</a>
+                    </div>
+                    <div class="hero-trust-row">
+                        <div class="trust-stat">
+                            <strong>25+ Years</strong>
+                            <span>Playing Together</span>
+                        </div>
+                        <div class="trust-divider" aria-hidden="true"></div>
+                        <div class="trust-stat">
+                            <strong>80-Mile Radius</strong>
+                            <span>From Center City Phila.</span>
+                        </div>
+                        <div class="trust-divider" aria-hidden="true"></div>
+                        <div class="trust-stat">
+                            <strong>Quartet, Trio &amp; Duo</strong>
+                            <span>Custom Ensembles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-media">
+                    <div class="hero-photo-frame">
+                        <img
+                            src="/img/arioso_quartet.jpg"
+                            alt="The four musicians of the Arioso String Quartet holding their cello, violins, and viola in formal concert attire"
+                            width="1177"
+                            height="1098"
+                            fetchpriority="high"
+                            class="hero-photo"
+                        >
+                        <div class="hero-caption">
+                            <span>Vivian Barton (Cello), Igor Szwec (Violin), Barbara Jaffe (Violin) &amp; Carol Briselli (Viola)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="rightCol col-lg-2 col-md-4">
-                <div>
-                    <a class="widget ng-scope" href="https://www.thebash.com/string-quartet/arioso-quartet" target="_blank">
-                        <img src="img/awards/bash-25.svg">
-                        <img src="img/awards/bash-rapid.svg">
-                        <img src="img/awards/bash-lifetime-award.svg">
-                        <img src="img/awards/bash-best-of.svg">
+        </section>
+
+        <!-- Awards & Recognition Strip -->
+        <section class="awards-banner" aria-label="Awards and Distinctions">
+            <div class="container awards-banner-inner">
+                <div class="awards-banner-text">
+                    <span class="awards-kicker">Award-Winning Ensemble</span>
+                    <p>Recognized on The Bash &amp; WeddingWire for 5-star client satisfaction, rapid communication, and lifetime excellence.</p>
+                </div>
+                <a class="awards-badges" href="https://www.thebash.com/string-quartet/arioso-quartet" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/awards/bash-25.svg" alt="The Bash 25 Years Member" width="64" height="64">
+                    <img src="/img/awards/bash-best-of.svg" alt="The Bash Best Of Award" width="64" height="64">
+                    <img src="/img/awards/bash-lifetime-award.svg" alt="The Bash Lifetime Award" width="64" height="64">
+                    <img src="/img/awards/bash-rapid.svg" alt="The Bash Rapid Responder" width="64" height="64">
+                </a>
+            </div>
+        </section>
+
+        <!-- Ensemble Options & About Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Tailored to Your Event</span>
+                    <h2 class="section-title">Ensemble Configurations &amp; Expertise</h2>
+                    <p class="section-subtitle">
+                        Based in the Philadelphia area and traveling up to 80 miles from Center City across Pennsylvania, Southern New Jersey, and Delaware.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-tag">Most Popular</div>
+                        <h3>String Quartet, Trio &amp; Duo</h3>
+                        <p>
+                            Arioso offers the standard <strong>string quartet</strong> (two violins, viola, and cello), a <strong>string trio</strong> (violin, viola, and cello), and a <strong>string duo</strong> (violin and cello). You may substitute a <strong>flute</strong> for one violin in any group at no additional charge, or add a <strong>trumpet</strong> and/or <strong>vocalist</strong> for your wedding ceremony.
+                        </p>
+                        <a href="rates" class="card-link">View pricing &amp; ensemble options &rarr;</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-tag">Conservatory Pedigree</div>
+                        <h3>Highest-Caliber Musicians</h3>
+                        <p>
+                            <a href="biographies">Arioso members</a> are seasoned professionals performing with Opera Philadelphia, the Philadelphia Ballet, and the Chamber Orchestra of Philadelphia. Our dress is formal black concert attire: long black dresses for women and tuxedos for men.
+                        </p>
+                        <a href="biographies" class="card-link">Meet our musicians &rarr;</a>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-tag">Every Denomination &amp; Venue</div>
+                        <h3>Ceremony &amp; Reception Experts</h3>
+                        <p>
+                            We are experts at ceremonies of every denomination, including full Catholic Masses (with or without singers) and Jewish ceremonies, as well as Bar/Bat Mitzvahs, cocktail hours, private parties, and concerts. We gladly help you select your program and arrange custom requests.
+                        </p>
+                        <a href="venues" class="card-link">Explore venues we've played &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Repertoire Highlights Section -->
+        <section class="section section-tinted">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-kicker">Extensive Musical Library</span>
+                    <h2 class="section-title">Explore Our Repertoire by Genre</h2>
+                    <p class="section-subtitle">
+                        We are constantly adding new music and are happy to play special requests or custom-arrange pieces not currently in our library.
+                    </p>
+                </div>
+
+                <div class="genre-grid">
+                    <a href="repertoire#classical" class="genre-card">
+                        <span class="genre-name">Classical Masterworks</span>
+                        <span class="genre-meta">Bach, Mozart, Haydn, Vivaldi, Handel &amp; more</span>
+                    </a>
+                    <a href="repertoire#wedding" class="genre-card">
+                        <span class="genre-name">Wedding Ceremony Music</span>
+                        <span class="genre-meta">Pachelbel Canon, Processionals &amp; Recessionals</span>
+                    </a>
+                    <a href="repertoire#popular" class="genre-card">
+                        <span class="genre-name">Popular Songs &amp; Modern Hits</span>
+                        <span class="genre-meta">Coldplay, Elvis, Sinatra, U2, Lady Gaga, Enya &amp; more</span>
+                    </a>
+                    <a href="repertoire#showtunes" class="genre-card">
+                        <span class="genre-name">Broadway &amp; Film Scores</span>
+                        <span class="genre-meta">La La Land, Star Wars, Lord of the Rings, Mancini &amp; more</span>
+                    </a>
+                    <a href="repertoire#jazz" class="genre-card">
+                        <span class="genre-name">Jazz Classics</span>
+                        <span class="genre-meta">Cole Porter, George Gershwin, Duke Ellington</span>
+                    </a>
+                    <a href="repertoire#catholic" class="genre-card">
+                        <span class="genre-name">Catholic Mass Music</span>
+                        <span class="genre-meta">Full Liturgical Settings, Psalms &amp; Ave Maria</span>
+                    </a>
+                    <a href="repertoire#jewish" class="genre-card">
+                        <span class="genre-name">Jewish Wedding &amp; Traditional</span>
+                        <span class="genre-meta">Dodi Li, Erev Shel Shoshanim, Siman Tov &amp; 50+ more</span>
+                    </a>
+                    <a href="repertoire#beatles" class="genre-card">
+                        <span class="genre-name">The Beatles</span>
+                        <span class="genre-meta">Here Comes the Sun, All You Need Is Love, In My Life</span>
+                    </a>
+                    <a href="repertoire#italian" class="genre-card">
+                        <span class="genre-name">Italian Songs, Hymns &amp; More</span>
+                        <span class="genre-meta">Italian Favorites, Joplin Rags, Tangos, Waltzes &amp; Hymns</span>
                     </a>
                 </div>
+
+                <div class="section-cta-row">
+                    <a href="repertoire" class="btn btn-primary">Search Complete Repertoire</a>
+                    <a href="samples" class="btn btn-secondary">Listen to 10 Full Audio Samples</a>
+                </div>
             </div>
-        </div>
-        <div class="none">
-            <%- include('../partials/footer.ejs') %>
-        </div>
-    </body>
+        </section>
+
+        <!-- Featured Testimonial & Live Performance Callout -->
+        <section class="section">
+            <div class="container split-callout">
+                <div class="callout-image-wrap">
+                    <img
+                        src="/img/playing.jpeg"
+                        alt="Arioso String Quartet performing outdoors at a wedding ceremony"
+                        width="874"
+                        height="612"
+                        loading="lazy"
+                        class="callout-image"
+                    >
+                </div>
+                <div class="callout-content">
+                    <span class="section-kicker">Client Praise</span>
+                    <blockquote class="featured-quote">
+                        &ldquo;Arioso Quartet was the perfect addition to our wedding ceremony! They added just the touch of elegance we were looking for. Carol was easy to communicate with and helpful in choosing our music for both the ceremony and cocktail hour&hellip; We received so many compliments throughout the night!&rdquo;
+                    </blockquote>
+                    <p class="quote-attribution">&mdash; Casey H., Wedding Client &bull; <a href="testimonials">Read 15+ Verified Reviews</a></p>
+
+                    <div class="contact-prompt-box">
+                        <h3>Planning Your Wedding or Special Event?</h3>
+                        <p>
+                            Questions or availability inquiries can be directed to Carol Briselli via email at
+                            <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a> or by phone at
+                            <a href="tel:+14848416445">(484) 841-6445</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
 </html>

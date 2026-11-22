@@ -1,118 +1,162 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Venues</title>
-    <meta name="keywords" content="arioso, string quartet, philadelphia area quartet, musicians, wedding, violins, viola, cello, carol briselli, carol, igor, szwec, igor szwec, barbara jaffe, vivian barton, matt briselli, matt, briselli, brslli">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="img/hand_logo_white.jpg">
-    <link rel="stylesheet" href="stylesheets/arioso.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/venues.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
-    <script src="scripts/jquery.js" type="text/javascript"></script>
-    <script src="scripts/arioso.js" type="text/javascript"></script>
+    <%- include('../partials/head.ejs', {
+        pageTitle: 'Past Venues',
+        pageDescription: 'Explore mansions, estates, hotels, country clubs, churches, and synagogues across Philadelphia, PA, NJ, and DE where the Arioso String Quartet has performed.'
+    }) %>
 </head>
 <body>
-    <div class="row bodyRow">
-        <%- include('../partials/leftCol.ejs') %>
-        <div class="centerCol col-lg-9 col-md-9 col-sm-11">
-            <%- include('../partials/header.ejs') %>
-            <div class="lowerBody">
-                <div class="pageTitle">Venues</div>
-                <div class="left">
-                    <div style="font-weight: bold;">MANSIONS, RESTAURANTS, GOLF CLUBS:</div>
-                    <div>Abington Art Center, Abington, PA</div>
-                    <div>Aldie Mansion, Doylestown, PA</div>
-                    <div>Appleford Estate, Villanova, PA</div>
-                    <div>Aronimink Golf Club, Newtown Square, PA</div>
-                    <div>Arts Ballroom, Philadelphia, PA</div>
-                    <div>The Ashford Estate, Allentown, NJ</div>
-                    <div>Audubon Center at Mill Grove, Audubon, PA</div>
-                    <div>Bowman’s Hill Wildflower Preserve, New Hope, PA</div>
-                    <div>Brandywine Manor House, Honeybrook, PA</div>
-                    <div>Brantwyn Mansion, Wilmington, DE</div>
-                    <div>Cairnwood, Bryn Athyn, PA</div>
-                    <div>The Carriage House, Galloway, NJ Celebrations, Bensalem, PA</div>
-                    <div>Clark's Landing, Point Pleasant Beach, NJ</div>
-                    <div>College of Physicians, Philadelphia, PA</div>
-                    <div>Colonial Dames, Philadelphia, PA</div>
-                    <div>Concorn Country Club, West Chester, PA</div>
-                    <div>Crystal Tea Room, Philadelphia, PA</div>
-                    <div>Deerfield Golf and Tennis Club, Newark, DE</div>
-                    <div>Donaldson Browne Center, Port Depoisit, MD</div>
-                    <div>DuPont Country Club, Wilmington, DE</div>
-                    <div>Erini Restaurant, Ewing, NJ</div>
-                    <div>Fonthill Castle, Doylestown, PA</div>
-                    <div>The Fountain Room, Philadelphia, PA</div>
-                    <div>Fuel Gallery, Philadelphia, PA</div>
-                    <div>Greenville Country Club, Greenville, DE</div>
-                    <div>Greystone Hall, West Chester, PA</div>
-                    <div>The Inn at Barley Sheaf, Holicong, PA</div>
-                    <div>Jericho Golf Club, New Hope, PA</div>
-                    <div>Joseph Ambler Inn, North Wales, PA</div>
-                    <div>Kemblesville United Methodist Church, Newark, DE</div>
-                    <div>Knowlton Mansion, Doylestown, PA</div>
-                    <div>Martell's Water's Edge, Bayville, NJ McCall's Country Club, Upper Darby, PA</div>
-                    <div>Mendenhall Inn, Mendenhall, PA</div>
-                    <div>The Old Mill, Rose Valley, PA</div>
-                    <div>Phoenixville Foundry, Phoenixville, PA</div>
-                    <div>Radnor Hunt Club, Malvern, PA</div>
-                    <div>Ridley Creek Mansion, Newtown Square, PA</div>
-                    <div>Rockwood Center, Wilmington, DE</div>
-                    <div>Rose Hip Barn, Thornton, PA</div>
-                    <div>Rydal Park Retirement Community, Jenkintown, PA</div>
-                    <div>The Shambles at Head House Square, Philadelphia, PA</div>
-                    <div>Stotesbury Mansion, Philadelphia, PA</div>
-                    <div>Swarthmore College amphitheater, Swarthmore, PA</div>
-                    <div>Sweetwater Farm, Glen Mills, PA</div>
-                    <div>Talula’s Garden, Philadelphia, PA</div>
-                    <div>University and Whist Club, Wilmington, DE</div>
-                    <div>Valley Green Inn, Philadelphia, PA</div>
-                    <div>Villanova Conference Center, Villanova, PA</div>
-                    <div>Whitemarsh Valley Country Club, Lafayette Hill, PA</div>
-                    <div>Winterthur, Wilmington, DE</div>
-                    <div>Unionville Winery, Ringoes, NJ</div>
-                </div>
-                <div class="right">
-                    <div style="font-weight: bold;">HOTELS:</div>
-                    <div>Bellevue Hotel, Philadelphia, PA</div>
-                    <div>Black Bass Hotel, Skillman, NJ</div>
-                    <div>Desmond Hotel, Malvern, PA</div>
-                    <div>Four Seasons Hotel, Philadelphia, PA</div>
-                    <div>Hotel DuPont, Wilmington, DE</div>
-                    <div>Loew’s Hotel, Philadelphia, PA</div>
-                    <div>Marriott Hotel, Conshohocken, PA</div>
-                    <div>Rittenhouse Hotel, Philadelphia, PA</div>
-                    <div>Westin Hotel, Philadelphia, PA</div>
-                    <br/>
-                    <div style="font-weight: bold;">CHURCHES/SYNAGOGUES:</div>
-                    <div>Albright Chapel, Reading, PA</div>
-                    <div>Baptist Church in the Great Valley, Devon, PA</div>
-                    <div>Bausman Memorial United Church of Christ, Wyomissing, PA</div>
-                    <div>Cathedral Basilica of Sts. Peter and Paul, Philadelphia, PA</div>
-                    <div>First Baptist Church, Philadelphia, PA</div>
-                    <div>Grace Bible Fellowship Church, Wallingford, PA</div>
-                    <div>Jordan United Church of Christ, Allentown, PA</div>
-                    <div>Our Lady of Mount Carmel Church, Doylestown, PA</div>
-                    <div>Our Lady of the Rosary Church, Coatesville, PA</div>
-                    <div>St. Ann’s Church, Wilmington, DE</div>
-                    <div>St. Augustine’s Church, Ocean City, NJ</div>
-                    <div>St. Denis Catholic Church, Havertown, PA</div>
-                    <div>St. Francis de Sales Church, Lenni, PA</div>
-                    <div>St. James Church, Elkins Park, PA</div>
-                    <div>St. Joan of Arc Catholic Church, Hershey, PA</div>
-                    <div>St. John’s Chrysostom Church, Wallingford, PA</div>
-                    <div>St. John’s Episcopal Church, Huntingdon Valley, PA</div>
-                    <div>St. Mark’s Church, Philadelphia, PA</div>
-                    <div>St. Mary of the Assumption Church, Hockessin, DE</div>
-                    <div>St. Paul’s Episcopal Church, Ardmore, PA</div>
-                    <div>St. Rita’s Church, Philadelphia, PA</div>
-                    <div>Sts. Peter and Paul Catholic Church, West Chester, PA</div>
-                    <div>Temple Sinai, Dresher, PA</div>
-                    <div>Unitarian Universalist Church, Media, PA</div>
+    <%- include('../partials/header.ejs', { activePage: 'venues' }) %>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-kicker">Where We Perform</span>
+                <h1 class="page-heading">Selected Venues</h1>
+                <p class="page-intro">
+                    Over the past two decades, the Arioso String Quartet has performed at hundreds of historic mansions, gardens, country clubs, luxury hotels, churches, and synagogues throughout Pennsylvania, New Jersey, Delaware, and Maryland.
+                </p>
+
+                <div class="venue-controls">
+                    <div class="search-input-wrap">
+                        <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
+                        <input type="search" id="venue-search" class="search-input" placeholder="Search venues or towns (e.g., Winterthur, Doylestown, Rittenhouse)..." aria-label="Search venues or towns">
+                    </div>
+                    <div class="filter-pills" role="group" aria-label="Filter venues by category">
+                        <button type="button" class="filter-pill is-active" data-venue-filter="all">All Venues</button>
+                        <button type="button" class="filter-pill" data-venue-filter="estates">Mansions, Restaurants &amp; Clubs</button>
+                        <button type="button" class="filter-pill" data-venue-filter="hotels">Hotels</button>
+                        <button type="button" class="filter-pill" data-venue-filter="worship">Churches &amp; Synagogues</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="venues-sections" id="venues-container">
+                    <article class="venue-category-card" data-venue-category="estates">
+                        <header class="venue-category-header">
+                            <h2>Mansions, Estates, Restaurants &amp; Golf Clubs</h2>
+                            <span class="venue-count">54 Venues</span>
+                        </header>
+                        <ul class="venue-list">
+                            <li><strong>Abington Art Center</strong> <span>Abington, PA</span></li>
+                            <li><strong>Aldie Mansion</strong> <span>Doylestown, PA</span></li>
+                            <li><strong>Appleford Estate</strong> <span>Villanova, PA</span></li>
+                            <li><strong>Aronimink Golf Club</strong> <span>Newtown Square, PA</span></li>
+                            <li><strong>Arts Ballroom</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>The Ashford Estate</strong> <span>Allentown, NJ</span></li>
+                            <li><strong>Audubon Center at Mill Grove</strong> <span>Audubon, PA</span></li>
+                            <li><strong>Bowman’s Hill Wildflower Preserve</strong> <span>New Hope, PA</span></li>
+                            <li><strong>Brandywine Manor House</strong> <span>Honeybrook, PA</span></li>
+                            <li><strong>Brantwyn Mansion</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>Cairnwood Estate</strong> <span>Bryn Athyn, PA</span></li>
+                            <li><strong>The Carriage House</strong> <span>Galloway, NJ</span></li>
+                            <li><strong>Celebrations</strong> <span>Bensalem, PA</span></li>
+                            <li><strong>Clark's Landing</strong> <span>Point Pleasant Beach, NJ</span></li>
+                            <li><strong>College of Physicians</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Colonial Dames</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Concord Country Club</strong> <span>West Chester, PA</span></li>
+                            <li><strong>Crystal Tea Room</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Deerfield Golf and Tennis Club</strong> <span>Newark, DE</span></li>
+                            <li><strong>Donaldson Browne Center</strong> <span>Port Deposit, MD</span></li>
+                            <li><strong>DuPont Country Club</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>Erini Restaurant</strong> <span>Ewing, NJ</span></li>
+                            <li><strong>Fonthill Castle</strong> <span>Doylestown, PA</span></li>
+                            <li><strong>The Fountain Room</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Fuel Gallery</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Greenville Country Club</strong> <span>Greenville, DE</span></li>
+                            <li><strong>Greystone Hall</strong> <span>West Chester, PA</span></li>
+                            <li><strong>The Inn at Barley Sheaf</strong> <span>Holicong, PA</span></li>
+                            <li><strong>Jericho National Golf Club</strong> <span>New Hope, PA</span></li>
+                            <li><strong>Joseph Ambler Inn</strong> <span>North Wales, PA</span></li>
+                            <li><strong>Knowlton Mansion</strong> <span>Doylestown, PA</span></li>
+                            <li><strong>Martell's Water's Edge</strong> <span>Bayville, NJ</span></li>
+                            <li><strong>McCall's Country Club</strong> <span>Upper Darby, PA</span></li>
+                            <li><strong>Mendenhall Inn</strong> <span>Mendenhall, PA</span></li>
+                            <li><strong>The Old Mill</strong> <span>Rose Valley, PA</span></li>
+                            <li><strong>Phoenixville Foundry</strong> <span>Phoenixville, PA</span></li>
+                            <li><strong>Radnor Hunt Club</strong> <span>Malvern, PA</span></li>
+                            <li><strong>Ridley Creek Mansion</strong> <span>Newtown Square, PA</span></li>
+                            <li><strong>Rockwood Center</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>Rose Hip Barn</strong> <span>Thornton, PA</span></li>
+                            <li><strong>Rydal Park Retirement Community</strong> <span>Jenkintown, PA</span></li>
+                            <li><strong>The Shambles at Head House Square</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Stotesbury Mansion</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Swarthmore College Amphitheater</strong> <span>Swarthmore, PA</span></li>
+                            <li><strong>Sweetwater Farm</strong> <span>Glen Mills, PA</span></li>
+                            <li><strong>Talula’s Garden</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Unionville Winery</strong> <span>Ringoes, NJ</span></li>
+                            <li><strong>University and Whist Club</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>Valley Green Inn</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Villanova Conference Center</strong> <span>Villanova, PA</span></li>
+                            <li><strong>Whitemarsh Valley Country Club</strong> <span>Lafayette Hill, PA</span></li>
+                            <li><strong>Winterthur Museum, Garden &amp; Library</strong> <span>Wilmington, DE</span></li>
+                        </ul>
+                    </article>
+
+                    <article class="venue-category-card" data-venue-category="hotels">
+                        <header class="venue-category-header">
+                            <h2>Luxury &amp; Historic Hotels</h2>
+                            <span class="venue-count">9 Venues</span>
+                        </header>
+                        <ul class="venue-list">
+                            <li><strong>The Bellevue Hotel</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Black Bass Hotel</strong> <span>Lumberville / Skillman, PA/NJ</span></li>
+                            <li><strong>The Desmond Hotel</strong> <span>Malvern, PA</span></li>
+                            <li><strong>Four Seasons Hotel</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Hotel DuPont</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>Loews Philadelphia Hotel</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Philadelphia Marriott West</strong> <span>Conshohocken, PA</span></li>
+                            <li><strong>The Rittenhouse Hotel</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>The Westin Philadelphia</strong> <span>Philadelphia, PA</span></li>
+                        </ul>
+                    </article>
+
+                    <article class="venue-category-card" data-venue-category="worship">
+                        <header class="venue-category-header">
+                            <h2>Churches, Cathedrals &amp; Synagogues</h2>
+                            <span class="venue-count">25 Venues</span>
+                        </header>
+                        <ul class="venue-list">
+                            <li><strong>Albright Chapel</strong> <span>Reading, PA</span></li>
+                            <li><strong>Baptist Church in the Great Valley</strong> <span>Devon, PA</span></li>
+                            <li><strong>Bausman Memorial United Church of Christ</strong> <span>Wyomissing, PA</span></li>
+                            <li><strong>Cathedral Basilica of Sts. Peter and Paul</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>First Baptist Church</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Grace Bible Fellowship Church</strong> <span>Wallingford, PA</span></li>
+                            <li><strong>Jordan United Church of Christ</strong> <span>Allentown, PA</span></li>
+                            <li><strong>Kemblesville United Methodist Church</strong> <span>Newark, DE</span></li>
+                            <li><strong>Our Lady of Mount Carmel Church</strong> <span>Doylestown, PA</span></li>
+                            <li><strong>Our Lady of the Rosary Church</strong> <span>Coatesville, PA</span></li>
+                            <li><strong>St. Ann’s Church</strong> <span>Wilmington, DE</span></li>
+                            <li><strong>St. Augustine’s Church</strong> <span>Ocean City, NJ</span></li>
+                            <li><strong>St. Denis Catholic Church</strong> <span>Havertown, PA</span></li>
+                            <li><strong>St. Francis de Sales Church</strong> <span>Lenni, PA</span></li>
+                            <li><strong>St. James Church</strong> <span>Elkins Park, PA</span></li>
+                            <li><strong>St. Joan of Arc Catholic Church</strong> <span>Hershey, PA</span></li>
+                            <li><strong>St. John Chrysostom Church</strong> <span>Wallingford, PA</span></li>
+                            <li><strong>St. John’s Episcopal Church</strong> <span>Huntingdon Valley, PA</span></li>
+                            <li><strong>St. Mark’s Church</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>St. Mary of the Assumption Church</strong> <span>Hockessin, DE</span></li>
+                            <li><strong>St. Paul’s Episcopal Church</strong> <span>Ardmore, PA</span></li>
+                            <li><strong>St. Rita’s Church</strong> <span>Philadelphia, PA</span></li>
+                            <li><strong>Sts. Peter and Paul Catholic Church</strong> <span>West Chester, PA</span></li>
+                            <li><strong>Temple Sinai</strong> <span>Dresher, PA</span></li>
+                            <li><strong>Unitarian Universalist Church</strong> <span>Media, PA</span></li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p id="venue-no-results" class="empty-state" hidden>
+                    No listed venues match your search—however, we perform at any location within 80 miles of Center City Philadelphia! <a href="mailto:carolbriselli@verizon.net">Contact us</a> to discuss your venue.
+                </p>
+            </div>
+        </section>
+    </main>
+
     <%- include('../partials/footer.ejs') %>
 </body>
 </html>

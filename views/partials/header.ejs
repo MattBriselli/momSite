@@ -1,51 +1,61 @@
-<!DOCTYPE html>
-<div class="row headerRow justify-content-center">
-    <div class="headCol">
-        <div class="header">
-            <div>
-                <div class="headLink"><a href="index">Home</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="biographies">Biographies</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="repertoire">Repertoire</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="samples">Music Samples</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="venues">Venues</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="testimonials">Testimonials</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="rates">Rates &amp; Availability</a></div>
-            </div>
-            <div>
-                <div class="headLink"><a href="FAQ">FAQ</a></div>
-            </div>
+<% const current = typeof activePage !== 'undefined' ? activePage : ''; %>
+<div class="utility-bar">
+    <div class="utility-inner">
+        <span class="utility-location">Serving Greater Philadelphia, Southern NJ &amp; Delaware</span>
+        <div class="utility-contacts">
+            <a href="tel:+14848416445" class="utility-link">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2Z"/></svg>
+                <span>(484) 841-6445</span>
+            </a>
+            <a href="mailto:carolbriselli@verizon.net" class="utility-link">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>
+                <span>carolbriselli@verizon.net</span>
+            </a>
+            <a href="https://www.youtube.com/watch?v=o11b5UK1TzU" target="_blank" rel="noopener noreferrer" class="utility-link">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 15l5.19-3L10 9v6Zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"/></svg>
+                <span>Watch Demo</span>
+            </a>
         </div>
     </div>
 </div>
-<div class="mobileHead row justify-content-center">
-    <div class="menuToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a class="site-logo" href="index">
+            <img src="/img/hand_logo_white.jpg" alt="" width="44" height="40" class="brand-mark">
+            <span class="brand-text">
+                <span class="brand-name">Arioso Quartet</span>
+                <span class="brand-tagline">Philadelphia String Ensemble</span>
+            </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+            <button
+                class="menu-button"
+                type="button"
+                popovertarget="site-menu"
+                popovertargetaction="toggle"
+                aria-controls="site-menu"
+            >
+                <svg class="icon menu-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z"/>
+                </svg>
+                <span>Menu</span>
+            </button>
+
+            <ul id="site-menu" class="site-menu" popover="auto">
+                <li><a href="index" <%- current === 'index' ? 'aria-current="page"' : '' %>>Home</a></li>
+                <li><a href="biographies" <%- current === 'biographies' ? 'aria-current="page"' : '' %>>Biographies</a></li>
+                <li><a href="repertoire" <%- current === 'repertoire' ? 'aria-current="page"' : '' %>>Repertoire</a></li>
+                <li><a href="samples" <%- current === 'samples' ? 'aria-current="page"' : '' %>>Music Samples</a></li>
+                <li><a href="venues" <%- current === 'venues' ? 'aria-current="page"' : '' %>>Venues</a></li>
+                <li><a href="testimonials" <%- current === 'testimonials' ? 'aria-current="page"' : '' %>>Testimonials</a></li>
+                <li><a href="rates" <%- current === 'rates' ? 'aria-current="page"' : '' %>>Rates &amp; Availability</a></li>
+                <li><a href="FAQ" <%- current === 'FAQ' ? 'aria-current="page"' : '' %>>FAQ</a></li>
+                <li class="menu-contact-item">
+                    <a href="mailto:carolbriselli@verizon.net" class="nav-cta">Inquire Now</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="welcomeImg">
-        <a href="index"><img src="img/welcome.gif" width="313" height="45"></a>
-    </div>
-</div>
-<div class="mobileMenu col-sm-6">
-    <ul>
-        <a href="index" class=""><li>Home</li></a>
-        <a href="biographies" class=""><li>Biographies</li></a>
-        <a href="repertoire" class=""><li>Repertoire</li></a>
-        <a href="venues" class=""><li>Venues</li></a>
-        <a href="samples" class=""><li>Music Samples</li></a>
-        <a href="testimonials" class=""><li>Testimonials</li></a>
-        <a href="rates" class=""><li>Rates &amp; Availability</li></a>
-        <a href="FAQ" class=""><li>FAQ</li></a>
-    </ul>
-</div>
+</header>

@@ -1,28 +1,44 @@
 const { spawn } = require('child_process');
-const request = require('request');
+const http = require('http');
 const test = require('tape');
 
-// Start the app
-const env = Object.assign({}, process.env, {PORT: 5000});
-const child = spawn('node', ['index.js'], {env});
+const TEST_PORT = 5055;
+const env = Object.assign({}, process.env, { PORT: TEST_PORT });
+const child = spawn('node', ['index.js'], { env });
 
-test('responds to requests', (t) => {
-    t.plan(4);
+function fetchPage(pathname) {
+    return new Promise((resolve, reject) => {
+        http.get(`http://127.0.0.1:${TEST_PORT}${pathname}`, (res) => {
+            let body = '';
+            res.on('data', (chunk) => { body += chunk; });
+            res.on('end', () => resolve({ statusCode: res.statusCode, body }));
+        }).on('error', reject);
+    });
+}
 
-    // Wait until the server is ready
-    child.stdout.on('data', _ => {
-        // Make a request to our app
-        request('http://127.0.0.1:5000', (error, response, body) => {
-            // stop the server
+test('Arioso String Quartet routes render cleanly', (t) => {
+    const routes = [
+        { path: '/', expected: 'Arioso String Quartet' },
+        { path: '/biographies', expected: 'Meet the Arioso Quartet' },
+        { path: '/repertoire', expected: 'Musical Repertoire' },
+        { path: '/samples', expected: 'Music Samples' },
+        { path: '/venues', expected: 'Selected Venues' },
+        { path: '/testimonials', expected: 'Client Testimonials' },
+        { path: '/rates', expected: 'Rates &amp; Availability' },
+        { path: '/FAQ', expected: 'Frequently Asked Questions' }
+    ];
+
+    t.plan(routes.length * 2);
+
+    child.stdout.once('data', async () => {
+        try {
+            for (const route of routes) {
+                const { statusCode, body } = await fetchPage(route.path);
+                t.equal(statusCode, 200, `${route.path} returns HTTP 200`);
+                t.ok(body.includes(route.expected), `${route.path} includes "${route.expected}"`);
+            }
+        } finally {
             child.kill();
-
-            // No error
-            t.false(error);
-            // Successful response
-            t.equal(response.statusCode, 200);
-            // Assert content checks
-            t.notEqual(body.indexOf("<title>Node.js Getting Started on Heroku</title>"), -1);
-            t.notEqual(body.indexOf("Getting Started with Node on Heroku"), -1);
-        });
+        }
     });
 });
