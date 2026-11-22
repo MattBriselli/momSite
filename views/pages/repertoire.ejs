@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
-        pageTitle: 'Complete Repertoire',
+        canonicalPath: '/repertoire',
+        pageTitle: 'Complete Repertoire (550+ Wedding & Event Selections)',
         pageDescription: 'Browse and search the complete musical repertoire of the Arioso String Quartet: Classical, Wedding Ceremony, Catholic Mass, Jazz, Pop, Broadway/Film, Beatles, Jewish, Italian, and Hymns.'
     }) %>
     <script src="/scripts/repertoire.js" defer></script>
@@ -19,14 +20,24 @@
                     Explore our repertoire across 14 genres below, or search by song title, composer, or artist. Don't see your favorite song? We are happy to play special requests and custom-arrange music for your ceremony or event.
                 </p>
 
-                <div class="repertoire-search-bar searchBar">
+                <search class="repertoire-search-bar searchBar" aria-label="Search repertoire">
                     <div class="search-input-wrap">
                         <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
-                        <input type="search" id="repertoire-search" name="search" class="search-input" placeholder="Search by song, composer, or artist (e.g., Bach, Canon, Sinatra, Beatles, Hora)..." aria-label="Search repertoire by song, composer, or artist">
+                        <input
+                            type="search"
+                            id="repertoire-search"
+                            name="search"
+                            class="search-input"
+                            placeholder="Search by song, composer, or artist (e.g., Bach, Canon, Sinatra, Beatles, Hora)..."
+                            aria-label="Search repertoire by song, composer, or artist"
+                            autocorrect="off"
+                            autocapitalize="none"
+                            spellcheck="false"
+                        >
                         <button type="button" id="repertoire-clear" class="search-clear-btn" hidden aria-label="Clear search">Clear</button>
                     </div>
                     <div id="repertoire-status" class="repertoire-status" role="status" aria-live="polite"></div>
-                </div>
+                </search>
             </div>
         </section>
 
@@ -944,7 +955,7 @@
                             </div>
                         </div>
                         <p id="repertoire-no-results" class="empty-state" hidden>
-                            No pieces in our online list matched your search—however, we are constantly adding new music and are happy to play or custom-arrange special requests! <a href="mailto:carolbriselli@verizon.net">Contact Carol Briselli</a> to inquire about your song.
+                            No pieces in our online list matched your search—however, we are constantly adding new music and are happy to play or custom-arrange special requests! <a href="/rates#inquiry-form">Inquire with Carol Briselli</a> about your song.
                         </p>
                     </div>
                 </div>

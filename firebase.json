@@ -7,6 +7,29 @@
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/index",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/FAQ",
+        "destination": "/faq",
+        "type": 301
+      }
+    ]
   }
 }

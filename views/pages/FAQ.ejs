@@ -1,9 +1,93 @@
+<%
+  const faqItems = [
+    {
+      q: 'Why should we hire Arioso?',
+      aHtml: 'The musicians of the Arioso Quartet are among the finest in the greater Philadelphia area. We have over 20 years of experience playing weddings, parties, and concerts together, and our expertise will make your event flow perfectly. Our ceremony timings are flawless. Having live music will make a lasting impression on you and your guests. Strings provide a sophisticated sound for your event. We have a very extensive list of <a href="/repertoire">repertoire</a>, including the standard classical literature, show tunes, popular songs, jazz, and much more! We work closely with every client to provide you with exactly the right music.',
+      aPlain: 'The musicians of the Arioso Quartet are among the finest in the greater Philadelphia area. We have over 20 years of experience playing weddings, parties, and concerts together, and our expertise will make your event flow perfectly. Our ceremony timings are flawless. Having live music will make a lasting impression on you and your guests. Strings provide a sophisticated sound for your event. We have a very extensive list of repertoire, including the standard classical literature, show tunes, popular songs, jazz, and much more! We work closely with every client to provide you with exactly the right music.'
+    },
+    {
+      q: 'What do Arioso members wear?',
+      aHtml: 'All musicians dress in formal concert attire: tuxedos for men and black dresses or skirts and blouses for women.',
+      aPlain: 'All musicians dress in formal concert attire: tuxedos for men and black dresses or skirts and blouses for women.'
+    },
+    {
+      q: 'Will you play in two different locations for the ceremony and reception?',
+      aHtml: 'Yes. The fee is calculated from the time we start at the ceremony until the time we end at the reception. If there is travel time between the two, that is included in the fee.',
+      aPlain: 'Yes. The fee is calculated from the time we start at the ceremony until the time we end at the reception. If there is travel time between the two, that is included in the fee.'
+    },
+    {
+      q: 'What do you require at the venue?',
+      aHtml: 'Our only requirement is four armless chairs and enough space, which is roughly 8\' &times; 8\'. For outdoor weddings and events, we must have a shaded area. We have our own battery-operated lights if needed, so we do not need electricity.',
+      aPlain: "Our only requirement is four armless chairs and enough space, which is roughly 8' x 8'. For outdoor weddings and events, we must have a shaded area. We have our own battery-operated lights if needed, so we do not need electricity."
+    },
+    {
+      q: 'Do you play special requests?',
+      aHtml: 'Yes, we do, provided the music is available for purchase. There might be a fee for arranging the music for the group, depending on the complexity, so please <a href="/rates#inquiry-form">contact us</a> to discuss.',
+      aPlain: 'Yes, we do, provided the music is available for purchase. There might be a fee for arranging the music for the group, depending on the complexity, so please contact us to discuss.'
+    },
+    {
+      q: 'Do you perform outdoors?',
+      aHtml: 'Yes. However, the minimum required temperature is 65&#8457;, since the cold weather can cause damage to our expensive instruments. We cannot play if there is any rain, unless we are under a shelter, and we need a shaded area since the sun is also damaging to the instruments. There are accommodations that can be made for any of those issues to ensure that we can play outside for your special day.',
+      aPlain: 'Yes. However, the minimum required temperature is 65°F, since the cold weather can cause damage to our expensive instruments. We cannot play if there is any rain, unless we are under a shelter, and we need a shaded area since the sun is also damaging to the instruments. There are accommodations that can be made for any of those issues to ensure that we can play outside for your special day.'
+    },
+    {
+      q: 'What if one of the musicians gets sick the day of the event?',
+      aHtml: 'We have musicians of equal caliber who have played with us before. The quality of musicianship will be the same.',
+      aPlain: 'We have musicians of equal caliber who have played with us before. The quality of musicianship will be the same.'
+    },
+    {
+      q: 'How do you know when to start the music for the processional?',
+      aHtml: 'We will need a cue from the wedding coordinator, or someone from the venue who is in charge that day. Once we start the first processional, everything will flow perfectly afterwards. We are extremely experienced in wedding ceremonies, and our timing of each piece will be perfectly coordinated.',
+      aPlain: 'We will need a cue from the wedding coordinator, or someone from the venue who is in charge that day. Once we start the first processional, everything will flow perfectly afterwards. We are extremely experienced in wedding ceremonies, and our timing of each piece will be perfectly coordinated.'
+    },
+    {
+      q: 'When should the music for the ceremony be chosen?',
+      aHtml: 'We need to know your selections no later than one month before the wedding.',
+      aPlain: 'We need to know your selections no later than one month before the wedding.'
+    },
+    {
+      q: 'Do you perform with other musicians, such as organists or singers?',
+      aHtml: 'We play with other musicians all the time, so that will not be a problem. We need a 15-minute rehearsal with that musician, which typically occurs right before the ceremony.',
+      aPlain: 'We play with other musicians all the time, so that will not be a problem. We need a 15-minute rehearsal with that musician, which typically occurs right before the ceremony.'
+    },
+    {
+      q: 'Do you come to the wedding rehearsal?',
+      aHtml: 'No, there is no need for us to come to the rehearsal. We have played hundreds of weddings, and will arrive early enough to coordinate with other people involved.',
+      aPlain: 'No, there is no need for us to come to the rehearsal. We have played hundreds of weddings, and will arrive early enough to coordinate with other people involved.'
+    },
+    {
+      q: 'Do you take breaks?',
+      aHtml: 'We take breaks if the total contracted time is two hours or more. Our breaks are 10 minutes per hour, and can be coordinated with you ahead of time so that they are at mutually convenient times.',
+      aPlain: 'We take breaks if the total contracted time is two hours or more. Our breaks are 10 minutes per hour, and can be coordinated with you ahead of time so that they are at mutually convenient times.'
+    },
+    {
+      q: 'Are tips expected?',
+      aHtml: 'Tips are always greatly appreciated, but not required.',
+      aPlain: 'Tips are always greatly appreciated, but not required.'
+    }
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.aPlain
+      }
+    }))
+  };
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
+        canonicalPath: '/faq',
         pageTitle: 'Frequently Asked Questions',
-        pageDescription: 'Answers to common questions about hiring the Arioso String Quartet for weddings and events: attire, outdoor ceremonies, venue requirements, special requests, and timing.'
+        pageDescription: 'Answers to common questions about hiring the Arioso String Quartet for weddings and events: attire, outdoor ceremonies, venue requirements, special requests, and timing.',
+        extraJsonLd: faqSchema
     }) %>
 </head>
 <body>
@@ -15,7 +99,7 @@
                 <span class="section-kicker">Planning Your Event</span>
                 <h1 class="page-heading" id="faq-heading">Frequently Asked Questions</h1>
                 <p class="page-intro">
-                    Everything you need to know about logistics, outdoor ceremonies, special song requests, and how we coordinate your wedding day. Any further questions can always be answered directly by <a href="mailto:carolbriselli@verizon.net">email</a> or phone at <a href="tel:+14848416445">(484) 841-6445</a>.
+                    Everything you need to know about logistics, outdoor ceremonies, special song requests, and how we coordinate your wedding day. Any further questions can always be answered via our <a href="/rates#inquiry-form">online inquiry form</a>, <a href="mailto:carolbriselli@verizon.net">email</a>, or phone at <a href="tel:+14848416445">(484) 841-6445</a>.
                 </p>
             </div>
         </section>
@@ -24,103 +108,21 @@
             <div class="container faq-container">
                 <section class="accordion" id="faq-accordion" aria-labelledby="faq-heading">
                     <div class="accordion-toolbar">
-                        <span class="accordion-count">13 Questions Answered</span>
+                        <span class="accordion-count"><%= faqItems.length %> Questions Answered</span>
                         <button type="button" class="btn btn-secondary btn-sm" commandfor="faq-accordion" command="--toggle-all" aria-expanded="false">
                             <span class="expand">Expand all</span>
                             <span class="collapse">Collapse all</span>
                         </button>
                     </div>
 
-                    <details open>
-                        <summary>Why should we hire Arioso?</summary>
+                    <% faqItems.forEach((item, idx) => { %>
+                    <details <%- idx < 2 ? 'open' : '' %>>
+                        <summary><%= item.q %></summary>
                         <div class="accordion-body">
-                            <p>The musicians of the Arioso Quartet are among the finest in the greater Philadelphia area. We have over 20 years of experience playing weddings, parties, and concerts together, and our expertise will make your event flow perfectly. Our ceremony timings are flawless. Having live music will make a lasting impression on you and your guests. Strings provide a sophisticated sound for your event. We have a very extensive list of <a href="repertoire">repertoire</a>, including the standard classical literature, show tunes, popular songs, jazz, and much more! We work closely with every client to provide you with exactly the right music.</p>
+                            <p><%- item.aHtml %></p>
                         </div>
                     </details>
-
-                    <details open>
-                        <summary>What do Arioso members wear?</summary>
-                        <div class="accordion-body">
-                            <p>All musicians dress in formal concert attire: tuxedos for men and black dresses or skirts and blouses for women.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Will you play in two different locations for the ceremony and reception?</summary>
-                        <div class="accordion-body">
-                            <p>Yes. The fee is calculated from the time we start at the ceremony until the time we end at the reception. If there is travel time between the two, that is included in the fee.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>What do you require at the venue?</summary>
-                        <div class="accordion-body">
-                            <p>Our only requirement is four armless chairs and enough space, which is roughly 8' &times; 8'. For outdoor weddings and events, we must have a shaded area. We have our own battery-operated lights if needed, so we do not need electricity.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Do you play special requests?</summary>
-                        <div class="accordion-body">
-                            <p>Yes, we do, provided the music is available for purchase. There might be a fee for arranging the music for the group, depending on the complexity, so please <a href="mailto:carolbriselli@verizon.net">contact us</a> to discuss.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Do you perform outdoors?</summary>
-                        <div class="accordion-body">
-                            <p>Yes. However, the minimum required temperature is 65&#8457;, since the cold weather can cause damage to our expensive instruments. We cannot play if there is any rain, unless we are under a shelter, and we need a shaded area since the sun is also damaging to the instruments. There are accommodations that can be made for any of those issues to ensure that we can play outside for your special day.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>What if one of the musicians gets sick the day of the event?</summary>
-                        <div class="accordion-body">
-                            <p>We have musicians of equal caliber who have played with us before. The quality of musicianship will be the same.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>How do you know when to start the music for the processional?</summary>
-                        <div class="accordion-body">
-                            <p>We will need a cue from the wedding coordinator, or someone from the venue who is in charge that day. Once we start the first processional, everything will flow perfectly afterwards. We are extremely experienced in wedding ceremonies, and our timing of each piece will be perfectly coordinated.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>When should the music for the ceremony be chosen?</summary>
-                        <div class="accordion-body">
-                            <p>We need to know your selections no later than one month before the wedding.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Do you perform with other musicians, such as organists or singers?</summary>
-                        <div class="accordion-body">
-                            <p>We play with other musicians all the time, so that will not be a problem. We need a 15-minute rehearsal with that musician, which typically occurs right before the ceremony.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Do you come to the wedding rehearsal?</summary>
-                        <div class="accordion-body">
-                            <p>No, there is no need for us to come to the rehearsal. We have played hundreds of weddings, and will arrive early enough to coordinate with other people involved.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Do you take breaks?</summary>
-                        <div class="accordion-body">
-                            <p>We take breaks if the total contracted time is two hours or more. Our breaks are 10 minutes per hour, and can be coordinated with you ahead of time so that they are at mutually convenient times.</p>
-                        </div>
-                    </details>
-
-                    <details>
-                        <summary>Are tips expected?</summary>
-                        <div class="accordion-body">
-                            <p>Tips are always greatly appreciated, but not required.</p>
-                        </div>
-                    </details>
+                    <% }) %>
                 </section>
             </div>
         </section>

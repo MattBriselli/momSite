@@ -1,0 +1,40 @@
+# Arioso String Quartet — Crawler & AI Search Policy
+User-agent: *
+Allow: /
+
+# Explicit permissions for Search & AI Citation Agents
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://ariosoquartet.com/sitemap.xml
+# LLM & Agent Structured Context: https://ariosoquartet.com/llms.txt

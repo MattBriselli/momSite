@@ -1,9 +1,60 @@
+<%
+  const baseUrl = typeof siteUrl !== 'undefined' ? siteUrl : 'https://ariosoquartet.com';
+  const reviewsSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Arioso String Quartet Client Reviews',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        item: {
+          '@type': 'Review',
+          itemReviewed: { '@id': baseUrl + '/#ensemble' },
+          author: { '@type': 'Person', name: 'Casey H.' },
+          datePublished: '2024-09-20',
+          name: 'Touch of elegance',
+          reviewBody: 'Arioso Quartet was the perfect addition to our wedding ceremony! They added just the touch of elegance we were looking for. Carol was easy to communicate with and helpful in choosing our music for both the ceremony and cocktail hour.',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }
+        }
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        item: {
+          '@type': 'Review',
+          itemReviewed: { '@id': baseUrl + '/#ensemble' },
+          author: { '@type': 'Person', name: 'Kristin B.' },
+          datePublished: '2021-09-12',
+          name: 'At the price they charge, they are an absolute steal',
+          reviewBody: 'ARIOSO played so beautifully for our ceremony. Carol was fantastic to work with and I am still very grateful to her for personally arranging the music for my walk down the aisle. At the price they charge, they are an absolute steal.',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }
+        }
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        item: {
+          '@type': 'Review',
+          itemReviewed: { '@id': baseUrl + '/#ensemble' },
+          author: { '@type': 'Person', name: 'Betsy Z.' },
+          datePublished: '2019-05-20',
+          name: 'I Would Highly Recommend You to Anyone',
+          reviewBody: 'Vivian was lovely and the quartet was just perfect. We had many compliments and Mallory was just delighted. I would highly recommend you to anyone as you are extremely talented and represent the utmost in professionalism.',
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' }
+        }
+      }
+    ]
+  };
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
+        canonicalPath: '/testimonials',
         pageTitle: 'Client Testimonials & Reviews',
-        pageDescription: 'Read 5-star reviews and wedding testimonials for the Arioso String Quartet from couples and families across the Greater Philadelphia area.'
+        pageDescription: 'Read 5-star reviews and wedding testimonials for the Arioso String Quartet from couples and families across the Greater Philadelphia area.',
+        extraJsonLd: reviewsSchema
     }) %>
 </head>
 <body>

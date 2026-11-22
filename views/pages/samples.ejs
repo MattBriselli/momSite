@@ -1,9 +1,60 @@
+<%
+  const baseUrl = typeof siteUrl !== 'undefined' ? siteUrl : 'https://ariosoquartet.com';
+  const samplesList = [
+    { num: '01', id: 'track-1', title: 'Eine Kleine Nachtmusik', composer: 'Wolfgang Amadeus Mozart', tag: 'Classical • Cocktail Hour', file: '/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3' },
+    { num: '02', id: 'track-2', title: 'Canon in D', composer: 'Johann Pachelbel', tag: 'Ceremony Processional', file: '/audio/Pachelbel_Canon.mp3' },
+    { num: '03', id: 'track-3', title: 'Wedding March', composer: 'Felix Mendelssohn', tag: 'Ceremony Recessional', file: '/audio/Mendelssohn_March.mp3' },
+    { num: '04', id: 'track-4', title: 'Bridal Chorus', composer: 'Richard Wagner', tag: 'Bridal Processional', file: '/audio/Wagner_Bridal_March.mp3' },
+    { num: '05', id: 'track-5', title: 'Two Gavottes', composer: 'Johann Sebastian Bach', tag: 'Baroque', file: '/audio/Bach_2_Gavottes.mp3' },
+    { num: '06', id: 'track-6', title: 'Minuet', composer: 'Luigi Boccherini', tag: 'Classical Standard', file: '/audio/Boccherini_Minuet.mp3' },
+    { num: '07', id: 'track-7', title: 'Arioso', composer: 'Johann Sebastian Bach', tag: 'Signature Piece', file: '/audio/Bach_Arioso.mp3' },
+    { num: '08', id: 'track-8', title: "Jesu, Joy of Man's Desiring", composer: 'Johann Sebastian Bach', tag: 'Ceremony Favorite', file: '/audio/Bach_Jesu_Joy.mp3' },
+    { num: '09', id: 'track-9', title: 'Water Music', composer: 'George Frideric Handel', tag: 'Festive Baroque', file: '/audio/Water_Music.mp3' },
+    { num: '10', id: 'track-10', title: 'The Entertainer', composer: 'Scott Joplin', tag: 'Ragtime • Reception', file: '/audio/The_Entertainer.mp3' }
+  ];
+
+  const samplesSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'ItemList',
+        name: 'Arioso String Quartet Audio Recordings',
+        itemListElement: samplesList.map((track, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          item: {
+            '@type': 'MusicRecording',
+            name: track.title + ' (' + track.composer + ')',
+            byArtist: { '@id': baseUrl + '/#ensemble' },
+            audio: {
+              '@type': 'AudioObject',
+              contentUrl: baseUrl + track.file,
+              encodingFormat: 'audio/mpeg',
+              name: track.title + ' — Performed by Arioso String Quartet'
+            }
+          }
+        }))
+      },
+      {
+        '@type': 'VideoObject',
+        name: 'Arioso String Quartet Live Demo Video',
+        description: 'Live performance demonstration by the Arioso String Quartet of Greater Philadelphia.',
+        thumbnailUrl: baseUrl + '/img/youtube.jpg',
+        embedUrl: 'https://www.youtube.com/embed/o11b5UK1TzU',
+        contentUrl: 'https://www.youtube.com/watch?v=o11b5UK1TzU',
+        uploadDate: '2018-01-01'
+      }
+    ]
+  };
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
+        canonicalPath: '/samples',
         pageTitle: 'Music Samples & Demo Video',
-        pageDescription: 'Listen to 10 full-length audio recordings and watch a live performance video of the Arioso String Quartet playing Mozart, Pachelbel, Bach, Handel, Mendelssohn, and Joplin.'
+        pageDescription: 'Listen to 10 full-length audio recordings and watch a live performance video of the Arioso String Quartet playing Mozart, Pachelbel, Bach, Handel, Mendelssohn, and Joplin.',
+        extraJsonLd: samplesSchema
     }) %>
 </head>
 <body>
@@ -23,145 +74,21 @@
         <section class="section">
             <div class="container">
                 <div class="samples-grid" id="samples-grid">
+                    <% samplesList.forEach((track, idx) => { %>
                     <article class="track-card">
                         <div class="track-header">
-                            <span class="track-number">01</span>
+                            <span class="track-number"><%= track.num %></span>
                             <div class="track-meta">
-                                <h2 class="track-title" id="track-1">Eine Kleine Nachtmusik</h2>
-                                <span class="track-composer">Wolfgang Amadeus Mozart</span>
+                                <h2 class="track-title" id="<%= track.id %>"><%= track.title %></h2>
+                                <span class="track-composer"><%= track.composer %></span>
                             </div>
-                            <span class="track-tag">Classical &bull; Cocktail Hour</span>
+                            <span class="track-tag"><%= track.tag %></span>
                         </div>
-                        <audio controls preload="metadata" aria-labelledby="track-1">
-                            <source src="/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3" type="audio/mpeg">
+                        <audio controls <%- idx >= 4 ? 'loading="lazy"' : '' %> preload="metadata" aria-labelledby="<%= track.id %>">
+                            <source src="<%= track.file %>" type="audio/mpeg">
                         </audio>
                     </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">02</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-2">Canon in D</h2>
-                                <span class="track-composer">Johann Pachelbel</span>
-                            </div>
-                            <span class="track-tag">Ceremony Processional</span>
-                        </div>
-                        <audio controls preload="metadata" aria-labelledby="track-2">
-                            <source src="/audio/Pachelbel_Canon.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">03</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-3">Wedding March</h2>
-                                <span class="track-composer">Felix Mendelssohn</span>
-                            </div>
-                            <span class="track-tag">Ceremony Recessional</span>
-                        </div>
-                        <audio controls preload="metadata" aria-labelledby="track-3">
-                            <source src="/audio/Mendelssohn_March.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">04</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-4">Bridal Chorus</h2>
-                                <span class="track-composer">Richard Wagner</span>
-                            </div>
-                            <span class="track-tag">Bridal Processional</span>
-                        </div>
-                        <audio controls preload="metadata" aria-labelledby="track-4">
-                            <source src="/audio/Wagner_Bridal_March.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">05</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-5">Two Gavottes</h2>
-                                <span class="track-composer">Johann Sebastian Bach</span>
-                            </div>
-                            <span class="track-tag">Baroque</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-5">
-                            <source src="/audio/Bach_2_Gavottes.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">06</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-6">Minuet</h2>
-                                <span class="track-composer">Luigi Boccherini</span>
-                            </div>
-                            <span class="track-tag">Classical Standard</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-6">
-                            <source src="/audio/Boccherini_Minuet.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">07</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-7">Arioso</h2>
-                                <span class="track-composer">Johann Sebastian Bach</span>
-                            </div>
-                            <span class="track-tag">Signature Piece</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-7">
-                            <source src="/audio/Bach_Arioso.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">08</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-8">Jesu, Joy of Man's Desiring</h2>
-                                <span class="track-composer">Johann Sebastian Bach</span>
-                            </div>
-                            <span class="track-tag">Ceremony Favorite</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-8">
-                            <source src="/audio/Bach_Jesu_Joy.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">09</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-9">Water Music</h2>
-                                <span class="track-composer">George Frideric Handel</span>
-                            </div>
-                            <span class="track-tag">Festive Baroque</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-9">
-                            <source src="/audio/Water_Music.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
-
-                    <article class="track-card">
-                        <div class="track-header">
-                            <span class="track-number">10</span>
-                            <div class="track-meta">
-                                <h2 class="track-title" id="track-10">The Entertainer</h2>
-                                <span class="track-composer">Scott Joplin</span>
-                            </div>
-                            <span class="track-tag">Ragtime &bull; Reception</span>
-                        </div>
-                        <audio controls loading="lazy" preload="metadata" aria-labelledby="track-10">
-                            <source src="/audio/The_Entertainer.mp3" type="audio/mpeg">
-                        </audio>
-                    </article>
+                    <% }) %>
                 </div>
 
                 <!-- Demo Video Callout -->
@@ -176,7 +103,7 @@
                             <a href="https://www.youtube.com/watch?v=o11b5UK1TzU" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                                 Watch on YouTube &rarr;
                             </a>
-                            <a href="repertoire" class="btn btn-secondary">Browse Full Repertoire</a>
+                            <a href="/repertoire" class="btn btn-secondary">Browse Full Repertoire</a>
                         </div>
                     </div>
                     <a href="https://www.youtube.com/watch?v=o11b5UK1TzU" target="_blank" rel="noopener noreferrer" class="video-poster-link">

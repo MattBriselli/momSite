@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
-        pageTitle: 'Rates & Availability',
-        pageDescription: 'Check wedding and event pricing and date availability for the Arioso String Quartet, String Trio, and String Duo in Greater Philadelphia.'
+        canonicalPath: '/rates',
+        pageTitle: 'Rates, Availability & Custom Quote Request',
+        pageDescription: 'Check wedding and event pricing, logistics at a glance, and date availability for the Arioso String Quartet, String Trio, and String Duo in Greater Philadelphia.'
     }) %>
 </head>
 <body>
@@ -15,13 +16,14 @@
                 <span class="section-kicker">Transparent Pricing &amp; Booking</span>
                 <h1 class="page-heading">Rates &amp; Availability</h1>
                 <p class="page-intro">
-                    Arioso often books dates over a year in advance. We schedules performances in half-hour increments with a one-hour minimum, and offer significantly reduced rates for additional playing time beyond the first hour.
+                    Arioso often books dates over a year in advance. We schedule performances in half-hour increments with a one-hour minimum, and offer significantly reduced rates for additional playing time beyond the first hour.
                 </p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
+                <!-- Pricing Cards -->
                 <div class="pricing-grid">
                     <article class="pricing-card pricing-card-featured">
                         <div class="pricing-badge">Signature Ensemble</div>
@@ -38,7 +40,7 @@
                             <li>Significantly lower contracted rates for additional half-hour increments beyond one hour</li>
                             <li>Includes personal music consultation with Carol Briselli</li>
                         </ul>
-                        <a href="mailto:carolbriselli@verizon.net?subject=Arioso%20String%20Quartet%20Availability%20Inquiry" class="btn btn-primary btn-block">Check Date &amp; Request Quote</a>
+                        <a href="#inquiry-form" class="btn btn-primary btn-block" data-select-ensemble="String Quartet">Select Quartet &amp; Check Date</a>
                     </article>
 
                     <article class="pricing-card">
@@ -56,7 +58,7 @@
                             <li>Significantly lower contracted rates for additional playing time beyond the initial hour</li>
                             <li>String Duo (Violin &amp; Cello) also available upon request</li>
                         </ul>
-                        <a href="mailto:carolbriselli@verizon.net?subject=Arioso%20String%20Trio%20Availability%20Inquiry" class="btn btn-secondary btn-block">Check Date &amp; Request Quote</a>
+                        <a href="#inquiry-form" class="btn btn-secondary btn-block" data-select-ensemble="String Trio">Select Trio &amp; Check Date</a>
                     </article>
 
                     <article class="pricing-card">
@@ -74,40 +76,273 @@
                             <li><strong>Multi-Location Events:</strong> Seamless transition from ceremony to reception venue</li>
                             <li><strong>Custom Arrangements:</strong> Special song requests arranged for your ceremony</li>
                         </ul>
-                        <a href="tel:+14848416445" class="btn btn-secondary btn-block">Call (484) 841-6445 to Discuss</a>
+                        <a href="#inquiry-form" class="btn btn-secondary btn-block">Request Custom Quote</a>
                     </article>
                 </div>
 
-                <!-- Detailed Info & Direct Contact Card -->
-                <div class="rates-detail-panel">
-                    <div class="rates-photo-col">
-                        <a href="mailto:carolbriselli@verizon.net">
-                            <img
-                                src="/img/playing-2.jpeg"
-                                alt="Arioso String Quartet performing live indoors"
-                                width="640"
-                                height="428"
-                                fetchpriority="high"
-                                class="rates-photo"
-                            >
-                        </a>
+                <!-- 2.5 Editorial "At a Glance" Event Specs Card -->
+                <section class="specs-card" aria-labelledby="specs-heading">
+                    <div class="specs-card-header">
+                        <div>
+                            <span class="section-kicker">Event Planner Summary</span>
+                            <h2 id="specs-heading" class="specs-card-title">At a Glance: Booking &amp; Venue Details</h2>
+                        </div>
+                        <span class="specs-ornament" aria-hidden="true">&#10022;</span>
                     </div>
-                    <div class="rates-copy-col">
-                        <h2>How Booking &amp; Quotes Work</h2>
-                        <p>
-                            Due to the busy nature of Arioso's schedule, we recommend that you contact <strong>Carol Briselli</strong> via <a href="mailto:carolbriselli@verizon.net">email</a> or by phone at <a href="tel:+14848416445">(484) 841-6445</a> as early as possible to determine whether your preferred date is available.
+
+                    <dl class="specs-ledger">
+                        <div class="spec-cell">
+                            <dt>Service Radius</dt>
+                            <dd>Up to 80 miles from Center City</dd>
+                            <span class="spec-sub">PA, Southern NJ &amp; Delaware</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Minimum &amp; Billing</dt>
+                            <dd>1-Hour Minimum</dd>
+                            <span class="spec-sub">Discounted 30-min increments after</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Space &amp; Seating</dt>
+                            <dd>8&prime; &times; 8&prime; &bull; 4 Armless Chairs</dd>
+                            <span class="spec-sub">Compact footprint for any venue</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Power Requirements</dt>
+                            <dd>No Electricity Needed</dd>
+                            <span class="spec-sub">Self-powered stand lights provided</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Outdoor Ceremonies</dt>
+                            <dd>65&#8457;+ &amp; Shaded Area</dd>
+                            <span class="spec-sub">Dry shelter required if rain</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Musician Attire</dt>
+                            <dd>Formal Concert Black</dd>
+                            <span class="spec-sub">Tuxedos &amp; long black dresses</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Music Selections Due</dt>
+                            <dd>1 Month Prior</dd>
+                            <span class="spec-sub">Guided consultation included</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Rehearsal Policy</dt>
+                            <dd>Day-Of Coordination</dd>
+                            <span class="spec-sub">15-min warmup with soloists/organist</span>
+                        </div>
+                    </dl>
+                </section>
+
+                <!-- 2.3 Structured Inquiry Form + Direct Contact Split -->
+                <div class="inquiry-layout" id="inquiry-form">
+                    <div class="inquiry-form-panel">
+                        <span class="section-kicker">Check Your Date</span>
+                        <h2 id="inquiry-heading" class="inquiry-title">Request Availability &amp; Custom Quote</h2>
+                        <p class="inquiry-subtitle">
+                            Complete the details below to prepare a structured availability inquiry directly for Carol Briselli, or call <a href="tel:+14848416445">(484) 841-6445</a>.
                         </p>
-                        <p>
-                            Arioso schedules performances in half-hour increments, with a one-hour minimum. Rates differ for trios and quartets and depend on the total length of the performance. Please be aware that contracted rates for additional playing time beyond one hour for quartet or trio are significantly lower than the initial hour.
-                        </p>
-                        <p>
-                            Please <a href="mailto:carolbriselli@verizon.net">contact Carol Briselli</a> with your event date, venue location, and approximate timeframe for a quote tailored to your specific requirements.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="mailto:carolbriselli@verizon.net" class="btn btn-primary">Email carolbriselli@verizon.net</a>
-                            <a href="tel:+14848416445" class="btn btn-secondary">Call (484) 841-6445</a>
+
+                        <form action="/api/inquiry" method="POST" id="booking-inquiry-form" aria-labelledby="inquiry-heading" novalidate>
+                            <!-- Honeypot field hidden from users & assistive tech -->
+                            <div class="visually-hidden" aria-hidden="true">
+                                <label for="website_url">Leave this field blank</label>
+                                <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="full_name">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input
+                                    type="text"
+                                    id="full_name"
+                                    name="full_name"
+                                    autocomplete="name"
+                                    required
+                                    maxlength="100"
+                                    enterkeyhint="next"
+                                    data-error="name-error"
+                                >
+                                <div id="name-error" class="error-msg">
+                                    <span role="img" aria-label="Error">&#9888;</span> Please enter your name so Carol knows how to address you.
+                                </div>
+                            </div>
+
+                            <div class="form-row-two">
+                                <div class="form-field">
+                                    <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
+                                    <span id="email-hint" class="field-hint">Format: you@example.com</span>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        autocomplete="email"
+                                        autocorrect="off"
+                                        autocapitalize="none"
+                                        spellcheck="false"
+                                        required
+                                        enterkeyhint="next"
+                                        aria-describedby="email-hint"
+                                        data-error="email-error"
+                                    >
+                                    <div id="email-error" class="error-msg">
+                                        <span role="img" aria-label="Error">&#9888;</span> Enter a valid email address in the format you@example.com.
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="phone">Phone Number <span class="optional-tag">(Optional)</span></label>
+                                    <span id="phone-hint" class="field-hint">For quick availability follow-up</span>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        autocomplete="tel"
+                                        enterkeyhint="next"
+                                        aria-describedby="phone-hint"
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="form-row-two">
+                                <div class="form-field">
+                                    <label for="event_date">Event Date <span class="optional-tag">(If known)</span></label>
+                                    <input
+                                        type="date"
+                                        id="event_date"
+                                        name="event_date"
+                                        enterkeyhint="next"
+                                    >
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="duration">Estimated Playing Time</label>
+                                    <select id="duration" name="duration">
+                                        <option value="1 hour (Ceremony / Minimum)">1 hour (Ceremony / Minimum)</option>
+                                        <option value="1.5 hours">1.5 hours</option>
+                                        <option value="2 hours (Ceremony + Cocktail Hour)" selected>2 hours (Ceremony + Cocktail Hour)</option>
+                                        <option value="2.5 hours">2.5 hours</option>
+                                        <option value="3+ hours">3+ hours</option>
+                                        <option value="Flexible / Need guidance">Flexible / Need guidance</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <fieldset class="form-fieldset">
+                                <legend>Preferred Ensemble</legend>
+                                <div class="radio-grid">
+                                    <div class="choice-item">
+                                        <input type="radio" id="ens-quartet" name="ensemble" value="String Quartet ($1,075+)" checked>
+                                        <label for="ens-quartet">String Quartet <span>($1,075+)</span></label>
+                                    </div>
+                                    <div class="choice-item">
+                                        <input type="radio" id="ens-trio" name="ensemble" value="String Trio ($850+)">
+                                        <label for="ens-trio">String Trio <span>($850+)</span></label>
+                                    </div>
+                                    <div class="choice-item">
+                                        <input type="radio" id="ens-duo" name="ensemble" value="String Duo">
+                                        <label for="ens-duo">String Duo</label>
+                                    </div>
+                                    <div class="choice-item">
+                                        <input type="radio" id="ens-unsure" name="ensemble" value="Undecided — Please Quote Quartet & Trio">
+                                        <label for="ens-unsure">Compare Quartet &amp; Trio</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-field">
+                                <label for="venue">Venue Name &amp; Town <span class="optional-tag">(Optional)</span></label>
+                                <input
+                                    type="text"
+                                    id="venue"
+                                    name="venue"
+                                    maxlength="160"
+                                    placeholder="e.g., Cairnwood Estate, Bryn Athyn, PA"
+                                    enterkeyhint="next"
+                                >
+                            </div>
+
+                            <fieldset class="form-fieldset">
+                                <legend>Optional Ceremony Enhancements</legend>
+                                <div class="checkbox-row">
+                                    <div class="choice-item">
+                                        <input type="checkbox" id="addon-flute" name="addons" value="Flute substitution (no extra fee)">
+                                        <label for="addon-flute">Flute substitution <span>(no extra fee)</span></label>
+                                    </div>
+                                    <div class="choice-item">
+                                        <input type="checkbox" id="addon-trumpet" name="addons" value="Add Trumpet">
+                                        <label for="addon-trumpet">Add Trumpet</label>
+                                    </div>
+                                    <div class="choice-item">
+                                        <input type="checkbox" id="addon-vocalist" name="addons" value="Add Vocalist">
+                                        <label for="addon-vocalist">Add Vocalist</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-field">
+                                <label for="notes">Event Details or Special Song Requests <span class="optional-tag">(Optional)</span></label>
+                                <textarea
+                                    id="notes"
+                                    name="notes"
+                                    rows="4"
+                                    maxlength="1500"
+                                    placeholder="Share ceremony type (e.g., outdoor garden, Catholic Mass, Jewish ceremony), start times, or favorite songs..."
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="inquiry-submit-btn">
+                                Send Availability Inquiry to Carol
+                            </button>
+                        </form>
+
+                        <div id="inquiry-result" class="inquiry-result-card" role="status" aria-live="polite" hidden>
+                            <h3 class="inquiry-result-title">Your Inquiry Summary Is Ready!</h3>
+                            <p class="inquiry-result-desc">
+                                Click below to open your email app pre-addressed to <strong>carolbriselli@verizon.net</strong>, or copy the formatted details if you use webmail:
+                            </p>
+                            <pre id="inquiry-summary-preview" class="inquiry-summary-box"></pre>
+                            <div class="hero-actions">
+                                <a id="inquiry-mailto-link" href="mailto:carolbriselli@verizon.net" class="btn btn-primary">
+                                    Open Pre-Filled Email &rarr;
+                                </a>
+                                <button type="button" id="inquiry-copy-btn" class="btn btn-secondary">
+                                    Copy Summary &amp; Email Address
+                                </button>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Direct Contact & Photo Sidebar -->
+                    <aside class="inquiry-aside-card" aria-label="Direct contact details">
+                        <img
+                            src="/img/playing-2.jpeg"
+                            alt="Arioso String Quartet performing live indoors"
+                            width="640"
+                            height="428"
+                            fetchpriority="high"
+                            class="rates-photo"
+                        >
+                        <div class="inquiry-aside-body">
+                            <h3>Prefer to Reach Out Directly?</h3>
+                            <p>
+                                Carol Briselli responds promptly to all date checks and personally guides every client through ceremony timing and repertoire selection.
+                            </p>
+                            <ul class="direct-contact-links">
+                                <li>
+                                    <strong>Phone:</strong>
+                                    <a href="tel:+14848416445">(484) 841-6445</a>
+                                </li>
+                                <li>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a>
+                                </li>
+                                <li>
+                                    <strong>Mailing:</strong>
+                                    <span>P.O. Box 35, Chester Heights, PA 19017</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>

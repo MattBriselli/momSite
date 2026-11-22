@@ -1,0 +1,1003 @@
+{
+  "ensemble": "Arioso String Quartet",
+  "siteUrl": "https://ariosoquartet.com",
+  "updatedAt": "2026-11-22",
+  "customRequestsNote": "Arioso is constantly adding new music and is happy to play or custom-arrange special song requests not listed here.",
+  "totalCategories": 14,
+  "totalSelections": 556,
+  "categories": [
+    {
+      "id": "classical",
+      "title": "Classical Music",
+      "url": "https://ariosoquartet.com/repertoire#classical",
+      "selectionCount": 117,
+      "groups": [
+        {
+          "group": "ALBENIZ",
+          "selections": [
+            "Spanish Dance"
+          ]
+        },
+        {
+          "group": "BACH, J.C.",
+          "selections": [
+            "Quartet in D Major, Op. 20"
+          ]
+        },
+        {
+          "group": "BACH, J.S.",
+          "selections": [
+            "Air on the G String",
+            "Arie",
+            "Arioso",
+            "Bist du Bei Mir (Be Thou With Me)",
+            "Brandenburg Concerto #3",
+            "Brandenburg Concerto #4",
+            "Chorale",
+            "Two Gavottes",
+            "Jesu, Joy of Man's Desiring",
+            "Little Fugue in G Minor",
+            "Loure from Cello Suite #3",
+            "Praeludium in E Major",
+            "Sarabande from First French Suite",
+            "Sheep May Safely Graze",
+            "Sleepers Awake",
+            "Willst Du Dein Herz Mir Schenken"
+          ]
+        },
+        {
+          "group": "BACH/GOUNOD",
+          "selections": [
+            "Ave Maria"
+          ]
+        },
+        {
+          "group": "BEECKE",
+          "selections": [
+            "String Quartet No. 6"
+          ]
+        },
+        {
+          "group": "BEETHOVEN",
+          "selections": [
+            "Cavatina",
+            "Fidelio: Finale",
+            "Minuet from the Septet",
+            "Minuet",
+            "Ode to Joy",
+            "Quartets: Opus 18 (Nos. 1-6)"
+          ]
+        },
+        {
+          "group": "BIZET",
+          "selections": [
+            "Adagietto"
+          ]
+        },
+        {
+          "group": "BOCCHERINI",
+          "selections": [
+            "Minuet"
+          ]
+        },
+        {
+          "group": "BORODIN",
+          "selections": [
+            "Nocturne"
+          ]
+        },
+        {
+          "group": "BOYCE",
+          "selections": [
+            "Allegro"
+          ]
+        },
+        {
+          "group": "BRAHMS",
+          "selections": [
+            "Theme from First Symphony",
+            "Theme from Third Symphony"
+          ]
+        },
+        {
+          "group": "BYRDE",
+          "selections": [
+            "Pavanna and Gagliarda"
+          ]
+        },
+        {
+          "group": "CHAMINADE",
+          "selections": [
+            "Scarf Dance"
+          ]
+        },
+        {
+          "group": "CHARPENTIER",
+          "selections": [
+            "Prelude to Te Deum"
+          ]
+        },
+        {
+          "group": "CHERUBINI",
+          "selections": [
+            "Scherzo"
+          ]
+        },
+        {
+          "group": "CLARKE",
+          "selections": [
+            "Prince of Denmark's March (Trumpet Voluntary)"
+          ]
+        },
+        {
+          "group": "CORELLI",
+          "selections": [
+            "La Follia",
+            "Concerto VIII (Christmas Concerto)",
+            "Suite in A"
+          ]
+        },
+        {
+          "group": "DEBUSSY",
+          "selections": [
+            "Clair de Lune"
+          ]
+        },
+        {
+          "group": "DITTERSDORF",
+          "selections": [
+            "Minuet"
+          ]
+        },
+        {
+          "group": "DONIZETTI",
+          "selections": [
+            "Quartet in G Minor"
+          ]
+        },
+        {
+          "group": "DVORAK",
+          "selections": [
+            "Slavonic Dance #7"
+          ]
+        },
+        {
+          "group": "FAURE",
+          "selections": [
+            "Pavane"
+          ]
+        },
+        {
+          "group": "GEMINIANI",
+          "selections": [
+            "Concerto Grosso"
+          ]
+        },
+        {
+          "group": "GLUCK",
+          "selections": [
+            "Gavotta",
+            "Melody"
+          ]
+        },
+        {
+          "group": "GOUNOD",
+          "selections": [
+            "Ave Maria"
+          ]
+        },
+        {
+          "group": "GRIEG",
+          "selections": [
+            "Anitra's Dance"
+          ]
+        },
+        {
+          "group": "HANDEL",
+          "selections": [
+            "Arrival of the Queen of Sheba",
+            "Largo",
+            "Messiah: 1. Hallelujah Chorus",
+            "Messiah: 2. Overture",
+            "Two Dances",
+            "Royal Fireworks: 1. Processional",
+            "Royal Fireworks: 2. La Rejouissance",
+            "Water Music"
+          ]
+        },
+        {
+          "group": "HASSE",
+          "selections": [
+            "Canzona"
+          ]
+        },
+        {
+          "group": "HAYDN",
+          "selections": [
+            "Emperor Variations",
+            "Processional from St. Anthony Chorale",
+            "Serenade",
+            "ALL STANDARD QUARTETS"
+          ]
+        },
+        {
+          "group": "HERBERT",
+          "selections": [
+            "Serenade"
+          ]
+        },
+        {
+          "group": "ILJYNSKY",
+          "selections": [
+            "Berceuse"
+          ]
+        },
+        {
+          "group": "KREISLER",
+          "selections": [
+            "Liebesleid"
+          ]
+        },
+        {
+          "group": "MacDOWELL",
+          "selections": [
+            "To a Wild Rose"
+          ]
+        },
+        {
+          "group": "MASCAGNI",
+          "selections": [
+            "Cavalleria Rusticana, Intermezzo"
+          ]
+        },
+        {
+          "group": "MENDELSSOHN",
+          "selections": [
+            "Canzonetta",
+            "Intermezzo from Quartet Op. 13",
+            "Nocturne (Midsummer Night's Dream)",
+            "Song Without Words",
+            "Wedding March"
+          ]
+        },
+        {
+          "group": "MOURET",
+          "selections": [
+            "Fanfares",
+            "Rondeau (Masterpiece Theatre theme)"
+          ]
+        },
+        {
+          "group": "MOZART",
+          "selections": [
+            "Ave Verum Corpus",
+            "Divertimenti",
+            "Eine Kleine Nachtmusik",
+            "Exsultate, Jubilate",
+            "The Marriage of Figaro: Voi, che sapete",
+            "The Marriage of Figaro: March",
+            "ALL STANDARD QUARTETS"
+          ]
+        },
+        {
+          "group": "PACHELBEL",
+          "selections": [
+            "Canon in D"
+          ]
+        },
+        {
+          "group": "PUCCINI",
+          "selections": [
+            "La Boheme: Finale",
+            "La Boheme: O, Mimi, tu piu non torni",
+            "La Boheme: Quando me'n vo'",
+            "La Boheme: Mi Chiamano Mimi"
+          ]
+        },
+        {
+          "group": "PURCELL",
+          "selections": [
+            "Chacony in G Minor",
+            "Minuets I and II",
+            "Rondeau from Fairy Queen",
+            "Trumpet Tune",
+            "Voluntary on the Doxology (Old 100th)"
+          ]
+        },
+        {
+          "group": "RAMEAU",
+          "selections": [
+            "Minuet"
+          ]
+        },
+        {
+          "group": "ROSSINI",
+          "selections": [
+            "Quartet II",
+            "The Barber of Seville, Largo al factotum"
+          ]
+        },
+        {
+          "group": "SCHUBERT",
+          "selections": [
+            "Ave Maria",
+            "March Militaire",
+            "Moment Musical",
+            "Serenade"
+          ]
+        },
+        {
+          "group": "SCHUMANN",
+          "selections": [
+            "Album for the Young",
+            "Song \"To Sunshine\"",
+            "Traumerei"
+          ]
+        },
+        {
+          "group": "STAMITZ",
+          "selections": [
+            "Quartet in G Major"
+          ]
+        },
+        {
+          "group": "TARTINI",
+          "selections": [
+            "Sinfonie in A"
+          ]
+        },
+        {
+          "group": "TCHAIKOVSKY",
+          "selections": [
+            "Song Without Words",
+            "Swan Lake",
+            "Theme from Romeo & Juliet"
+          ]
+        },
+        {
+          "group": "TENAGLIA",
+          "selections": [
+            "Aria"
+          ]
+        },
+        {
+          "group": "VERDI",
+          "selections": [
+            "Aida: Act II Grand Finale",
+            "Aida: Celeste Aida",
+            "Aida: Numi, pieta",
+            "Aida: Il Trovatore: Anvil Chorus"
+          ]
+        },
+        {
+          "group": "VIVALDI",
+          "selections": [
+            "A Baroque Concerto",
+            "Concerto Grosso in D Minor",
+            "The Four Seasons (Spring, Summer, Winter & Fall)"
+          ]
+        },
+        {
+          "group": "WAGNER",
+          "selections": [
+            "Bridal chorus from Lohengrin"
+          ]
+        },
+        {
+          "group": "WOLF",
+          "selections": [
+            "Italian Serenade"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wedding",
+      "title": "Wedding Ceremony Music",
+      "url": "https://ariosoquartet.com/repertoire#wedding",
+      "selectionCount": 31,
+      "groups": [
+        {
+          "group": "Wedding Ceremony Music",
+          "selections": [
+            "Pachelbel Canon",
+            "Wagner Bridal Chorus",
+            "Mendelssohn Wedding March",
+            "Air from Water Music – Handel",
+            "Amazing Grace",
+            "Arrival of the Queen of Sheba – Handel",
+            "Ave Verum Corpus – Mozart",
+            "Believe Me, If All Those Endearing Young Charms",
+            "Brahms - 1st Symphony Theme",
+            "Brahms - 3rd Symphony Theme",
+            "Chopin – Etude No. 3",
+            "Forever and Ever Amen",
+            "I Love You Truly",
+            "In Remembrance",
+            "Korean Wedding Song",
+            "Lord’s Prayer",
+            "Love’s Old Sweet Song",
+            "Melody – Gluck",
+            "Ode to Joy – Beethoven",
+            "Oh, Promise Me",
+            "On Eagle’s Wings",
+            "Pomp and Circumstance",
+            "Rigaudon – Campra",
+            "Serenade – Schubert",
+            "They Make A Wonderful Pair",
+            "To A Wild Rose – MacDowell",
+            "Trumpet Tune – Purcell",
+            "Trumpet Voluntary – Clark",
+            "Waves of the Danube – Ivanovici",
+            "Wedding Music – Aria – Handel",
+            "Wedding Processional from Sound of Music"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catholic",
+      "title": "Catholic Mass Music",
+      "url": "https://ariosoquartet.com/repertoire#catholic",
+      "selectionCount": 55,
+      "groups": [
+        {
+          "group": "Catholic Mass Music",
+          "selections": [
+            "A Blessing",
+            "All I Ask of You",
+            "Amen (St. Louis Jesuits Mass)",
+            "Anywhere Is",
+            "Ave Maria - Bach/Gounod",
+            "Ave Maria – Schubert",
+            "The Lord Fills the Earth",
+            "Beginning Today",
+            "Blest Are They",
+            "Blest Are Those Who Love You",
+            "Celtic Alleluia",
+            "Come, My Way, My Truth, My Life (The Call)",
+            "Covenant Hymn (Wherever You Go)",
+            "Gift of Finest Wheat",
+            "Glory to God",
+            "Glory & Praise to Our God",
+            "Psalm 95 - Come Worship the Lord",
+            "God is Love (responsorial psalm)",
+            "Gospel Acclamation",
+            "Hail Mary Gentle Woman",
+            "Happy Are You",
+            "Here I Am Lord",
+            "Holy, Holy, Holy: Jesus, Lamb of God",
+            "I Am the Bread of Life",
+            "I Believe in You and Me",
+            "I Have Loved You",
+            "In Remembrance",
+            "Irish Wedding Song",
+            "Lamb of God Litany",
+            "Let There Be Peace on Earth",
+            "Liturgy of the Eucharist",
+            "Lord, Have Mercy",
+            "Lord’s Prayer",
+            "Love Never Fails You",
+            "Mass of Creation: Holy, Holy, Holy",
+            "Memorial Acclamation",
+            "O Lord Most Holy (Panis Angelicus)",
+            "O Perfect Love",
+            "One Bread, One Body",
+            "Our Blessing Cup (responsorial psalm)",
+            "Panis Angelicus (O Lord Most Holy)",
+            "Prayer of St. Francis",
+            "Responsorial Psalm - Psalm 89",
+            "Simple Gifts",
+            "Take My Hand",
+            "This is the Day",
+            "Ubi Caritas",
+            "Unity Candle Song",
+            "We've Been to the Mountain",
+            "Wedding Song (There is Love)",
+            "Where Charity & Love Prevail",
+            "Where There is Love",
+            "Wherever You Go",
+            "With this Ring",
+            "You Are Mine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jazz",
+      "title": "Jazz Classics",
+      "url": "https://ariosoquartet.com/repertoire#jazz",
+      "selectionCount": 29,
+      "groups": [
+        {
+          "group": "Jazz Classics",
+          "selections": [
+            "All of You - Porter",
+            "An American in Paris – Gershwin",
+            "Autumn Nocturne - Myrow",
+            "The Birth of the Blues - Henderson",
+            "Body and Soul - Green",
+            "Concerto in F – Gershwin",
+            "Ev’ry Time We Say Goodbye - Porter",
+            "Fascinating Rhythm – Gershwin",
+            "I Get a Kick Out of You - Porter",
+            "I Got Rhythm – Gershwin",
+            "I Love You - Porter",
+            "I’m In Another World – Ellington",
+            "I’ve Got You Under My Skin – Porter",
+            "It’s All Right With Me - Porter",
+            "Just One of Those Things - Porter",
+            "Love is Here to Stay - Gershwin",
+            "Lullaby – Gershwin",
+            "Lullaby of Birdland - Shearing",
+            "Pigeons and Peppers – Ellington",
+            "Prelude II - Gershwin",
+            "Rhapsody in Blue - Gershwin",
+            "‘Round Midnight – Wlliams/Monk",
+            "'S Wonderful - Gershwin",
+            "Second Rhapsody - Gershwin",
+            "Sophisticated Lady - Ellington",
+            "Summertime  - Gershwin",
+            "What is This Thing Called Love? – Porter",
+            "Zing! Went the Strings of My Heart – Hanley",
+            "Zonky Blues - Ellington"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "popular",
+      "title": "Pop Tunes",
+      "url": "https://ariosoquartet.com/repertoire#popular",
+      "selectionCount": 62,
+      "groups": [
+        {
+          "group": "Pop Tunes",
+          "selections": [
+            "All I Want is You – U2",
+            "All My Life - Bonoff",
+            "Always – Irving Berlin",
+            "Amazing Grace",
+            "Annie’s Song – John Denver",
+            "Anywhere Is - Enya",
+            "Baby, I Love Your Way – Peter Frampton",
+            "Beautiful Day – U2/Bono",
+            "Can’t Help Falling in Love – Elvis Presley",
+            "Can’t Take My Eyes Off of You – Frankie Valli",
+            "Concerning Hobbits - Howard Shore (The Lord of the Rings: The Fellowship of the Ring)",
+            "Danny Boy",
+            "Dawn – Frankie Valli",
+            "December 1963 – Frankie Valli",
+            "Edge of Glory – Lady Gaga",
+            "Feels Like Home – Randy Newman",
+            "Fly Me to the Moon - Frank Sinatra / Bart Howard",
+            "From a Distance – Julie Gold",
+            "From This Moment On – Shania Twain",
+            "God Only Knows – Brian Wilson",
+            "Greensleeves",
+            "Hallelujah – Leonard Cohen",
+            "I Choose You - Sara Bareilles",
+            "I Don’t Want to Miss a Thing - Aerosmith",
+            "I Will Follow You Into the Dark - Death Cab for Cutie",
+            "I Write Sins Not Tragedies - Panic! At The Disco",
+            "In the Aeroplane Over the Sea - Neutral Milk Hotel",
+            "In Your Eyes – Peter Gabriel",
+            "La Bamba - Valens",
+            "La Vie en Rose – Edith Piaf",
+            "The Last Dance - Samuel Sim",
+            "Longer – Dan Fogelberg",
+            "Lost in Love - Kramer",
+            "Love Me Tender – Elvis Presley",
+            "Make You Feel My Love – Bob Dylan",
+            "Marry You – Bruno Mars",
+            "My Way - Frank Sinatra",
+            "Nobody Loves Me Like You Do – Phillips/Dunne",
+            "On the Way to Cape May",
+            "On the Wings of Love – Osborne/Schless",
+            "Our House – Graham Nash",
+            "Piano Man – Billy Joel",
+            "Please Please Please – The Smiths",
+            "The Prayer - Sager/Foster",
+            "Rag Doll – Frankie Valli",
+            "Scarlet Begonias – Jerry Garcia",
+            "Shallow - Lady Gaga",
+            "Silence is Golden – Frankie Valli",
+            "Simple Gifts",
+            "Strangers in the Night - Frank Sinatra",
+            "The Sun Ain’t Gonna Shine Anymore – Frankie Valli",
+            "A Thousand Years – Christina Perri",
+            "Time to Say Goodbye – Bocelli/Sartori",
+            "Truly – Lionel Richie",
+            "Viva La Vida - Coldplay",
+            "We’ve Only Just Begun – The Carpenters",
+            "When Irish Eyes Are Smiling – Ball",
+            "Who Loves You – Frankie Valli",
+            "The Wind Beneath My Wings – Bette Midler",
+            "You Are So Beautiful - Joe Cocker",
+            "You Raise Me Up - Josh Grobin",
+            "You're My Best Friend - John Deacon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "showtunes",
+      "title": "Show/Movie Tunes",
+      "url": "https://ariosoquartet.com/repertoire#showtunes",
+      "selectionCount": 70,
+      "groups": [
+        {
+          "group": "Show/Movie Tunes",
+          "selections": [
+            "Against All Odds (Take a Look at Me Now) - Collins",
+            "All I Ask of You (Phantom of the Opera)",
+            "And This is My Beloved (Kismet) - Wright/Forrest",
+            "Baby Elephant Walk (Hatari) - Mancini",
+            "Beauty and the Beast (Theme Song) - Mencken",
+            "Because You Loved Me (Up Close and Personal)",
+            "A Bushel and a Peck (Guys and Dolls)",
+            "Cabaret (Theme Song)",
+            "Charade (Theme Song) - Mancini",
+            "City of Stars (La La Land) - Hurwitz",
+            "Days of Wine and Roses (Theme Song)",
+            "Edelweiss (The Sound of Music)",
+            "Friendly Persuasion (Theme Song)",
+            "Gabriel’s Oboe (The Mission)",
+            "Game of Thrones (Game of Thrones)",
+            "Get Me To the Church on Time (My Fair Lady)",
+            "He’s A Pirate (Pirates of the Caribbean)",
+            "Hedwig’s Theme – John Williams (Harry Potter)",
+            "How Do You Keep the Music Playing? (Best Friends) - LeGrand",
+            "I Could Have Danced All Night (My Fair Lady) - Lerner/Loewe",
+            "If Ever I Would Leave You (Camelot) - Lerner/Loewe",
+            "If I Loved You (Carousel) - Rodgers/Hammerstein",
+            "If I Were a Rich Man (Fiddler on the Roof) - Harnick/Bock",
+            "The Impossible Dream (The Quest) - Leigh",
+            "Inspector Clouseau Theme (Pink Panther) - Mancini",
+            "Isn’t It Romanic? (Love Me Tonight) - Rodgers/Hart",
+            "It Had to Be You (Show Business) - Kahn/Jones",
+            "I’ve Grown Accustomed to her Face (My Fair Lady) - Lerner/Loewe",
+            "Kiss the Girl (The Little Mermaid) - Menken",
+            "Lara’s Theme (Dr. Zhivago) - Jarre/Webster",
+            "Lullaby of Broadway (42nd Street) - Warren",
+            "Make Someone Happy (Do Re Mi) - Comden/Green",
+            "Matchmaker (Fiddler on the Roof) - Harnick/Bock",
+            "Meggie’s Theme (The Thornbirds) - Mancini",
+            "Memory (Cats) - Webber",
+            "Molly Maguires (Theme Song) - Mancini",
+            "Moonfall (The Mystery of Edwin Drood) - Holmes",
+            "Moon River (Breakfast at Tiffany’s) - Mancini",
+            "Mr. Wonderful (Theme Song) - Bock",
+            "The Music of the Night (Phantom of the Opera) - Webber",
+            "Never Ending Story (Theme Song) - Moroder/Forsey",
+            "On a Clear Day (Theme Song) - Barbra Streisand - Lerner/Lane",
+            "Once Upon a Dream (Sleeping Beauty) - Fain/Lawrence",
+            "One Hand, One Heart (West Side Story) - Bernstein",
+            "Over the Rainbow (The Wizard of Oz) - Arlen",
+            "People (Funny Girl) - Styne",
+            "People Will Say We’re in Love (Oklahoma) - Rodgers/Hammerstein",
+            "P.M.’s Love Theme (Love Actually) - Armstrong",
+            "Pure Imagination (Willy Wonka)",
+            "The Rose (Theme Song)",
+            "Send in the Clowns (A Little Night Music) - Sondheim",
+            "Shall We Dance? (The King and I) - Rodgers/Hammerstein",
+            "Some Enchanted Evening (South Pacific) - Rodgers/Hammerstein",
+            "Someday My Prince Will Come (Snow White) - Churchill",
+            "Somewhere (West Side Story) - Bernstein",
+            "Somewhere in Time (Theme Song) - Barry",
+            "Song from “10” (Theme Song) - Mancini",
+            "Sunrise, Sunset (Fiddler on the Roof) - Harnick/Bock",
+            "Tea for Two (Theme Song)",
+            "The Thornbirds (Theme Song) - Mancini",
+            "The Throne Room (Star Wars) - Williams",
+            "Till There Was You (The Music Man) - Willson",
+            "A Time for Us (Romeo and Juliet) - Rota",
+            "Tonight (West Side Story) - Bernstein",
+            "The Way We Were (Theme Song) - Hamlisch",
+            "When You Wish Upon a Star (Pinocchio) - Tatar",
+            "A Whole New World (Aladdin) - Menken/Rice",
+            "Wouldn’t It be Loverly? (My Fair Lady) - Lerner/Loewe",
+            "You Are My Lucky Star (Singin’ in the Rain) - Brown",
+            "You Are Woman, I Am Man (Funny Girl) - Styne"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beatles",
+      "title": "The Beatles",
+      "url": "https://ariosoquartet.com/repertoire#beatles",
+      "selectionCount": 14,
+      "groups": [
+        {
+          "group": "The Beatles",
+          "selections": [
+            "All My Loving",
+            "All You Need is Love",
+            "And I Love Her",
+            "Blackbird",
+            "Can’t Buy Me Love",
+            "Eight Days a Week",
+            "From Me to You",
+            "Here Comes the Sun",
+            "If I Fell",
+            "In My Life",
+            "Michelle",
+            "Please Please Me",
+            "Till There Was You",
+            "When I’m 64"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jewish",
+      "title": "Jewish Songs",
+      "url": "https://ariosoquartet.com/repertoire#jewish",
+      "selectionCount": 78,
+      "groups": [
+        {
+          "group": "Jewish Songs",
+          "selections": [
+            "A La Nana",
+            "Ad or Haboker",
+            "Agadat Kineret",
+            "Ale Giva",
+            "Ana Halach Dodech",
+            "Ani Ma-Anim",
+            "Ani Purim",
+            "Ata Ehad",
+            "Avadim Hayinu",
+            "Avinu Malkenu",
+            "Ba-A M'nuha",
+            "Bashana Haba-A",
+            "Chussen Kalle Mazel Tov",
+            "Cuando El Rey Nimrod",
+            "Dayenu",
+            "Dodi Li",
+            "El Ginat Egoz",
+            "Eli Ata",
+            "Eli, Eli",
+            "Eli Eliyahu",
+            "Eliyahu Hanavi",
+            "Erev Shel Shoshanim",
+            "Fregt Die Velt",
+            "Hafinjan",
+            "Hana-Ava Babanot",
+            "Hanuka Oy Hanuka",
+            "Hatikva",
+            "Hava Nagila",
+            "Hine Ma Tov",
+            "Hitrag'ut",
+            "Kadesh Ur'hats",
+            "Karev Yom",
+            "Kirya Y'fefiya",
+            "L'cha Dodi",
+            "Laila, Laila",
+            "Lo Sharti Lach Artsi",
+            "Los Bilbilicos",
+            "Ma Avarech",
+            "Ma Navu",
+            "Ma Nishtana",
+            "Ma'oz Tsur",
+            "Me-Al Hamigdal",
+            "Mi Yitneni Of",
+            "Mipi El",
+            "Molad'ti",
+            "Natati Ets",
+            "Ner Li",
+            "Nivne Artsenu",
+            "Numi, Numi",
+            "Od Yishama",
+            "Oifn Pripitchok",
+            "Orha Bamidbar",
+            "Ose Shalom",
+            "Rad Halaila",
+            "Ro-E V'ro-A",
+            "Rozhinkes Mit Mandlen",
+            "Sa-Enu",
+            "Sahki",
+            "Shabat Hamalka",
+            "Shalom Alechem",
+            "Shir Eres",
+            "Shir Ha-Avoda",
+            "Shir Ham'shotet",
+            "Shir Hama-Alot",
+            "Shir Hapalmah",
+            "Shoshanat Yaakov",
+            "Siman Tov",
+            "Sisu Et Y'rushalayim",
+            "Tehezakna",
+            "Torat Emet",
+            "Tsiyon Tamati",
+            "Unter Dem Kinds Vigele",
+            "Uri Tsiyon",
+            "V'tehezena",
+            "Vu Ist Dus Geselle",
+            "Y'rushalayim",
+            "Y'rushalayim Shel Zahav",
+            "Yigdal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "italian",
+      "title": "Italian Songs",
+      "url": "https://ariosoquartet.com/repertoire#italian",
+      "selectionCount": 12,
+      "groups": [
+        {
+          "group": "Italian Songs",
+          "selections": [
+            "Ah! Marie",
+            "Carnival of Venice",
+            "Ciribiribin",
+            "Come Back to Sorrento",
+            "Funiculi Funicula",
+            "Io Te Vurria Vasa",
+            "Italian Love Song",
+            "Mattinata",
+            "O Sole Mio",
+            "Santa Lucia",
+            "Tarantella",
+            "Vieni Sul Mar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hymns",
+      "title": "Hymns",
+      "url": "https://ariosoquartet.com/repertoire#hymns",
+      "selectionCount": 40,
+      "groups": [
+        {
+          "group": "Hymns",
+          "selections": [
+            "A Christian Home",
+            "All Creatures of Our God and King",
+            "All the Way My Savior Leads Me",
+            "All Things Bright and Beautiful",
+            "Crown Him with Many Crowns",
+            "Far Away in the Depths of my Spirit",
+            "Gift of Finest Wheat",
+            "Glorious Things of Thee are Spoken",
+            "Go My Children, with my Blessing",
+            "Great is thy Faithfulness",
+            "Hail to the Brightness of Zion's Glad Morning",
+            "Have Thine Own Way, Lord",
+            "Here, O my Lord, I See Thee Face to Face",
+            "Holy, Holy, Holy! Lord God Almightly",
+            "I Know that my Redeemer Lives",
+            "I Will Give Thanks to Thee",
+            "I'd Rather Have Jesus",
+            "I've Reached the Land of Corn and Wine",
+            "Jesus Comes with Power to Gladden",
+            "Jesus, Rose of Sharon",
+            "Jesus, Thine All Victorious Love",
+            "Joy and Praise this Day Confessing",
+            "Joyful, Joyful We Adore Thee (Ode to Joy)",
+            "Let All Things Now Living",
+            "Lord's Prayer",
+            "O Lord Most Holy",
+            "O, Lord my god! When I in Awesome Wonder",
+            "O Perfect Love",
+            "Ode to Joe",
+            "On Eagle's Wings",
+            "Our Father, who art in heaven (Lord's Prayer)",
+            "Praise Ye the Lord, the Almighty",
+            "Psalm 23",
+            "Sevenfold Amen",
+            "There Comes to my Heart",
+            "There's a Peace in my Heart",
+            "There's Sunshine in My Soul Today",
+            "What Wondrous Love is This",
+            "When Peace, Like a River, Attendeth my Way",
+            "You Are Mine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "joplin",
+      "title": "Joplin Rags",
+      "url": "https://ariosoquartet.com/repertoire#joplin",
+      "selectionCount": 14,
+      "groups": [
+        {
+          "group": "Joplin Rags",
+          "selections": [
+            "The Cascades",
+            "The Chrysanthemum",
+            "Cleopha",
+            "Country Club",
+            "The Easy Winners",
+            "Elite Synocopations",
+            "The Entertainer",
+            "Euphonic Sounds",
+            "The Favorite",
+            "Heliotrope Bouquet",
+            "Maple Leaf Rag",
+            "Paragon Rag",
+            "Pineapple Rag",
+            "Scott Joplin’s New Rag"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tangos",
+      "title": "Tangos by Michael McLean",
+      "url": "https://ariosoquartet.com/repertoire#tangos",
+      "selectionCount": 6,
+      "groups": [
+        {
+          "group": "Tangos by Michael McLean",
+          "selections": [
+            "Tango",
+            "Serenata",
+            "Rhumba",
+            "Csardas",
+            "Fandango",
+            "Tango Chromatique"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waltzes",
+      "title": "Waltzes",
+      "url": "https://ariosoquartet.com/repertoire#waltzes",
+      "selectionCount": 4,
+      "groups": [
+        {
+          "group": "Waltzes",
+          "selections": [
+            "Blue Danube",
+            "Emperor Waltz",
+            "The Merry Widow",
+            "Tales from the Vienna Woods"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "christmas",
+      "title": "Christmas Music",
+      "url": "https://ariosoquartet.com/repertoire#christmas",
+      "selectionCount": 24,
+      "groups": [
+        {
+          "group": "Christmas Music",
+          "selections": [
+            "The Messiah - Overture",
+            "The Messiah - Pastoral Symphony",
+            "Angels, from the Realms of Glory",
+            "Cantique de Noel",
+            "Deck the Hall",
+            "Ding Dong! Merrily on High",
+            "Edelweiss",
+            "The First Noel",
+            "God Rest You Merry, Gentlemen",
+            "Good Christian Men, Rejoice",
+            "Hark! The Herald Angels Sing",
+            "The Holly and the Ivy",
+            "It Came Upon the Midnight Clear",
+            "Jingle Bells",
+            "Joy to the World",
+            "Little Jesus, Sweetly Sleep",
+            "O Come, All Ye Faithful",
+            "O Little Town of Bethlehem",
+            "Patapan",
+            "See Amid the Winter's Snow",
+            "Silent Night",
+            "Tomorrow Shall Be My Dancing Day",
+            "The 12 Days of Christmas",
+            "We Three Kings of Orient Are"
+          ]
+        }
+      ]
+    }
+  ]
+}

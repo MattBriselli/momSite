@@ -21,8 +21,11 @@
 
 <header class="site-header" id="site-header">
     <div class="header-inner">
-        <a class="site-logo" href="index">
-            <img src="/img/hand_logo_white.jpg" alt="" width="44" height="40" class="brand-mark">
+        <a class="site-logo" href="/">
+            <picture>
+                <source srcset="/img/optimized/brand-mark-110.avif" type="image/avif">
+                <img src="/img/optimized/brand-mark-110.jpg" alt="" width="44" height="40" class="brand-mark">
+            </picture>
             <span class="brand-text">
                 <span class="brand-name">Arioso Quartet</span>
                 <span class="brand-tagline">Philadelphia String Ensemble</span>
@@ -44,16 +47,16 @@
             </button>
 
             <ul id="site-menu" class="site-menu" popover="auto">
-                <li><a href="index" <%- current === 'index' ? 'aria-current="page"' : '' %>>Home</a></li>
-                <li><a href="biographies" <%- current === 'biographies' ? 'aria-current="page"' : '' %>>Biographies</a></li>
-                <li><a href="repertoire" <%- current === 'repertoire' ? 'aria-current="page"' : '' %>>Repertoire</a></li>
-                <li><a href="samples" <%- current === 'samples' ? 'aria-current="page"' : '' %>>Music Samples</a></li>
-                <li><a href="venues" <%- current === 'venues' ? 'aria-current="page"' : '' %>>Venues</a></li>
-                <li><a href="testimonials" <%- current === 'testimonials' ? 'aria-current="page"' : '' %>>Testimonials</a></li>
-                <li><a href="rates" <%- current === 'rates' ? 'aria-current="page"' : '' %>>Rates &amp; Availability</a></li>
-                <li><a href="FAQ" <%- current === 'FAQ' ? 'aria-current="page"' : '' %>>FAQ</a></li>
+                <li><a href="/" <%- current === 'index' ? 'aria-current="page"' : '' %>>Home</a></li>
+                <li><a href="/biographies" <%- current === 'biographies' ? 'aria-current="page"' : '' %>>Biographies</a></li>
+                <li><a href="/repertoire" <%- current === 'repertoire' ? 'aria-current="page"' : '' %>>Repertoire</a></li>
+                <li><a href="/samples" <%- current === 'samples' ? 'aria-current="page"' : '' %>>Music Samples</a></li>
+                <li><a href="/venues" <%- current === 'venues' ? 'aria-current="page"' : '' %>>Venues</a></li>
+                <li><a href="/testimonials" <%- current === 'testimonials' ? 'aria-current="page"' : '' %>>Testimonials</a></li>
+                <li><a href="/rates" <%- current === 'rates' ? 'aria-current="page"' : '' %>>Rates &amp; Availability</a></li>
+                <li><a href="/faq" <%- current === 'FAQ' ? 'aria-current="page"' : '' %>>FAQ</a></li>
                 <li class="menu-contact-item">
-                    <a href="mailto:carolbriselli@verizon.net" class="nav-cta">Inquire Now</a>
+                    <a href="/rates#inquiry-form" class="nav-cta">Inquire Now</a>
                 </li>
             </ul>
         </nav>

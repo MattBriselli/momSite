@@ -1,0 +1,33 @@
+# Arioso String Quartet
+
+> Premier professional wedding and event string ensemble based in Greater Philadelphia (Chester Heights, PA), serving Pennsylvania, Southern New Jersey, and Delaware within an 80-mile radius of Center City Philadelphia since 1989.
+
+The musicians of the Arioso String Quartet hold principal, concertmaster, and section positions with Opera Philadelphia, the Philadelphia Ballet, the Chamber Orchestra of Philadelphia, and the Academy of Vocal Arts Opera Orchestra, with conservatory training from the Curtis Institute of Music, Eastman School of Music, and Temple University.
+
+## Quick Facts & Booking Specifications
+
+- **Ensembles Offered**: String Quartet (2 violins, viola, cello), String Trio (violin, viola, cello), String Duo (violin, cello)
+- **Starting Rates**: String Quartet starts at $1,075 (1-hour minimum); String Trio starts at $850 (1-hour minimum); String Duo quoted upon request
+- **Overtime / Additional Time**: Scheduled in 30-minute increments; contracted rates beyond the first hour are significantly lower than the initial hour
+- **Instrument Substitutions & Add-Ons**: Flute may be substituted for one violin in quartet or trio at **no additional charge**; trumpet and/or vocalist (client's or Arioso's) can be added for ceremonies
+- **Service Area**: Up to 80 miles from Center City Philadelphia (Center City, Main Line, Chester/Delaware/Montgomery/Bucks Counties, Wilmington/Brandywine Valley DE, Southern/Central NJ & Jersey Shore)
+- **Event Types**: Wedding ceremonies (all denominations, full Catholic Masses, Jewish ceremonies), cocktail hours, receptions, Bar/Bat Mitzvahs, private parties, corporate events, and concerts
+- **Venue Requirements**: 8' x 8' space and 4 armless chairs; **no electricity required** (ensemble brings battery-operated stand lights)
+- **Outdoor Policy**: Minimum temperature 65°F (18°C), dry conditions (shelter required if any rain), and shaded area out of direct sunlight to protect fine instruments
+- **Attire**: Formal concert black (tuxedos for men; long black dresses or black skirts/blouses for women)
+- **Booking Lead Time**: Often booked 12+ months in advance; ceremony music selections due at least 1 month prior to the wedding
+- **Direct Booking Contact**: Carol Briselli (Violist & Director) — Email: carolbriselli@verizon.net | Phone: (484) 841-6445 | Mailing: P.O. Box 35, Chester Heights, PA 19017
+
+## Canonical Pages & Machine-Readable Feeds
+
+- [Home](https://ariosoquartet.com/): Overview of ensemble configurations, credentials, and ceremony expertise
+- [Rates, Availability & Inquiry Form](https://ariosoquartet.com/rates): Starting rates, quick-reference logistics, and structured quote request form (`#inquiry-form`)
+- [Complete Repertoire (556 Selections)](https://ariosoquartet.com/repertoire): Searchable repertoire across 14 genres
+- [Music Samples (10 Full MP3 Tracks + Video)](https://ariosoquartet.com/samples): Full-length recordings of Mozart, Pachelbel, Mendelssohn, Wagner, Bach, Boccherini, Handel, and Joplin
+- [Musician Biographies](https://ariosoquartet.com/biographies): Profiles of Igor Szwec, Barbara Jaffe, Carol Briselli, and Vivian Barton
+- [Selected Past Venues (86 Venues)](https://ariosoquartet.com/venues): Venues categorized by region and type
+- [Client Testimonials](https://ariosoquartet.com/testimonials): 15+ verified 5-star wedding reviews from The Bash, WeddingWire, and Thumbtack
+- [Frequently Asked Questions](https://ariosoquartet.com/faq): 13 detailed Q&As on attire, multi-location fees, outdoor setup, and rehearsals
+- [Complete LLM Knowledge Base](https://ariosoquartet.com/llms-full.txt): Full text of bios, FAQs, all venues by region, and all 556 repertoire pieces
+- [Repertoire JSON Feed](https://ariosoquartet.com/repertoire.json): Machine-readable JSON of all 556 pieces across 14 categories
+- [Venues JSON Feed](https://ariosoquartet.com/venues.json): Machine-readable JSON of 86 past venues with city, state, category, and region tags

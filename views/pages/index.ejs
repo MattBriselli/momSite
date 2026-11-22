@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
+        canonicalPath: '/',
         pageTitle: 'Philadelphia Wedding & Event String Musicians',
         pageDescription: 'The Arioso String Quartet offers world-class live string quartet, trio, and duo music for weddings, ceremonies, cocktail hours, and events across Philadelphia, Southern NJ, and Delaware.'
     }) %>
@@ -22,11 +23,11 @@
                         Members of the Arioso String Quartet perform with <strong>Opera Philadelphia</strong>, the <strong>Philadelphia Ballet</strong>, and the <strong>Chamber Orchestra of Philadelphia</strong>—bringing conservatory artistry and over 20 years of seamless ceremony experience to weddings, cocktail hours, Bar/Bat Mitzvahs, and private events.
                     </p>
                     <div class="hero-actions">
-                        <a href="samples" class="btn btn-primary">
+                        <a href="/samples" class="btn btn-primary">
                             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7L8 5Z"/></svg>
                             <span>Listen to Music Samples</span>
                         </a>
-                        <a href="rates" class="btn btn-secondary">Check Rates &amp; Availability</a>
+                        <a href="/rates" class="btn btn-secondary">Check Rates &amp; Availability</a>
                     </div>
                     <div class="hero-trust-row">
                         <div class="trust-stat">
@@ -50,6 +51,8 @@
                     <div class="hero-photo-frame">
                         <img
                             src="/img/arioso_quartet.jpg"
+                            srcset="/img/optimized/arioso_quartet-640.jpg 640w, /img/arioso_quartet.jpg 1177w"
+                            sizes="(min-width: 58rem) 34rem, calc(100vw - 3.5rem)"
                             alt="The four musicians of the Arioso String Quartet holding their cello, violins, and viola in formal concert attire"
                             width="1177"
                             height="1098"
@@ -98,16 +101,16 @@
                         <p>
                             Arioso offers the standard <strong>string quartet</strong> (two violins, viola, and cello), a <strong>string trio</strong> (violin, viola, and cello), and a <strong>string duo</strong> (violin and cello). You may substitute a <strong>flute</strong> for one violin in any group at no additional charge, or add a <strong>trumpet</strong> and/or <strong>vocalist</strong> for your wedding ceremony.
                         </p>
-                        <a href="rates" class="card-link">View pricing &amp; ensemble options &rarr;</a>
+                        <a href="/rates" class="card-link">View pricing &amp; ensemble options &rarr;</a>
                     </article>
 
                     <article class="feature-card">
                         <div class="feature-tag">Conservatory Pedigree</div>
                         <h3>Highest-Caliber Musicians</h3>
                         <p>
-                            <a href="biographies">Arioso members</a> are seasoned professionals performing with Opera Philadelphia, the Philadelphia Ballet, and the Chamber Orchestra of Philadelphia. Our dress is formal black concert attire: long black dresses for women and tuxedos for men.
+                            <a href="/biographies">Arioso members</a> are seasoned professionals performing with Opera Philadelphia, the Philadelphia Ballet, and the Chamber Orchestra of Philadelphia. Our dress is formal black concert attire: long black dresses for women and tuxedos for men.
                         </p>
-                        <a href="biographies" class="card-link">Meet our musicians &rarr;</a>
+                        <a href="/biographies" class="card-link">Meet our musicians &rarr;</a>
                     </article>
 
                     <article class="feature-card">
@@ -116,7 +119,7 @@
                         <p>
                             We are experts at ceremonies of every denomination, including full Catholic Masses (with or without singers) and Jewish ceremonies, as well as Bar/Bat Mitzvahs, cocktail hours, private parties, and concerts. We gladly help you select your program and arrange custom requests.
                         </p>
-                        <a href="venues" class="card-link">Explore venues we've played &rarr;</a>
+                        <a href="/venues" class="card-link">Explore venues we've played &rarr;</a>
                     </article>
                 </div>
             </div>
@@ -134,47 +137,47 @@
                 </div>
 
                 <div class="genre-grid">
-                    <a href="repertoire#classical" class="genre-card">
+                    <a href="/repertoire#classical" class="genre-card">
                         <span class="genre-name">Classical Masterworks</span>
                         <span class="genre-meta">Bach, Mozart, Haydn, Vivaldi, Handel &amp; more</span>
                     </a>
-                    <a href="repertoire#wedding" class="genre-card">
+                    <a href="/repertoire#wedding" class="genre-card">
                         <span class="genre-name">Wedding Ceremony Music</span>
                         <span class="genre-meta">Pachelbel Canon, Processionals &amp; Recessionals</span>
                     </a>
-                    <a href="repertoire#popular" class="genre-card">
+                    <a href="/repertoire#popular" class="genre-card">
                         <span class="genre-name">Popular Songs &amp; Modern Hits</span>
                         <span class="genre-meta">Coldplay, Elvis, Sinatra, U2, Lady Gaga, Enya &amp; more</span>
                     </a>
-                    <a href="repertoire#showtunes" class="genre-card">
+                    <a href="/repertoire#showtunes" class="genre-card">
                         <span class="genre-name">Broadway &amp; Film Scores</span>
                         <span class="genre-meta">La La Land, Star Wars, Lord of the Rings, Mancini &amp; more</span>
                     </a>
-                    <a href="repertoire#jazz" class="genre-card">
+                    <a href="/repertoire#jazz" class="genre-card">
                         <span class="genre-name">Jazz Classics</span>
                         <span class="genre-meta">Cole Porter, George Gershwin, Duke Ellington</span>
                     </a>
-                    <a href="repertoire#catholic" class="genre-card">
+                    <a href="/repertoire#catholic" class="genre-card">
                         <span class="genre-name">Catholic Mass Music</span>
                         <span class="genre-meta">Full Liturgical Settings, Psalms &amp; Ave Maria</span>
                     </a>
-                    <a href="repertoire#jewish" class="genre-card">
+                    <a href="/repertoire#jewish" class="genre-card">
                         <span class="genre-name">Jewish Wedding &amp; Traditional</span>
                         <span class="genre-meta">Dodi Li, Erev Shel Shoshanim, Siman Tov &amp; 50+ more</span>
                     </a>
-                    <a href="repertoire#beatles" class="genre-card">
+                    <a href="/repertoire#beatles" class="genre-card">
                         <span class="genre-name">The Beatles</span>
                         <span class="genre-meta">Here Comes the Sun, All You Need Is Love, In My Life</span>
                     </a>
-                    <a href="repertoire#italian" class="genre-card">
+                    <a href="/repertoire#italian" class="genre-card">
                         <span class="genre-name">Italian Songs, Hymns &amp; More</span>
                         <span class="genre-meta">Italian Favorites, Joplin Rags, Tangos, Waltzes &amp; Hymns</span>
                     </a>
                 </div>
 
                 <div class="section-cta-row">
-                    <a href="repertoire" class="btn btn-primary">Search Complete Repertoire</a>
-                    <a href="samples" class="btn btn-secondary">Listen to 10 Full Audio Samples</a>
+                    <a href="/repertoire" class="btn btn-primary">Search Complete Repertoire</a>
+                    <a href="/samples" class="btn btn-secondary">Listen to 10 Full Audio Samples</a>
                 </div>
             </div>
         </section>
@@ -185,6 +188,8 @@
                 <div class="callout-image-wrap">
                     <img
                         src="/img/playing.jpeg"
+                        srcset="/img/optimized/playing-560.jpg 560w, /img/playing.jpeg 874w"
+                        sizes="(min-width: 54rem) 34rem, calc(100vw - 4rem)"
                         alt="Arioso String Quartet performing outdoors at a wedding ceremony"
                         width="874"
                         height="612"
@@ -197,13 +202,13 @@
                     <blockquote class="featured-quote">
                         &ldquo;Arioso Quartet was the perfect addition to our wedding ceremony! They added just the touch of elegance we were looking for. Carol was easy to communicate with and helpful in choosing our music for both the ceremony and cocktail hour&hellip; We received so many compliments throughout the night!&rdquo;
                     </blockquote>
-                    <p class="quote-attribution">&mdash; Casey H., Wedding Client &bull; <a href="testimonials">Read 15+ Verified Reviews</a></p>
+                    <p class="quote-attribution">&mdash; Casey H., Wedding Client &bull; <a href="/testimonials">Read 15+ Verified Reviews</a></p>
 
                     <div class="contact-prompt-box">
                         <h3>Planning Your Wedding or Special Event?</h3>
                         <p>
-                            Questions or availability inquiries can be directed to Carol Briselli via email at
-                            <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a> or by phone at
+                            Submit an <a href="/rates#inquiry-form">online availability inquiry</a>, email Carol Briselli at
+                            <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a>, or call
                             <a href="tel:+14848416445">(484) 841-6445</a>.
                         </p>
                     </div>

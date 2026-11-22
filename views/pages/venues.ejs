@@ -1,9 +1,41 @@
+<%
+  const allVenues = typeof venuesData !== 'undefined' ? venuesData : [];
+  const regions = typeof regionMeta !== 'undefined' ? regionMeta : {};
+  const shortCategoryLabels = {
+    estates: 'Estate / Club',
+    hotels: 'Hotel',
+    worship: 'House of Worship'
+  };
+
+  const venuesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Selected Wedding & Event Venues Played by Arioso String Quartet',
+    numberOfItems: allVenues.length,
+    itemListElement: allVenues.map((v, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      item: {
+        '@type': 'Place',
+        name: v.name,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: v.city,
+          addressRegion: v.state,
+          addressCountry: 'US'
+        }
+      }
+    }))
+  };
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
-        pageTitle: 'Past Venues',
-        pageDescription: 'Explore mansions, estates, hotels, country clubs, churches, and synagogues across Philadelphia, PA, NJ, and DE where the Arioso String Quartet has performed.'
+        canonicalPath: '/venues',
+        pageTitle: 'Philadelphia, Main Line, NJ & DE Wedding Venues',
+        pageDescription: 'Explore 85+ mansions, estates, country clubs, luxury hotels, churches, and synagogues across Philadelphia, the Main Line, Bucks/Chester/Montgomery Counties, NJ, and Delaware where the Arioso String Quartet performs.',
+        extraJsonLd: venuesSchema
     }) %>
 </head>
 <body>
@@ -13,145 +45,81 @@
         <section class="page-hero">
             <div class="container">
                 <span class="section-kicker">Where We Perform</span>
-                <h1 class="page-heading">Selected Venues</h1>
+                <h1 class="page-heading">Selected Venues Across Greater Philadelphia, NJ &amp; Delaware</h1>
                 <p class="page-intro">
-                    Over the past two decades, the Arioso String Quartet has performed at hundreds of historic mansions, gardens, country clubs, luxury hotels, churches, and synagogues throughout Pennsylvania, New Jersey, Delaware, and Maryland.
+                    Over the past two decades, the Arioso String Quartet has performed at hundreds of historic mansions, gardens, country clubs, luxury hotels, churches, and synagogues within 80 miles of Center City Philadelphia.
                 </p>
 
-                <div class="venue-controls">
+                <search class="venue-controls" aria-label="Search and filter venues">
                     <div class="search-input-wrap">
                         <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
-                        <input type="search" id="venue-search" class="search-input" placeholder="Search venues or towns (e.g., Winterthur, Doylestown, Rittenhouse)..." aria-label="Search venues or towns">
+                        <input
+                            type="search"
+                            id="venue-search"
+                            class="search-input"
+                            placeholder="Search venue or town (e.g., Winterthur, Cairnwood, Doylestown, Rittenhouse)..."
+                            aria-label="Search venues or towns"
+                            autocorrect="off"
+                            autocapitalize="none"
+                            spellcheck="false"
+                        >
                     </div>
-                    <div class="filter-pills" role="group" aria-label="Filter venues by category">
-                        <button type="button" class="filter-pill is-active" data-venue-filter="all">All Venues</button>
-                        <button type="button" class="filter-pill" data-venue-filter="estates">Mansions, Restaurants &amp; Clubs</button>
-                        <button type="button" class="filter-pill" data-venue-filter="hotels">Hotels</button>
-                        <button type="button" class="filter-pill" data-venue-filter="worship">Churches &amp; Synagogues</button>
+
+                    <div class="filter-group-stack">
+                        <div class="filter-row">
+                            <span class="filter-row-label">Region:</span>
+                            <div class="filter-pills" role="group" aria-label="Filter venues by region">
+                                <button type="button" class="filter-pill is-active" data-region-filter="all">All Regions (<%= allVenues.length %>)</button>
+                                <button type="button" class="filter-pill" data-region-filter="philadelphia">Philadelphia</button>
+                                <button type="button" class="filter-pill" data-region-filter="pa-suburbs">Main Line &amp; PA Suburbs</button>
+                                <button type="button" class="filter-pill" data-region-filter="delaware">Wilmington &amp; Delaware</button>
+                                <button type="button" class="filter-pill" data-region-filter="new-jersey">New Jersey &amp; Shore</button>
+                                <button type="button" class="filter-pill" data-region-filter="greater-region">Lehigh Valley, Hershey &amp; MD</button>
+                            </div>
+                        </div>
+
+                        <div class="filter-row">
+                            <span class="filter-row-label">Type:</span>
+                            <div class="filter-pills" role="group" aria-label="Filter venues by venue type">
+                                <button type="button" class="filter-pill is-active" data-venue-filter="all">All Types</button>
+                                <button type="button" class="filter-pill" data-venue-filter="estates">Mansions, Estates &amp; Clubs</button>
+                                <button type="button" class="filter-pill" data-venue-filter="hotels">Hotels</button>
+                                <button type="button" class="filter-pill" data-venue-filter="worship">Churches &amp; Synagogues</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </search>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="venues-sections" id="venues-container">
-                    <article class="venue-category-card" data-venue-category="estates">
+                    <% Object.entries(regions).forEach(([regionKey, regionTitle]) => {
+                        const regionVenues = allVenues.filter((v) => v.region === regionKey);
+                    %>
+                    <article class="venue-category-card" data-venue-region="<%= regionKey %>">
                         <header class="venue-category-header">
-                            <h2>Mansions, Estates, Restaurants &amp; Golf Clubs</h2>
-                            <span class="venue-count">54 Venues</span>
+                            <h2><%= regionTitle %></h2>
+                            <span class="venue-count" data-region-count><%= regionVenues.length %> Venues</span>
                         </header>
                         <ul class="venue-list">
-                            <li><strong>Abington Art Center</strong> <span>Abington, PA</span></li>
-                            <li><strong>Aldie Mansion</strong> <span>Doylestown, PA</span></li>
-                            <li><strong>Appleford Estate</strong> <span>Villanova, PA</span></li>
-                            <li><strong>Aronimink Golf Club</strong> <span>Newtown Square, PA</span></li>
-                            <li><strong>Arts Ballroom</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>The Ashford Estate</strong> <span>Allentown, NJ</span></li>
-                            <li><strong>Audubon Center at Mill Grove</strong> <span>Audubon, PA</span></li>
-                            <li><strong>Bowman’s Hill Wildflower Preserve</strong> <span>New Hope, PA</span></li>
-                            <li><strong>Brandywine Manor House</strong> <span>Honeybrook, PA</span></li>
-                            <li><strong>Brantwyn Mansion</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>Cairnwood Estate</strong> <span>Bryn Athyn, PA</span></li>
-                            <li><strong>The Carriage House</strong> <span>Galloway, NJ</span></li>
-                            <li><strong>Celebrations</strong> <span>Bensalem, PA</span></li>
-                            <li><strong>Clark's Landing</strong> <span>Point Pleasant Beach, NJ</span></li>
-                            <li><strong>College of Physicians</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Colonial Dames</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Concord Country Club</strong> <span>West Chester, PA</span></li>
-                            <li><strong>Crystal Tea Room</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Deerfield Golf and Tennis Club</strong> <span>Newark, DE</span></li>
-                            <li><strong>Donaldson Browne Center</strong> <span>Port Deposit, MD</span></li>
-                            <li><strong>DuPont Country Club</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>Erini Restaurant</strong> <span>Ewing, NJ</span></li>
-                            <li><strong>Fonthill Castle</strong> <span>Doylestown, PA</span></li>
-                            <li><strong>The Fountain Room</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Fuel Gallery</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Greenville Country Club</strong> <span>Greenville, DE</span></li>
-                            <li><strong>Greystone Hall</strong> <span>West Chester, PA</span></li>
-                            <li><strong>The Inn at Barley Sheaf</strong> <span>Holicong, PA</span></li>
-                            <li><strong>Jericho National Golf Club</strong> <span>New Hope, PA</span></li>
-                            <li><strong>Joseph Ambler Inn</strong> <span>North Wales, PA</span></li>
-                            <li><strong>Knowlton Mansion</strong> <span>Doylestown, PA</span></li>
-                            <li><strong>Martell's Water's Edge</strong> <span>Bayville, NJ</span></li>
-                            <li><strong>McCall's Country Club</strong> <span>Upper Darby, PA</span></li>
-                            <li><strong>Mendenhall Inn</strong> <span>Mendenhall, PA</span></li>
-                            <li><strong>The Old Mill</strong> <span>Rose Valley, PA</span></li>
-                            <li><strong>Phoenixville Foundry</strong> <span>Phoenixville, PA</span></li>
-                            <li><strong>Radnor Hunt Club</strong> <span>Malvern, PA</span></li>
-                            <li><strong>Ridley Creek Mansion</strong> <span>Newtown Square, PA</span></li>
-                            <li><strong>Rockwood Center</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>Rose Hip Barn</strong> <span>Thornton, PA</span></li>
-                            <li><strong>Rydal Park Retirement Community</strong> <span>Jenkintown, PA</span></li>
-                            <li><strong>The Shambles at Head House Square</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Stotesbury Mansion</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Swarthmore College Amphitheater</strong> <span>Swarthmore, PA</span></li>
-                            <li><strong>Sweetwater Farm</strong> <span>Glen Mills, PA</span></li>
-                            <li><strong>Talula’s Garden</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Unionville Winery</strong> <span>Ringoes, NJ</span></li>
-                            <li><strong>University and Whist Club</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>Valley Green Inn</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Villanova Conference Center</strong> <span>Villanova, PA</span></li>
-                            <li><strong>Whitemarsh Valley Country Club</strong> <span>Lafayette Hill, PA</span></li>
-                            <li><strong>Winterthur Museum, Garden &amp; Library</strong> <span>Wilmington, DE</span></li>
+                            <% regionVenues.forEach((venue) => { %>
+                            <li data-item-category="<%= venue.category %>">
+                                <div class="venue-item-top">
+                                    <strong><%= venue.name %></strong>
+                                    <span class="venue-type-chip"><%= shortCategoryLabels[venue.category] %></span>
+                                </div>
+                                <span><%= venue.city %>, <%= venue.state %></span>
+                            </li>
+                            <% }) %>
                         </ul>
                     </article>
-
-                    <article class="venue-category-card" data-venue-category="hotels">
-                        <header class="venue-category-header">
-                            <h2>Luxury &amp; Historic Hotels</h2>
-                            <span class="venue-count">9 Venues</span>
-                        </header>
-                        <ul class="venue-list">
-                            <li><strong>The Bellevue Hotel</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Black Bass Hotel</strong> <span>Lumberville / Skillman, PA/NJ</span></li>
-                            <li><strong>The Desmond Hotel</strong> <span>Malvern, PA</span></li>
-                            <li><strong>Four Seasons Hotel</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Hotel DuPont</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>Loews Philadelphia Hotel</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Philadelphia Marriott West</strong> <span>Conshohocken, PA</span></li>
-                            <li><strong>The Rittenhouse Hotel</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>The Westin Philadelphia</strong> <span>Philadelphia, PA</span></li>
-                        </ul>
-                    </article>
-
-                    <article class="venue-category-card" data-venue-category="worship">
-                        <header class="venue-category-header">
-                            <h2>Churches, Cathedrals &amp; Synagogues</h2>
-                            <span class="venue-count">25 Venues</span>
-                        </header>
-                        <ul class="venue-list">
-                            <li><strong>Albright Chapel</strong> <span>Reading, PA</span></li>
-                            <li><strong>Baptist Church in the Great Valley</strong> <span>Devon, PA</span></li>
-                            <li><strong>Bausman Memorial United Church of Christ</strong> <span>Wyomissing, PA</span></li>
-                            <li><strong>Cathedral Basilica of Sts. Peter and Paul</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>First Baptist Church</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Grace Bible Fellowship Church</strong> <span>Wallingford, PA</span></li>
-                            <li><strong>Jordan United Church of Christ</strong> <span>Allentown, PA</span></li>
-                            <li><strong>Kemblesville United Methodist Church</strong> <span>Newark, DE</span></li>
-                            <li><strong>Our Lady of Mount Carmel Church</strong> <span>Doylestown, PA</span></li>
-                            <li><strong>Our Lady of the Rosary Church</strong> <span>Coatesville, PA</span></li>
-                            <li><strong>St. Ann’s Church</strong> <span>Wilmington, DE</span></li>
-                            <li><strong>St. Augustine’s Church</strong> <span>Ocean City, NJ</span></li>
-                            <li><strong>St. Denis Catholic Church</strong> <span>Havertown, PA</span></li>
-                            <li><strong>St. Francis de Sales Church</strong> <span>Lenni, PA</span></li>
-                            <li><strong>St. James Church</strong> <span>Elkins Park, PA</span></li>
-                            <li><strong>St. Joan of Arc Catholic Church</strong> <span>Hershey, PA</span></li>
-                            <li><strong>St. John Chrysostom Church</strong> <span>Wallingford, PA</span></li>
-                            <li><strong>St. John’s Episcopal Church</strong> <span>Huntingdon Valley, PA</span></li>
-                            <li><strong>St. Mark’s Church</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>St. Mary of the Assumption Church</strong> <span>Hockessin, DE</span></li>
-                            <li><strong>St. Paul’s Episcopal Church</strong> <span>Ardmore, PA</span></li>
-                            <li><strong>St. Rita’s Church</strong> <span>Philadelphia, PA</span></li>
-                            <li><strong>Sts. Peter and Paul Catholic Church</strong> <span>West Chester, PA</span></li>
-                            <li><strong>Temple Sinai</strong> <span>Dresher, PA</span></li>
-                            <li><strong>Unitarian Universalist Church</strong> <span>Media, PA</span></li>
-                        </ul>
-                    </article>
+                    <% }) %>
                 </div>
 
                 <p id="venue-no-results" class="empty-state" hidden>
-                    No listed venues match your search—however, we perform at any location within 80 miles of Center City Philadelphia! <a href="mailto:carolbriselli@verizon.net">Contact us</a> to discuss your venue.
+                    No listed venues match your current filter—however, we perform at any indoor or shaded outdoor location within 80 miles of Center City Philadelphia! <a href="/rates#inquiry-form">Inquire about your venue</a>.
                 </p>
             </div>
         </section>

@@ -1961,3 +1961,410 @@ h4 {
 .mobile-action-primary:hover {
   color: var(--text-on-dark);
 }
+
+
+/* ==========================================================================
+   Accessibility Utilities, Editorial Specs Card, Venues Regions & Inquiry Form
+   ========================================================================== */
+
+/* Canonical visually-hidden recipe per forms & validate-input-after-interaction */
+.visually-hidden:where(:not(:focus-within, :active)),
+.visually-hidden[aria-hidden="true"] {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Regional Venues Filter Rows & Chips */
+.filter-group-stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+}
+
+.filter-row-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  min-inline-size: 4rem;
+}
+
+.venue-item-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.65rem;
+}
+
+.venue-type-chip {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-plum);
+  background-color: var(--bg-tinted);
+  padding-block: 0.1rem;
+  padding-inline: 0.5rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+/* 2.5 Editorial "At a Glance" Event Specs Card */
+.specs-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fcfaf6 100%);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  margin-block-end: 2.75rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.specs-card::before {
+  content: "";
+  position: absolute;
+  inset: 0.45rem;
+  border: 1px solid rgba(184, 137, 51, 0.28);
+  border-radius: calc(var(--radius-lg) - 0.3rem);
+  pointer-events: none;
+}
+
+.specs-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block-end: 1.25rem;
+  margin-block-end: 1.5rem;
+  border-block-end: 1px solid var(--border-subtle);
+}
+
+.specs-card-title {
+  font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.1rem);
+  color: var(--bg-plum-deep);
+  margin: 0;
+}
+
+.specs-ornament {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  line-height: 1;
+}
+
+.specs-ledger {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14.5rem), 1fr));
+  gap: 1.35rem 1.75rem;
+}
+
+.spec-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-inline-start: 0.9rem;
+  border-inline-start: 2px solid var(--accent-gold-soft);
+}
+
+.spec-cell dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--accent-plum);
+}
+
+.spec-cell dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--bg-plum-deep);
+  line-height: 1.2;
+}
+
+.spec-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* 2.3 Structured Inquiry Form & Aside Layout */
+.inquiry-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+  scroll-margin-block-start: 6rem;
+}
+
+@media (min-width: 58rem) {
+  .inquiry-layout {
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: 2.5rem;
+  }
+}
+
+.inquiry-form-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-md);
+}
+
+.inquiry-title {
+  font-size: clamp(1.65rem, 1.25rem + 1.4vw, 2.25rem);
+  color: var(--bg-plum-deep);
+  margin-block-end: 0.45rem;
+}
+
+.inquiry-subtitle {
+  color: var(--text-secondary);
+  margin-block-start: 0;
+  margin-block-end: 1.75rem;
+}
+
+/* Gestalt Proximity Rule: label->input gap (0.3rem) < between-field margin (1.35rem) */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+  margin-block-end: 1.35rem;
+}
+
+.form-row-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .form-row-two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-field label,
+.form-fieldset legend {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.required-mark {
+  color: #b3261e;
+}
+
+.optional-tag {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.field-hint {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-block-end: 0.1rem;
+}
+
+/* Accessible sizing (>=16px prevents iOS zoom; >=48px/52px tap targets; >=3:1 border contrast) */
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font: inherit;
+  font-size: max(1rem, 1em);
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid #756d63;
+  border-radius: var(--radius-sm);
+  padding-block: 0.7rem;
+  padding-inline: 0.85rem;
+  min-block-size: 48px;
+  inline-size: 100%;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+@media (pointer: coarse) {
+  .form-field input,
+  .form-field select {
+    min-block-size: 52px;
+  }
+}
+
+.form-field textarea {
+  min-block-size: 6.5rem;
+  resize: vertical;
+}
+
+.form-fieldset {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  margin-inline: 0;
+  margin-block-start: 0;
+  margin-block-end: 1.35rem;
+  background-color: var(--bg-canvas);
+}
+
+.form-fieldset legend {
+  padding-inline: 0.45rem;
+}
+
+.radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
+  gap: 0.65rem;
+  margin-block-start: 0.35rem;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin-block-start: 0.35rem;
+}
+
+.choice-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-block-size: 44px;
+}
+
+.choice-item input[type="radio"],
+.choice-item input[type="checkbox"] {
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  margin: 0;
+  accent-color: var(--bg-plum);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.choice-item label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding-block: 0.35rem;
+}
+
+.choice-item label span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Validate Input After Interaction (:user-invalid + fallback) */
+.error-msg {
+  display: none;
+  color: #b3261e;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-block-start: 0.2rem;
+}
+
+.form-field :is(:user-invalid, .user-invalid-fallback) {
+  border-color: #b3261e;
+  background-color: #fdf2f2;
+}
+
+.form-field :is(:user-invalid, .user-invalid-fallback) + .error-msg {
+  display: block;
+}
+
+.form-field :is(input[required], input[type="email"]):user-valid {
+  border-color: #266c3b;
+}
+
+.inquiry-result-card {
+  margin-block-start: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-tinted);
+  border: 1px solid var(--accent-gold);
+  border-radius: var(--radius-md);
+}
+
+.inquiry-result-title {
+  font-size: 1.45rem;
+  color: var(--bg-plum-deep);
+  margin-block-end: 0.35rem;
+}
+
+.inquiry-result-desc {
+  margin-block-start: 0;
+  margin-block-end: 0.85rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.inquiry-summary-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+  margin-block-start: 0;
+  margin-block-end: 1.15rem;
+}
+
+.inquiry-aside-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: clip;
+  box-shadow: var(--shadow-sm);
+}
+
+.inquiry-aside-body {
+  padding: 1.5rem;
+}
+
+.inquiry-aside-body h3 {
+  font-size: 1.45rem;
+  color: var(--bg-plum-deep);
+  margin-block-end: 0.5rem;
+}
+
+.inquiry-aside-body p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin-block-start: 0;
+  margin-block-end: 1.15rem;
+}
+
+.direct-contact-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+}
+
+.direct-contact-links li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
