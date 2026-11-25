@@ -306,7 +306,7 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 ## Quick Facts & Booking Specifications
 
 - **Ensembles Offered**: String Quartet (2 violins, viola, cello), String Trio (violin, viola, cello), String Duo (violin, cello)
-- **Starting Rates**: String Quartet starts at $1,075 (1-hour minimum); String Trio starts at $850 (1-hour minimum); String Duo quoted upon request
+- **Starting Rates**: String Quartet starts at $1,175 (1-hour minimum); String Trio starts at $925 (1-hour minimum); String Duo starts at $750 (1-hour minimum)
 - **Overtime / Additional Time**: Scheduled in 30-minute increments; contracted rates beyond the first hour are significantly lower than the initial hour
 - **Instrument Substitutions & Add-Ons**: Flute may be substituted for one violin in quartet or trio at **no additional charge**; trumpet and/or vocalist (client's or Arioso's) can be added for ceremonies
 - **Service Area**: Up to 80 miles from Center City Philadelphia (Center City, Main Line, Chester/Delaware/Montgomery/Bucks Counties, Wilmington/Brandywine Valley DE, Southern/Central NJ & Jersey Shore)

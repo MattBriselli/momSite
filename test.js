@@ -101,7 +101,7 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
         full_name: 'Test Planner',
         email: 'planner@example.com',
         event_date: '2027-06-12',
-        ensemble: 'String Quartet ($1,075+)',
+        ensemble: 'String Quartet ($1,175+)',
         venue: 'Cairnwood Estate'
       });
       const inquiryRes = await requestPath('/api/inquiry', {
