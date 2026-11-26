@@ -165,22 +165,20 @@
 <script type="application/ld+json"><%- JSON.stringify(extraJsonLd) %></script>
 <% } %>
 
-<!-- Google Analytics 4 (Production Only — never fires on staging or localhost) -->
+<!-- Google Analytics 4 (Tag present for Google verification; only sends hits on ariosoquartet.com) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-83VLJ0XRJ0"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
   (function () {
     var h = window.location.hostname;
+    var isProd = h === 'ariosoquartet.com' || h === 'www.ariosoquartet.com';
     window.ariosoTrack = function (eventName, params) {
-      if (typeof window.gtag === 'function') {
+      if (isProd && typeof window.gtag === 'function') {
         window.gtag('event', eventName, params || {});
       }
     };
-    if (h !== 'ariosoquartet.com' && h !== 'www.ariosoquartet.com') return;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-83VLJ0XRJ0';
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
+    if (!isProd) return;
     window.gtag('js', new Date());
     window.gtag('config', 'G-83VLJ0XRJ0', { anonymize_ip: true });
   })();
