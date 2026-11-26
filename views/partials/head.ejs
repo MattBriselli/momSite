@@ -1,0 +1,173 @@
+<%
+  const baseUrl = typeof siteUrl !== 'undefined' ? siteUrl : 'https://ariosoquartet.com';
+  const pathSlug = typeof canonicalPath !== 'undefined' ? canonicalPath : '/';
+  const canonicalUrl = baseUrl + (pathSlug === '/' ? '/' : pathSlug);
+  const fullTitle = typeof pageTitle !== 'undefined'
+    ? pageTitle + ' | Arioso String Quartet'
+    : 'Arioso String Quartet | Philadelphia Wedding & Event Musicians';
+  const metaDesc = typeof pageDescription !== 'undefined'
+    ? pageDescription
+    : 'The Arioso String Quartet provides premier live classical, pop, jazz, and liturgical string music for weddings, ceremonies, cocktail hours, and special events in Greater Philadelphia, Southern NJ, and Delaware.';
+  const ogImageUrl = baseUrl + '/img/optimized/og-share.jpg';
+
+  const coreSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['MusicGroup', 'EntertainmentBusiness'],
+        '@id': baseUrl + '/#ensemble',
+        name: 'Arioso String Quartet',
+        alternateName: 'Arioso Quartet',
+        url: baseUrl + '/',
+        logo: baseUrl + '/img/optimized/brand-mark-110.jpg',
+        image: ogImageUrl,
+        description: 'Premier professional wedding and event string ensemble based in Greater Philadelphia, performing string quartet, trio, and duo music across PA, Southern NJ, and Delaware since 1989.',
+        foundingDate: '1989',
+        telephone: '+1-484-841-6445',
+        email: 'carolbriselli@verizon.net',
+        priceRange: '$750 - $1,175+',
+        address: {
+          '@type': 'PostalAddress',
+          postOfficeBoxNumber: '35',
+          addressLocality: 'Chester Heights',
+          addressRegion: 'PA',
+          postalCode: '19017',
+          addressCountry: 'US'
+        },
+        areaServed: [
+          { '@type': 'City', name: 'Philadelphia' },
+          { '@type': 'AdministrativeArea', name: 'Chester County, PA' },
+          { '@type': 'AdministrativeArea', name: 'Delaware County, PA' },
+          { '@type': 'AdministrativeArea', name: 'Montgomery County, PA' },
+          { '@type': 'AdministrativeArea', name: 'Bucks County, PA' },
+          { '@type': 'State', name: 'New Jersey' },
+          { '@type': 'State', name: 'Delaware' }
+        ],
+        genre: [
+          'Classical',
+          'Chamber Music',
+          'Wedding Ceremony Music',
+          'Jazz Standards',
+          'Pop Covers',
+          'Broadway & Film Scores',
+          'Catholic Mass Music',
+          'Jewish Traditional & Wedding Music'
+        ],
+        member: [
+          { '@type': 'OrganizationRole', member: { '@type': 'Person', name: 'Igor Szwec' }, roleName: 'Violinist' },
+          { '@type': 'OrganizationRole', member: { '@type': 'Person', name: 'Barbara Jaffe' }, roleName: 'Violinist' },
+          { '@type': 'OrganizationRole', member: { '@type': 'Person', name: 'Carol Briselli' }, roleName: 'Violist & Ensemble Director' },
+          { '@type': 'OrganizationRole', member: { '@type': 'Person', name: 'Vivian Barton' }, roleName: 'Cellist' }
+        ],
+        makesOffer: [
+          {
+            '@type': 'Offer',
+            name: 'String Quartet Performance (Two Violins, Viola & Cello)',
+            description: 'One-hour minimum performance with optional flute substitution at no extra charge; discounted half-hour increments after the first hour.',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              minPrice: 1175,
+              priceCurrency: 'USD',
+              unitText: 'first hour minimum'
+            },
+            url: baseUrl + '/rates'
+          },
+          {
+            '@type': 'Offer',
+            name: 'String Trio Performance (Violin, Viola & Cello)',
+            description: 'One-hour minimum performance with optional flute substitution at no extra charge; discounted half-hour increments after the first hour.',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              minPrice: 925,
+              priceCurrency: 'USD',
+              unitText: 'first hour minimum'
+            },
+            url: baseUrl + '/rates'
+          },
+          {
+            '@type': 'Offer',
+            name: 'String Duo Performance (Violin & Cello)',
+            description: 'One-hour minimum performance with optional flute substitution at no extra charge; discounted half-hour increments after the first hour.',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              minPrice: 750,
+              priceCurrency: 'USD',
+              unitText: 'first hour minimum'
+            },
+            url: baseUrl + '/rates'
+          }
+        ],
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          bestRating: '5',
+          ratingCount: '15',
+          reviewCount: '15'
+        },
+        sameAs: [
+          'https://www.thebash.com/string-quartet/arioso-quartet',
+          'https://www.weddingwire.com/biz/arioso-quartet-chester-heights/938db69417015771.html',
+          'https://www.thumbtack.com/pa/chester-heights/string-quartet-for-hire/sophisticated-string-group-for-weddings',
+          'https://www.youtube.com/watch?v=o11b5UK1TzU'
+        ],
+        potentialAction: {
+          '@type': 'AskAction',
+          name: 'Check Date Availability & Request a Custom Quote',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: baseUrl + '/rates#inquiry-form',
+            inLanguage: 'en-US',
+            actionPlatform: [
+              'http://schema.org/DesktopWebPlatform',
+              'http://schema.org/MobileWebPlatform'
+            ]
+          }
+        }
+      }
+    ]
+  };
+%>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= fullTitle %></title>
+<meta name="description" content="<%= metaDesc %>">
+<link rel="canonical" href="<%= canonicalUrl %>">
+
+<!-- Optimized Favicons & Apple Touch Icon -->
+<link rel="icon" href="/img/optimized/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/optimized/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/optimized/apple-touch-icon.png">
+
+<!-- OpenGraph & iMessage / Social Preview Cards -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arioso String Quartet">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="<%= fullTitle %>">
+<meta property="og:description" content="<%= metaDesc %>">
+<meta property="og:url" content="<%= canonicalUrl %>">
+<meta property="og:image" content="<%= ogImageUrl %>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The four musicians of the Arioso String Quartet holding their cello, violins, and viola">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<%= fullTitle %>">
+<meta name="twitter:description" content="<%= metaDesc %>">
+<meta name="twitter:image" content="<%= ogImageUrl %>">
+
+<!-- Machine-Readable Feeds for AI Search & Agents -->
+<link rel="alternate" type="text/markdown" title="Arioso String Quartet LLM Overview (llms.txt)" href="/llms.txt">
+<link rel="alternate" type="application/json" title="Complete Repertoire JSON Feed" href="/repertoire.json">
+<link rel="alternate" type="application/json" title="Selected Past Venues JSON Feed" href="/venues.json">
+
+<!-- Typography & Styles -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/stylesheets/arioso.css" type="text/css">
+<script src="/scripts/arioso.js" defer></script>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json"><%- JSON.stringify(coreSchema) %></script>
+<% if (typeof extraJsonLd !== 'undefined' && extraJsonLd) { %>
+<script type="application/ld+json"><%- JSON.stringify(extraJsonLd) %></script>
+<% } %>

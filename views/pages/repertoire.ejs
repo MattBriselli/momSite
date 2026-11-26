@@ -1,79 +1,97 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Repertoire</title>
-        <meta name="keywords" content="arioso, string quartet, repertoire, classical music, wedding ceremony music, hymns, catholic mass music, jewish music, popular music, philadelphia area quartet, musicians, wedding, violins, viola, cello, carol briselli, carol, igor, szwec, igor szwec, barbara jaffe, vivian barton, matt briselli, matt, briselli, brslli">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="img/hand_logo_white.jpg">
-        <link rel="stylesheet" href="stylesheets/arioso.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/repertoire.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
-        <script type="text/javascript" src="scripts/jquery.js"></script>
-        <script type="text/javascript" src="scripts/popper.js"></script>
-        <script type="text/javascript" src="scripts/bootstrap.js"></script>
-        <script type="text/javascript" src="scripts/repertoire.js"></script>
-        <script type="text/javascript" src="scripts/arioso.js"></script>
-    </head>
-    <body>
-        <div class="row bodyRow">
-            <%- include('../partials/leftCol.ejs') %>
-            <div class="centerCol col-lg-9 col-md-9 col-sm-11">
-                <%- include('../partials/header.ejs') %>
-                <div class="lowerBody">
-                    <div class="repHeader">
-                        <div class="pageTitle">Repertoire</div>
-                        <div class="searchBar">
-                            <input type="text" name="search" placeholder="Search...">
-                        </div>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs', {
+        canonicalPath: '/repertoire',
+        pageTitle: 'Complete Repertoire (550+ Wedding & Event Selections)',
+        pageDescription: 'Browse and search the complete musical repertoire of the Arioso String Quartet: Classical, Wedding Ceremony, Catholic Mass, Jazz, Pop, Broadway/Film, Beatles, Jewish, Italian, and Hymns.'
+    }) %>
+    <script src="/scripts/repertoire.js" defer></script>
+</head>
+<body>
+    <%- include('../partials/header.ejs', { activePage: 'repertoire' }) %>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="section-kicker">Hundreds of Selections</span>
+                <h1 class="page-heading">Musical Repertoire</h1>
+                <p class="page-intro">
+                    Explore our repertoire across 14 genres below, or search by song title, composer, or artist. Don't see your favorite song? We are happy to play special requests and custom-arrange music for your ceremony or event.
+                </p>
+
+                <search class="repertoire-search-bar searchBar" aria-label="Search repertoire">
+                    <div class="search-input-wrap">
+                        <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
+                        <input
+                            type="search"
+                            id="repertoire-search"
+                            name="search"
+                            class="search-input"
+                            placeholder="Search by song, composer, or artist (e.g., Bach, Canon, Sinatra, Beatles, Hora)..."
+                            aria-label="Search repertoire by song, composer, or artist"
+                            autocorrect="off"
+                            autocapitalize="none"
+                            spellcheck="false"
+                        >
+                        <button type="button" id="repertoire-clear" class="search-clear-btn" hidden aria-label="Clear search">Clear</button>
                     </div>
-                    <div class="leftRep">
-                        <ul>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#classical">Classical Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#wedding">Wedding Ceremony Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#catholic">Catholic Mass Music</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#jazz">Jazz Classics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#popular">Pop Tunes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#showtunes">Show/Movie Tunes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#beatles">The Beatles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#jewish">Jewish Songs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#italian">Italian Songs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#hymns">Hymns</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#joplin">Joplin Rags</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#tangos">Tangos by Michael McLean</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#waltzes">Waltzes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#christmas">Christmas Music</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="repBody" data-spy="scroll">
+                    <div id="repertoire-status" class="repertoire-status" role="status" aria-live="polite"></div>
+                </search>
+            </div>
+        </section>
+
+        <section class="section repertoire-section">
+            <div class="container repertoire-layout">
+                <aside class="leftRep" aria-label="Repertoire categories">
+                    <div class="rep-nav-title">Categories</div>
+                    <ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#classical">Classical Music</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#wedding">Wedding Ceremony</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catholic">Catholic Mass</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jazz">Jazz Classics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#popular">Pop Tunes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#showtunes">Show &amp; Movie Tunes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#beatles">The Beatles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#jewish">Jewish Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#italian">Italian Songs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hymns">Hymns</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#joplin">Joplin Rags</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tangos">Tangos (McLean)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#waltzes">Waltzes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#christmas">Christmas Music</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="repBody" id="rep-body">
                         <div class="box">
                             <h4 id="classical">Classical Music</h4>
                             <div class="leftList">
@@ -516,7 +534,7 @@
                                     <li>Beautiful Day – U2/Bono
                                     <li>Can’t Help Falling in Love – Elvis Presley
                                     <li>Can’t Take My Eyes Off of You – Frankie Valli
-                                    <li>Concerning Hobbits - Howard Shore (The Lord of the Rings: The Fellowship of the Ring)
+                                    <li>Concerning Hobbits - Howard Shore
                                     <li>Danny Boy
                                     <li>Dawn – Frankie Valli
                                     <li>December 1963 – Frankie Valli
@@ -579,16 +597,16 @@
                             <h4 id="showtunes">Show/Movie Tunes</h4>
                             <div class="leftList">
                                 <ul data-key="show movie tunes">
-                                    <li>Against All Odds (Take a Look at Me Now) - Collins
+                                    <li>Against All Odds (Take a Look at Me Now)
                                     <li>All I Ask of You (Phantom of the Opera)
-                                    <li>And This is My Beloved (Kismet) - Wright/Forrest
-                                    <li>Baby Elephant Walk (Hatari) - Mancini
-                                    <li>Beauty and the Beast (Theme Song) - Mencken
+                                    <li>And This is My Beloved (Kismet)
+                                    <li>Baby Elephant Walk (Hatari)
+                                    <li>Beauty and the Beast (Theme Song)
                                     <li>Because You Loved Me (Up Close and Personal)
                                     <li>A Bushel and a Peck (Guys and Dolls)
                                     <li>Cabaret (Theme Song)
-                                    <li>Charade (Theme Song) - Mancini
-                                    <li>City of Stars (La La Land) - Hurwitz
+                                    <li>Charade (Theme Song)
+                                    <li>City of Stars (La La Land)
                                     <li>Days of Wine and Roses (Theme Song)
                                     <li>Edelweiss (The Sound of Music)
                                     <li>Friendly Persuasion (Theme Song)
@@ -596,63 +614,63 @@
                                     <li>Game of Thrones (Game of Thrones)
                                     <li>Get Me To the Church on Time (My Fair Lady)
                                     <li>He’s A Pirate (Pirates of the Caribbean)
-                                    <li>Hedwig’s Theme – John Williams (Harry Potter)
-                                    <li>How Do You Keep the Music Playing? (Best Friends) - LeGrand
-                                    <li>I Could Have Danced All Night (My Fair Lady) - Lerner/Loewe
-                                    <li>If Ever I Would Leave You (Camelot) - Lerner/Loewe
-                                    <li>If I Loved You (Carousel) - Rodgers/Hammerstein
-                                    <li>If I Were a Rich Man (Fiddler on the Roof) - Harnick/Bock
-                                    <li>The Impossible Dream (The Quest) - Leigh
-                                    <li>Inspector Clouseau Theme (Pink Panther) - Mancini
-                                    <li>Isn’t It Romanic? (Love Me Tonight) - Rodgers/Hart
-                                    <li>It Had to Be You (Show Business) - Kahn/Jones
-                                    <li>I’ve Grown Accustomed to her Face (My Fair Lady) - Lerner/Loewe
-                                    <li>Kiss the Girl (The Little Mermaid) - Menken
-                                    <li>Lara’s Theme (Dr. Zhivago) - Jarre/Webster
-                                    <li>Lullaby of Broadway (42nd Street) - Warren
-                                    <li>Make Someone Happy (Do Re Mi) - Comden/Green
-                                    <li>Matchmaker (Fiddler on the Roof) - Harnick/Bock
-                                    <li>Meggie’s Theme (The Thornbirds) - Mancini
-                                    <li>Memory (Cats) - Webber
+                                    <li>Hedwig’s Theme (Harry Potter)
+                                    <li>How Do You Keep the Music Playing? (Best Friends)
+                                    <li>I Could Have Danced All Night (My Fair Lady)
+                                    <li>If Ever I Would Leave You (Camelot)
+                                    <li>If I Loved You (Carousel)
+                                    <li>If I Were a Rich Man (Fiddler on the Roof)
+                                    <li>The Impossible Dream (The Quest)
+                                    <li>Inspector Clouseau Theme (Pink Panther)
+                                    <li>Isn’t It Romanic? (Love Me Tonight)
+                                    <li>It Had to Be You (Show Business)
+                                    <li>I’ve Grown Accustomed to her Face (My Fair Lady)
+                                    <li>Kiss the Girl (The Little Mermaid)
+                                    <li>Lara’s Theme (Dr. Zhivago)
+                                    <li>Lullaby of Broadway (42nd Street)
+                                    <li>Make Someone Happy (Do Re Mi)
+                                    <li>Matchmaker (Fiddler on the Roof)
+                                    <li>Meggie’s Theme (The Thornbirds)
+                                    <li>Memory (Cats)
                                 </ul>
                             </div>
                             <div class="rightList">
                                 <ul data-key="show movie tunes">
-                                    <li>Molly Maguires (Theme Song) - Mancini
-                                    <li>Moonfall (The Mystery of Edwin Drood) - Holmes
-                                    <li>Moon River (Breakfast at Tiffany’s) - Mancini
-                                    <li>Mr. Wonderful (Theme Song) - Bock
-                                    <li>The Music of the Night (Phantom of the Opera) - Webber
-                                    <li>Never Ending Story (Theme Song) - Moroder/Forsey
-                                    <li>On a Clear Day (Theme Song) - Barbra Streisand - Lerner/Lane
-                                    <li>Once Upon a Dream (Sleeping Beauty) - Fain/Lawrence
-                                    <li>One Hand, One Heart (West Side Story) - Bernstein
-                                    <li>Over the Rainbow (The Wizard of Oz) - Arlen
-                                    <li>People (Funny Girl) - Styne
-                                    <li>People Will Say We’re in Love (Oklahoma) - Rodgers/Hammerstein
-                                    <li>P.M.’s Love Theme (Love Actually) - Armstrong
+                                    <li>Molly Maguires (Theme Song)
+                                    <li>Moonfall (The Mystery of Edwin Drood)
+                                    <li>Moon River (Breakfast at Tiffany’s)
+                                    <li>Mr. Wonderful (Theme Song)
+                                    <li>The Music of the Night (Phantom of the Opera)
+                                    <li>Never Ending Story (Theme Song)
+                                    <li>On a Clear Day (Theme Song)
+                                    <li>Once Upon a Dream (Sleeping Beauty)
+                                    <li>One Hand, One Heart (West Side Story)
+                                    <li>Over the Rainbow (The Wizard of Oz)
+                                    <li>People (Funny Girl)
+                                    <li>People Will Say We’re in Love (Oklahoma)
+                                    <li>P.M.’s Love Theme (Love Actually)
                                     <li>Pure Imagination (Willy Wonka)
                                     <li>The Rose (Theme Song)
-                                    <li>Send in the Clowns (A Little Night Music) - Sondheim
-                                    <li>Shall We Dance? (The King and I) - Rodgers/Hammerstein
-                                    <li>Some Enchanted Evening (South Pacific) - Rodgers/Hammerstein
-                                    <li>Someday My Prince Will Come (Snow White) - Churchill
-                                    <li>Somewhere (West Side Story) - Bernstein
-                                    <li>Somewhere in Time (Theme Song) - Barry
-                                    <li>Song from “10” (Theme Song) - Mancini
-                                    <li>Sunrise, Sunset (Fiddler on the Roof) - Harnick/Bock
+                                    <li>Send in the Clowns (A Little Night Music)
+                                    <li>Shall We Dance? (The King and I)
+                                    <li>Some Enchanted Evening (South Pacific)
+                                    <li>Someday My Prince Will Come (Snow White)
+                                    <li>Somewhere (West Side Story)
+                                    <li>Somewhere in Time (Theme Song)
+                                    <li>Song from “10” (Theme Song)
+                                    <li>Sunrise, Sunset (Fiddler on the Roof)
                                     <li>Tea for Two (Theme Song)
-                                    <li>The Thornbirds (Theme Song) - Mancini
-                                    <li>The Throne Room (Star Wars) - Williams
-                                    <li>Till There Was You (The Music Man) - Willson
-                                    <li>A Time for Us (Romeo and Juliet) - Rota
-                                    <li>Tonight (West Side Story) - Bernstein
-                                    <li>The Way We Were (Theme Song) - Hamlisch
-                                    <li>When You Wish Upon a Star (Pinocchio) - Tatar
-                                    <li>A Whole New World (Aladdin) - Menken/Rice
-                                    <li>Wouldn’t It be Loverly? (My Fair Lady) - Lerner/Loewe
-                                    <li>You Are My Lucky Star (Singin’ in the Rain) - Brown
-                                    <li>You Are Woman, I Am Man (Funny Girl) - Styne
+                                    <li>The Thornbirds (Theme Song)
+                                    <li>The Throne Room (Star Wars)
+                                    <li>Till There Was You (The Music Man)
+                                    <li>A Time for Us (Romeo and Juliet)
+                                    <li>Tonight (West Side Story)
+                                    <li>The Way We Were (Theme Song)
+                                    <li>When You Wish Upon a Star (Pinocchio)
+                                    <li>A Whole New World (Aladdin)
+                                    <li>Wouldn’t It be Loverly? (My Fair Lady)
+                                    <li>You Are My Lucky Star (Singin’ in the Rain)
+                                    <li>You Are Woman, I Am Man (Funny Girl)
                                 </ul>
                             </div>
                         </div>
@@ -936,10 +954,14 @@
                                 </ul>
                             </div>
                         </div>
+                        <p id="repertoire-no-results" class="empty-state" hidden>
+                            No pieces in our online list matched your search—however, we are constantly adding new music and are happy to play or custom-arrange special requests! <a href="/rates#inquiry-form">Inquire with Carol Briselli</a> about your song.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
+
         <%- include('../partials/footer.ejs') %>
     </body>
 </html>

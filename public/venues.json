@@ -1,0 +1,881 @@
+{
+  "ensemble": "Arioso String Quartet",
+  "siteUrl": "https://ariosoquartet.com/venues",
+  "updatedAt": "2026-11-26",
+  "serviceAreaNote": "Travels up to 80 miles from Center City Philadelphia across Pennsylvania, Southern New Jersey, Delaware, and Northern Maryland. Performs at any indoor or shaded outdoor venue.",
+  "totalVenuesListed": 86,
+  "regions": {
+    "philadelphia": "Philadelphia (Center City & Historic Districts)",
+    "pa-suburbs": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)",
+    "delaware": "Wilmington, Brandywine Valley & Northern Delaware",
+    "new-jersey": "Southern & Central New Jersey & Jersey Shore",
+    "greater-region": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+  },
+  "categories": {
+    "estates": "Mansions, Estates, Restaurants & Golf Clubs",
+    "hotels": "Luxury & Historic Hotels",
+    "worship": "Churches, Cathedrals & Synagogues"
+  },
+  "venues": [
+    {
+      "name": "Abington Art Center",
+      "city": "Abington",
+      "state": "PA",
+      "location": "Abington, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Aldie Mansion",
+      "city": "Doylestown",
+      "state": "PA",
+      "location": "Doylestown, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Appleford Estate",
+      "city": "Villanova",
+      "state": "PA",
+      "location": "Villanova, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Aronimink Golf Club",
+      "city": "Newtown Square",
+      "state": "PA",
+      "location": "Newtown Square, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Arts Ballroom",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "The Ashford Estate",
+      "city": "Allentown",
+      "state": "NJ",
+      "location": "Allentown, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "Audubon Center at Mill Grove",
+      "city": "Audubon",
+      "state": "PA",
+      "location": "Audubon, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Bowman’s Hill Wildflower Preserve",
+      "city": "New Hope",
+      "state": "PA",
+      "location": "New Hope, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Brandywine Manor House",
+      "city": "Honeybrook",
+      "state": "PA",
+      "location": "Honeybrook, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Brantwyn Mansion",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Cairnwood Estate",
+      "city": "Bryn Athyn",
+      "state": "PA",
+      "location": "Bryn Athyn, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Carriage House",
+      "city": "Galloway",
+      "state": "NJ",
+      "location": "Galloway, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "Celebrations",
+      "city": "Bensalem",
+      "state": "PA",
+      "location": "Bensalem, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Clark's Landing",
+      "city": "Point Pleasant Beach",
+      "state": "NJ",
+      "location": "Point Pleasant Beach, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "College of Physicians",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Colonial Dames",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Concord Country Club",
+      "city": "West Chester",
+      "state": "PA",
+      "location": "West Chester, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Crystal Tea Room",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Deerfield Golf and Tennis Club",
+      "city": "Newark",
+      "state": "DE",
+      "location": "Newark, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Donaldson Browne Center",
+      "city": "Port Deposit",
+      "state": "MD",
+      "location": "Port Deposit, MD",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "greater-region",
+      "regionLabel": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+    },
+    {
+      "name": "DuPont Country Club",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Erini Restaurant",
+      "city": "Ewing",
+      "state": "NJ",
+      "location": "Ewing, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "Fonthill Castle",
+      "city": "Doylestown",
+      "state": "PA",
+      "location": "Doylestown, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Fountain Room",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Fuel Gallery",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Greenville Country Club",
+      "city": "Greenville",
+      "state": "DE",
+      "location": "Greenville, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Greystone Hall",
+      "city": "West Chester",
+      "state": "PA",
+      "location": "West Chester, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Inn at Barley Sheaf",
+      "city": "Holicong",
+      "state": "PA",
+      "location": "Holicong, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Jericho National Golf Club",
+      "city": "New Hope",
+      "state": "PA",
+      "location": "New Hope, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Joseph Ambler Inn",
+      "city": "North Wales",
+      "state": "PA",
+      "location": "North Wales, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Knowlton Mansion",
+      "city": "Doylestown",
+      "state": "PA",
+      "location": "Doylestown, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Martell's Water's Edge",
+      "city": "Bayville",
+      "state": "NJ",
+      "location": "Bayville, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "McCall's Country Club",
+      "city": "Upper Darby",
+      "state": "PA",
+      "location": "Upper Darby, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Mendenhall Inn",
+      "city": "Mendenhall",
+      "state": "PA",
+      "location": "Mendenhall, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Old Mill",
+      "city": "Rose Valley",
+      "state": "PA",
+      "location": "Rose Valley, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Phoenixville Foundry",
+      "city": "Phoenixville",
+      "state": "PA",
+      "location": "Phoenixville, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Radnor Hunt Club",
+      "city": "Malvern",
+      "state": "PA",
+      "location": "Malvern, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Ridley Creek Mansion",
+      "city": "Newtown Square",
+      "state": "PA",
+      "location": "Newtown Square, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Rockwood Center",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Rose Hip Barn",
+      "city": "Thornton",
+      "state": "PA",
+      "location": "Thornton, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Rydal Park Retirement Community",
+      "city": "Jenkintown",
+      "state": "PA",
+      "location": "Jenkintown, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Shambles at Head House Square",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Stotesbury Mansion",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Swarthmore College Amphitheater",
+      "city": "Swarthmore",
+      "state": "PA",
+      "location": "Swarthmore, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Sweetwater Farm",
+      "city": "Glen Mills",
+      "state": "PA",
+      "location": "Glen Mills, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Talula’s Garden",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Unionville Winery",
+      "city": "Ringoes",
+      "state": "NJ",
+      "location": "Ringoes, NJ",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "University and Whist Club",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Valley Green Inn",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Villanova Conference Center",
+      "city": "Villanova",
+      "state": "PA",
+      "location": "Villanova, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Whitemarsh Valley Country Club",
+      "city": "Lafayette Hill",
+      "state": "PA",
+      "location": "Lafayette Hill, PA",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Winterthur Museum, Garden & Library",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "estates",
+      "categoryLabel": "Mansions, Estates, Restaurants & Golf Clubs",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "The Bellevue Hotel",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Black Bass Hotel",
+      "city": "Lumberville",
+      "state": "PA",
+      "location": "Lumberville, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Desmond Hotel",
+      "city": "Malvern",
+      "state": "PA",
+      "location": "Malvern, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Four Seasons Hotel",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Hotel DuPont",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Loews Philadelphia Hotel",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Philadelphia Marriott West",
+      "city": "Conshohocken",
+      "state": "PA",
+      "location": "Conshohocken, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "The Rittenhouse Hotel",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "The Westin Philadelphia",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "hotels",
+      "categoryLabel": "Luxury & Historic Hotels",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Albright Chapel",
+      "city": "Reading",
+      "state": "PA",
+      "location": "Reading, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "greater-region",
+      "regionLabel": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+    },
+    {
+      "name": "Baptist Church in the Great Valley",
+      "city": "Devon",
+      "state": "PA",
+      "location": "Devon, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Bausman Memorial United Church of Christ",
+      "city": "Wyomissing",
+      "state": "PA",
+      "location": "Wyomissing, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "greater-region",
+      "regionLabel": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+    },
+    {
+      "name": "Cathedral Basilica of Sts. Peter and Paul",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "First Baptist Church",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Grace Bible Fellowship Church",
+      "city": "Wallingford",
+      "state": "PA",
+      "location": "Wallingford, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Jordan United Church of Christ",
+      "city": "Allentown",
+      "state": "PA",
+      "location": "Allentown, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "greater-region",
+      "regionLabel": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+    },
+    {
+      "name": "Kemblesville United Methodist Church",
+      "city": "Newark",
+      "state": "DE",
+      "location": "Newark, DE",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "Our Lady of Mount Carmel Church",
+      "city": "Doylestown",
+      "state": "PA",
+      "location": "Doylestown, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Our Lady of the Rosary Church",
+      "city": "Coatesville",
+      "state": "PA",
+      "location": "Coatesville, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. Ann’s Church",
+      "city": "Wilmington",
+      "state": "DE",
+      "location": "Wilmington, DE",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "St. Augustine’s Church",
+      "city": "Ocean City",
+      "state": "NJ",
+      "location": "Ocean City, NJ",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "new-jersey",
+      "regionLabel": "Southern & Central New Jersey & Jersey Shore"
+    },
+    {
+      "name": "St. Denis Catholic Church",
+      "city": "Havertown",
+      "state": "PA",
+      "location": "Havertown, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. Francis de Sales Church",
+      "city": "Lenni",
+      "state": "PA",
+      "location": "Lenni, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. James Church",
+      "city": "Elkins Park",
+      "state": "PA",
+      "location": "Elkins Park, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. Joan of Arc Catholic Church",
+      "city": "Hershey",
+      "state": "PA",
+      "location": "Hershey, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "greater-region",
+      "regionLabel": "Lehigh Valley, Reading, Hershey & Northern Maryland"
+    },
+    {
+      "name": "St. John Chrysostom Church",
+      "city": "Wallingford",
+      "state": "PA",
+      "location": "Wallingford, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. John’s Episcopal Church",
+      "city": "Huntingdon Valley",
+      "state": "PA",
+      "location": "Huntingdon Valley, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. Mark’s Church",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "St. Mary of the Assumption Church",
+      "city": "Hockessin",
+      "state": "DE",
+      "location": "Hockessin, DE",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "delaware",
+      "regionLabel": "Wilmington, Brandywine Valley & Northern Delaware"
+    },
+    {
+      "name": "St. Paul’s Episcopal Church",
+      "city": "Ardmore",
+      "state": "PA",
+      "location": "Ardmore, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "St. Rita’s Church",
+      "city": "Philadelphia",
+      "state": "PA",
+      "location": "Philadelphia, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "philadelphia",
+      "regionLabel": "Philadelphia (Center City & Historic Districts)"
+    },
+    {
+      "name": "Sts. Peter and Paul Catholic Church",
+      "city": "West Chester",
+      "state": "PA",
+      "location": "West Chester, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Temple Sinai",
+      "city": "Dresher",
+      "state": "PA",
+      "location": "Dresher, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    },
+    {
+      "name": "Unitarian Universalist Church",
+      "city": "Media",
+      "state": "PA",
+      "location": "Media, PA",
+      "category": "worship",
+      "categoryLabel": "Churches, Cathedrals & Synagogues",
+      "region": "pa-suburbs",
+      "regionLabel": "Main Line, Bucks, Chester, Delaware & Montgomery Counties (PA)"
+    }
+  ]
+}

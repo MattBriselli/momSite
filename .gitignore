@@ -1,0 +1,8 @@
+# Static build output & Firebase cache
+dist/
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# macOS metadata
+.DS_Store
