@@ -91,9 +91,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  let searchTrackTimer;
   if (searchInput) {
     searchInput.addEventListener("input", (event) => {
-      filterRepertoire(event.target.value);
+      const val = event.target.value;
+      filterRepertoire(val);
+      clearTimeout(searchTrackTimer);
+      const trimmed = val.trim();
+      if (trimmed.length >= 3 && typeof window.ariosoTrack === "function") {
+        searchTrackTimer = setTimeout(() => {
+          window.ariosoTrack("repertoire_search", {
+            search_term: trimmed.slice(0, 60),
+            source: "input"
+          });
+        }, 800);
+      }
     });
   }
 
@@ -114,6 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.value = term;
       }
       filterRepertoire(term);
+      if (term && typeof window.ariosoTrack === "function") {
+        window.ariosoTrack("repertoire_search", {
+          search_term: term,
+          source: "chip"
+        });
+      }
       repBody.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
