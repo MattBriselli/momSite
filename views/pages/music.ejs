@@ -1,7 +1,7 @@
 <%
   const baseUrl = typeof siteUrl !== 'undefined' ? siteUrl : 'https://ariosoquartet.com';
   const samplesList = [
-    { num: '01', id: 'track-1', title: 'Eine Kleine Nachtmusik', composer: 'Wolfgang Amadeus Mozart', tag: 'Classical • Cocktail Hour', file: '/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3' },
+    { num: '01', id: 'track-1', title: 'Eine Kleine Nachtmusik', composer: 'Wolfgang Amadeus Mozart', tag: 'Classical \u2022 Cocktail Hour', file: '/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3' },
     { num: '02', id: 'track-2', title: 'Canon in D', composer: 'Johann Pachelbel', tag: 'Ceremony Processional', file: '/audio/Pachelbel_Canon.mp3' },
     { num: '03', id: 'track-3', title: 'Wedding March', composer: 'Felix Mendelssohn', tag: 'Ceremony Recessional', file: '/audio/Mendelssohn_March.mp3' },
     { num: '04', id: 'track-4', title: 'Bridal Chorus', composer: 'Richard Wagner', tag: 'Bridal Processional', file: '/audio/Wagner_Bridal_March.mp3' },
@@ -10,7 +10,7 @@
     { num: '07', id: 'track-7', title: 'Arioso', composer: 'Johann Sebastian Bach', tag: 'Signature Piece', file: '/audio/Bach_Arioso.mp3' },
     { num: '08', id: 'track-8', title: "Jesu, Joy of Man's Desiring", composer: 'Johann Sebastian Bach', tag: 'Ceremony Favorite', file: '/audio/Bach_Jesu_Joy.mp3' },
     { num: '09', id: 'track-9', title: 'Water Music', composer: 'George Frideric Handel', tag: 'Festive Baroque', file: '/audio/Water_Music.mp3' },
-    { num: '10', id: 'track-10', title: 'The Entertainer', composer: 'Scott Joplin', tag: 'Ragtime • Reception', file: '/audio/The_Entertainer.mp3' }
+    { num: '10', id: 'track-10', title: 'The Entertainer', composer: 'Scott Joplin', tag: 'Ragtime \u2022 Reception', file: '/audio/The_Entertainer.mp3' }
   ];
 
   const samplesSchema = {
@@ -30,7 +30,7 @@
               '@type': 'AudioObject',
               contentUrl: baseUrl + track.file,
               encodingFormat: 'audio/mpeg',
-              name: track.title + ' — Performed by Arioso String Quartet'
+              name: track.title + ' \u2014 Performed by Arioso String Quartet'
             }
           }
         }))
@@ -41,8 +41,7 @@
         description: 'Live performance demonstration by the Arioso String Quartet of Greater Philadelphia.',
         thumbnailUrl: baseUrl + '/img/youtube.jpg',
         embedUrl: 'https://www.youtube.com/embed/o11b5UK1TzU',
-        contentUrl: 'https://www.youtube.com/watch?v=o11b5UK1TzU',
-        uploadDate: '2018-01-01'
+        contentUrl: 'https://www.youtube.com/watch?v=o11b5UK1TzU'
       }
     ]
   };
@@ -51,35 +50,49 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
-        canonicalPath: '/samples',
-        pageTitle: 'Music Samples & Demo Video',
-        pageDescription: 'Listen to 10 full-length audio recordings and watch a live performance video of the Arioso String Quartet playing Mozart, Pachelbel, Bach, Handel, Mendelssohn, and Joplin.',
+        canonicalPath: '/music',
+        pageTitle: 'Our Music: Samples, Video & Repertoire',
+        pageDescription: 'Listen to ten full-length recordings, watch the Arioso String Quartet perform, and search a repertoire of 550+ wedding, classical, jazz, pop, Broadway, Catholic and Jewish selections.',
         extraJsonLd: samplesSchema
     }) %>
+    <script src="/scripts/repertoire.js" defer></script>
 </head>
 <body>
-    <%- include('../partials/header.ejs', { activePage: 'samples' }) %>
+    <%- include('../partials/header.ejs', { activePage: 'music' }) %>
 
     <main id="main-content">
         <section class="page-hero">
             <div class="container">
-                <span class="section-kicker">Listen &amp; Watch</span>
-                <h1 class="page-heading">Music Samples</h1>
+                <span class="section-kicker">Listen, Watch &amp; Browse</span>
+                <h1 class="page-heading">Our Music</h1>
                 <p class="page-intro">
-                    The ten pieces you can listen to here are the most frequently performed by Arioso, and provide a sampling of the wide musical variety in our repertoire. Each of these standards is long enough for you to get a glimpse of the full beauty of the music.
+                    Hear ten of the pieces we play most often, watch us perform, and search our full repertoire.
                 </p>
+                <nav class="subnav" aria-label="On this page">
+                    <a href="#samples" class="chip">Listen</a>
+                    <a href="#video" class="chip">Watch</a>
+                    <a href="#repertoire" class="chip">Repertoire</a>
+                </nav>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="samples">
             <div class="container">
+                <div class="section-header section-header-left">
+                    <span class="section-kicker">Listen</span>
+                    <h2 class="section-title section-title-left">Ten Favorites</h2>
+                    <p class="section-subtitle section-subtitle-left">
+                        These are the pieces we perform most often, and together they show the variety in our repertoire. Each is long enough to give you a real taste of the music.
+                    </p>
+                </div>
+
                 <div class="samples-grid" id="samples-grid">
                     <% samplesList.forEach((track, idx) => { %>
                     <article class="track-card">
                         <div class="track-header">
                             <span class="track-number"><%= track.num %></span>
                             <div class="track-meta">
-                                <h2 class="track-title" id="<%= track.id %>"><%= track.title %></h2>
+                                <h3 class="track-title" id="<%= track.id %>"><%= track.title %></h3>
                                 <span class="track-composer"><%= track.composer %></span>
                             </div>
                             <span class="track-tag"><%= track.tag %></span>
@@ -90,31 +103,32 @@
                     </article>
                     <% }) %>
                 </div>
+            </div>
+        </section>
 
-                <!-- Demo Video Callout -->
-                <div class="video-showcase-card">
-                    <div class="video-showcase-copy">
-                        <span class="section-kicker">Video Performance</span>
-                        <h2>Watch Our Demo Video on YouTube</h2>
-                        <p>
-                            See and hear the Arioso String Quartet in performance. Looking for a specific song not heard above? Browse our full repertoire of hundreds of classical, pop, Broadway, jazz, and traditional pieces.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="https://www.youtube.com/watch?v=o11b5UK1TzU" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Watch on YouTube &rarr;
-                            </a>
-                            <a href="/repertoire" class="btn btn-secondary">Browse Full Repertoire</a>
-                        </div>
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=o11b5UK1TzU" target="_blank" rel="noopener noreferrer" class="video-poster-link">
-                        <img src="/img/youtube.jpg" alt="Watch Arioso Quartet demo video on YouTube" width="604" height="328" loading="lazy">
-                        <span class="play-overlay" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></svg>
-                        </span>
-                    </a>
+        <section class="section section-tinted" id="video">
+            <div class="container video-section">
+                <div class="video-copy">
+                    <span class="section-kicker">Watch</span>
+                    <h2 class="section-title section-title-left">See Us Perform</h2>
+                    <p class="section-subtitle section-subtitle-left">
+                        A short demo of the quartet in performance.
+                    </p>
+                </div>
+                <div class="video-frame">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/o11b5UK1TzU"
+                        title="Arioso String Quartet demo video"
+                        loading="lazy"
+                        allow="accelerometer; encrypted-media; picture-in-picture"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin"
+                    ></iframe>
                 </div>
             </div>
         </section>
+
+        <%- include('../sections/repertoire-explorer.ejs') %>
     </main>
 
     <%- include('../partials/footer.ejs') %>

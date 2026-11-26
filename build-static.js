@@ -8,6 +8,7 @@ const {
   CATEGORY_META,
   generateSeoAndAgentAssets
 } = require('./generate-seo-assets');
+const REVIEWS = require('./data/reviews.json');
 
 const DIST_DIR = path.join(__dirname, 'dist');
 const PUBLIC_DIR = path.join(__dirname, 'public');
@@ -15,13 +16,10 @@ const VIEWS_DIR = path.join(__dirname, 'views', 'pages');
 
 const pages = [
   { template: 'index', slug: 'index', canonicalPath: '/' },
-  { template: 'biographies', slug: 'biographies', canonicalPath: '/biographies' },
-  { template: 'repertoire', slug: 'repertoire', canonicalPath: '/repertoire' },
-  { template: 'samples', slug: 'samples', canonicalPath: '/samples' },
-  { template: 'venues', slug: 'venues', canonicalPath: '/venues' },
-  { template: 'testimonials', slug: 'testimonials', canonicalPath: '/testimonials' },
-  { template: 'rates', slug: 'rates', canonicalPath: '/rates' },
-  { template: 'FAQ', slug: 'faq', canonicalPath: '/faq' }
+  { template: 'music', slug: 'music', canonicalPath: '/music' },
+  { template: 'about', slug: 'about', canonicalPath: '/about' },
+  { template: 'reviews', slug: 'reviews', canonicalPath: '/reviews' },
+  { template: 'rates', slug: 'rates', canonicalPath: '/rates' }
 ];
 
 function copyRecursiveSync(src, dest) {
@@ -49,7 +47,7 @@ async function buildStaticSite() {
   }
   fs.mkdirSync(DIST_DIR, { recursive: true });
 
-  // 3. Copy all public/ assets (including newly generated JSON/llms/sitemap/robots & optimized images)
+  // 3. Copy all public/ assets
   copyRecursiveSync(PUBLIC_DIR, DIST_DIR);
 
   // 4. Render each EJS template with canonical metadata
@@ -60,7 +58,8 @@ async function buildStaticSite() {
       canonicalPath: page.canonicalPath,
       venuesData: VENUES_DATA,
       regionMeta: REGION_META,
-      categoryMeta: CATEGORY_META
+      categoryMeta: CATEGORY_META,
+      reviews: REVIEWS
     });
 
     fs.writeFileSync(path.join(DIST_DIR, `${page.slug}.html`), html, 'utf8');

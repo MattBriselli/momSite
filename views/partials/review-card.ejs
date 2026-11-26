@@ -1,0 +1,21 @@
+<%
+  const isFeatured = typeof featured !== 'undefined' && featured;
+  const isClamp = typeof clamp !== 'undefined' && clamp;
+%>
+<article class="review-card<%= isFeatured ? ' review-card-featured' : '' %>">
+    <% if (r.stars) { %>
+    <div class="review-stars" aria-label="<%= r.stars %> out of 5 stars"><%= '\u2605'.repeat(r.stars) %></div>
+    <% } %>
+    <h3 class="review-title">
+        <% if (r.link) { %>
+        <a target="_blank" rel="noopener noreferrer" href="<%= r.link %>">&ldquo;<%= r.title %>&rdquo;</a>
+        <% } else { %>
+        &ldquo;<%= r.title %>&rdquo;
+        <% } %>
+    </h3>
+    <blockquote class="review-body<%= isClamp ? ' is-clampable' : '' %>"><%= r.body %></blockquote>
+    <footer class="review-footer">
+        <strong><%= r.author %></strong>
+        <time datetime="<%= r.iso %>"><%= r.date %><%= r.source ? ' \u2022 ' + r.source : '' %></time>
+    </footer>
+</article>

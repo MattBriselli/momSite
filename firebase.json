@@ -20,16 +20,22 @@
       }
     ],
     "redirects": [
-      {
-        "source": "/index",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/FAQ",
-        "destination": "/faq",
-        "type": 301
-      }
+      { "source": "/index", "destination": "/", "type": 301 },
+      { "source": "/index.html", "destination": "/", "type": 301 },
+      { "source": "/samples", "destination": "/music#samples", "type": 301 },
+      { "source": "/samples.html", "destination": "/music#samples", "type": 301 },
+      { "source": "/repertoire", "destination": "/music#repertoire", "type": 301 },
+      { "source": "/repertoire.html", "destination": "/music#repertoire", "type": 301 },
+      { "source": "/biographies", "destination": "/about", "type": 301 },
+      { "source": "/biographies.html", "destination": "/about", "type": 301 },
+      { "source": "/venues", "destination": "/about#venues", "type": 301 },
+      { "source": "/venues.html", "destination": "/about#venues", "type": 301 },
+      { "source": "/testimonials", "destination": "/reviews", "type": 301 },
+      { "source": "/testimonials.html", "destination": "/reviews", "type": 301 },
+      { "source": "/FAQ", "destination": "/rates#faq", "type": 301 },
+      { "source": "/faq", "destination": "/rates#faq", "type": 301 },
+      { "source": "/FAQ.html", "destination": "/rates#faq", "type": 301 },
+      { "source": "/faq.html", "destination": "/rates#faq", "type": 301 }
     ]
   }
 }

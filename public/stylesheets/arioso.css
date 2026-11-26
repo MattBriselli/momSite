@@ -239,7 +239,7 @@ a:hover {
 }
 
 .brand-tagline {
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--text-muted);
@@ -405,7 +405,7 @@ h4 {
 .awards-kicker {
   display: inline-block;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.11em;
@@ -691,7 +691,7 @@ h4 {
 
 .feature-tag {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -881,7 +881,7 @@ h4 {
 
 .instrument-badge {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -966,7 +966,7 @@ h4 {
 }
 
 .track-tag {
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--accent-plum);
   background-color: var(--bg-tinted);
@@ -1076,7 +1076,7 @@ h4 {
 
 .pricing-badge {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -1844,7 +1844,7 @@ h4 {
 
 .video-badge-link small {
   color: var(--accent-gold-soft);
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
 }
 
 .footer-heading {
@@ -1995,7 +1995,7 @@ h4 {
 }
 
 .filter-row-label {
-  font-size: 0.78rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -2012,7 +2012,7 @@ h4 {
 }
 
 .venue-type-chip {
-  font-size: 0.68rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2082,7 +2082,7 @@ h4 {
 }
 
 .spec-cell dt {
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -2399,4 +2399,392 @@ h4 {
   margin: 0;
   color: var(--text-secondary);
   font-size: 0.9375rem;
+}
+
+/* ==========================================================================
+   Simplified 5-Page Architecture: Subnav, Chips, Video, Bios, Venues,
+   Reviews Clamp & Rates Comparison Table
+   ========================================================================== */
+
+.subnav,
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-start: 1.25rem;
+}
+
+.chip-row-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-inline-end: 0.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 0.42rem;
+  padding-inline: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-plum);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  background-color: var(--bg-plum);
+  color: var(--text-on-dark);
+  border-color: var(--bg-plum);
+}
+
+.section-header-left {
+  margin-inline: 0;
+  text-align: start;
+  max-inline-size: 48rem;
+}
+
+.section-title-left,
+.section-subtitle-left {
+  text-align: start;
+}
+
+.repertoire-intro {
+  margin-block-end: 2rem;
+}
+
+/* Embedded YouTube Demo Video (/music#video) */
+.video-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 54rem) {
+  .video-section {
+    grid-template-columns: 0.72fr 1.28fr;
+    gap: 3rem;
+  }
+}
+
+.video-frame {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: clip;
+  background-color: var(--bg-plum-deep);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-frame iframe {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+}
+
+/* Bios 2-line Summary + Expandable Full Bio (/about#bios) */
+.bio-summary {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.bio-more summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-plum);
+  cursor: pointer;
+  padding-block: 0.25rem;
+}
+
+.bio-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.bio-more summary::after {
+  content: "▾";
+  font-size: 0.9em;
+  transition: transform 0.15s ease;
+}
+
+.bio-more[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.bio-more summary:hover {
+  color: var(--accent-plum-hover);
+  text-decoration: underline;
+}
+
+.bio-more .bio-text {
+  margin-block-start: 0.65rem;
+  padding-block-start: 0.65rem;
+  border-block-start: 1px solid var(--border-subtle);
+}
+
+/* Collapsible <details> Venues Regions (/about#venues) */
+details.venue-category-card {
+  padding: 0;
+  overflow: clip;
+}
+
+summary.venue-category-header {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  padding: clamp(1.1rem, 2.5vw, 1.5rem) clamp(1.25rem, 3vw, 2rem);
+  margin-block-end: 0;
+  border-block-end: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+summary.venue-category-header::-webkit-details-marker {
+  display: none;
+}
+
+summary.venue-category-header:hover {
+  background-color: var(--bg-canvas);
+}
+
+.venue-region-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+  font-weight: 700;
+  color: var(--bg-plum-deep);
+}
+
+.venue-region-name::before {
+  content: "";
+  inline-size: 0.75em;
+  block-size: 0.75em;
+  flex-shrink: 0;
+  background-color: var(--accent-plum);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41Z'/%3E%3C/svg%3E") no-repeat center / contain;
+  rotate: -90deg;
+  transition: rotate 0.2s ease;
+}
+
+details.venue-category-card[open] > summary.venue-category-header {
+  border-block-end: 1px solid var(--border-subtle);
+}
+
+details.venue-category-card[open] .venue-region-name::before {
+  rotate: 0deg;
+}
+
+details.venue-category-card > .venue-list {
+  padding: clamp(1.1rem, 2.5vw, 1.5rem) clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
+}
+
+/* Featured Reviews & Clamped "More Reviews" (/reviews) */
+.reviews-featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+  gap: 1.5rem;
+  margin-block-start: 1.25rem;
+}
+
+.review-card-featured {
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.reviews-more-heading {
+  margin-block-start: 3.25rem;
+  margin-block-end: 1.25rem;
+}
+
+.review-body.is-clampable {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: clip;
+  flex: 0 0 auto;
+  margin-block-end: 0.65rem;
+}
+
+.review-body.is-clampable.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
+.read-more-btn {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 0.2rem 0;
+  margin-block-end: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-plum);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.read-more-btn:hover {
+  color: var(--accent-plum-hover);
+}
+
+.review-card .review-footer {
+  margin-block-start: auto;
+}
+
+/* Rates Comparison Table (/rates#rates) */
+.compare-table {
+  inline-size: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: clip;
+  box-shadow: var(--shadow-md);
+}
+
+.compare-table th,
+.compare-table td {
+  text-align: start;
+  padding: 1.15rem 1.35rem;
+  border-block-end: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.compare-table thead th {
+  background-color: var(--bg-tinted);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-plum);
+}
+
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td {
+  border-block-end: 0;
+}
+
+.compare-table tbody th {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--bg-plum-deep);
+  white-space: nowrap;
+}
+
+.compare-row-featured {
+  background-color: var(--bg-plum-soft);
+}
+
+.compare-price {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--bg-plum-deep);
+  white-space: nowrap;
+}
+
+.compare-notes {
+  margin: 1.5rem 0 0 0;
+  padding: 1.25rem 1.5rem 1.25rem 2.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (max-width: 47.99rem) {
+  .compare-table,
+  .compare-table tbody,
+  .compare-table tr,
+  .compare-table th,
+  .compare-table td {
+    display: block;
+    inline-size: 100%;
+  }
+
+  .compare-table {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .compare-table thead {
+    position: absolute;
+    clip-path: inset(50%);
+    overflow: hidden;
+    inline-size: 1px;
+    block-size: 1px;
+  }
+
+  .compare-table tbody {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .compare-table tbody tr {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .compare-table tbody tr.compare-row-featured {
+    background-color: var(--bg-plum-soft);
+    border: 2px solid var(--bg-plum);
+  }
+
+  .compare-table tbody th,
+  .compare-table tbody td {
+    padding: 0.35rem 0;
+    border: 0;
+  }
+
+  .compare-table tbody td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-inline-end: 0.35rem;
+  }
+
+  .compare-table tbody td:last-child {
+    margin-block-start: 0.75rem;
+  }
 }
