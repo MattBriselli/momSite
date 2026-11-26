@@ -3,7 +3,7 @@
 ## Terminology (the user's vocabulary)
 - **"main"** and **"prod"** both mean the live site at https://ariosoquartet.com.
   - Git branch: `develop` (the GitHub default branch). It is NOT named `main`; do not rename it.
-  - Heroku app `arioso` auto-deploys from `develop` (GitHub integration), proxied by Cloudflare.
+  - Hosted on **Cloudflare Workers Static Assets** (Worker `momsite`, `wrangler.jsonc`, `public/_redirects`, `public/_headers`), auto-deploying from `develop` via GitHub integration (`npm run build` → `npx wrangler deploy`).
   - Pushing or merging to `develop` = changing the live site.
 - **"staging"** means the preview site for the user's mom to review:
   - Git branch: `staging`
@@ -20,6 +20,6 @@
 4. Never push to `develop` without the user's explicit go-ahead.
 
 ## Notes
-- A future move of prod from Heroku to Firebase is planned (cheaper), after staging is approved. Remove the `noindex` header from any production Firebase config.
+- Prod migrated off Heroku to free Cloudflare Workers Static Assets (`momsite`). Never add `noindex` to `public/_headers`.
 - Local dev: `npm start` serves http://localhost:9000.
 - `dist/` and `.firebase/` are generated and git-ignored.
