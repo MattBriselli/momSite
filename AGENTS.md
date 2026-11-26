@@ -13,7 +13,8 @@
 - `master` was deleted; it was fully contained in `develop`.
 
 ## Workflow
-1. Do new work on `staging` (or a branch off it), then run `npm test` and `npm run deploy:staging`.
+0. **Always work in a fresh branch.** For every task, branch off `staging` (e.g. `git checkout -b seo-tweaks`), never commit directly to `staging` or `develop`. When the work is verified, merge it into `staging`, then delete the spent branch locally and on GitHub (`git branch -d <name>` and `git push origin --delete <name>`). Check `git status` is clean before starting.
+1. Do new work on that fresh branch, merge it into `staging`, then run `npm test` and `npm run deploy:staging`.
 2. The user's mom reviews the staging URL.
 3. Only after the user confirms she approved, merge `staging` into `develop` (prod), run `npm test`, push, and verify https://ariosoquartet.com.
 4. Never push to `develop` without the user's explicit go-ahead.
