@@ -63,12 +63,6 @@ async function buildStaticSite() {
     });
 
     fs.writeFileSync(path.join(DIST_DIR, `${page.slug}.html`), html, 'utf8');
-
-    if (page.slug !== 'index') {
-      const cleanDir = path.join(DIST_DIR, page.slug);
-      fs.mkdirSync(cleanDir, { recursive: true });
-      fs.writeFileSync(path.join(cleanDir, 'index.html'), html, 'utf8');
-    }
   }
 
   console.log(`Static site + SEO/Agent feeds built successfully in ${DIST_DIR}`);
