@@ -1,0 +1,61 @@
+<%
+  const allReviews = typeof reviews !== 'undefined' ? reviews : [];
+  // Featured picks: most recent, and each covers a different strength
+  // (elegance + easy planning / value + personal arranging / professionalism).
+  const featuredNames = ['Casey H.', 'Kristin B.', 'Betsy Z.'];
+  const featuredReviews = featuredNames.map((n) => allReviews.find((r) => r.author === n)).filter(Boolean);
+  const moreReviews = allReviews.filter((r) => !featuredNames.includes(r.author));
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs', {
+        canonicalPath: '/reviews',
+        pageTitle: 'Client Reviews',
+        pageDescription: 'Read wedding reviews of the Arioso String Quartet from couples and families across the Greater Philadelphia area, from The Bash, WeddingWire, GigMasters, and Thumbtack.'
+    }) %>
+</head>
+<body>
+    <%- include('../partials/header.ejs', { activePage: 'reviews' }) %>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container testimonials-hero-inner">
+                <div>
+                    <span class="section-kicker">In Our Clients' Words</span>
+                    <h1 class="page-heading">Client Reviews</h1>
+                    <p class="page-intro">
+                        Here is what couples, parents, and hosts have said about working with Carol Briselli and the Arioso String Quartet.
+                    </p>
+                </div>
+                <a class="hero-awards-cluster" href="https://www.thebash.com/string-quartet/arioso-quartet" target="_blank" rel="noopener noreferrer" aria-label="View Arioso Quartet profile on The Bash">
+                    <img src="/img/awards/bash-25.svg" alt="The Bash 25 Years Award" width="68" height="68" fetchpriority="high">
+                    <img src="/img/awards/bash-best-of.svg" alt="The Bash Best Of Award" width="68" height="68">
+                    <img src="/img/awards/bash-lifetime-award.svg" alt="The Bash Lifetime Award" width="68" height="68">
+                    <img src="/img/awards/bash-rapid.svg" alt="The Bash Rapid Responder" width="68" height="68">
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title section-title-left">Featured Reviews</h2>
+                <div class="reviews-featured">
+                    <% featuredReviews.forEach((r) => { %>
+                    <%- include('../partials/review-card.ejs', { r: r, featured: true, clamp: false }) %>
+                    <% }) %>
+                </div>
+
+                <h2 class="section-title section-title-left reviews-more-heading">More Reviews</h2>
+                <div class="reviews-grid">
+                    <% moreReviews.forEach((r) => { %>
+                    <%- include('../partials/review-card.ejs', { r: r, featured: false, clamp: true }) %>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
