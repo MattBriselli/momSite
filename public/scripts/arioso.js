@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAudioSamples();
   initLazyMediaFallback();
   initVenuesFilter();
+  initContactClickTracking();
   initBookingInquiryForm();
 });
 
@@ -149,6 +150,8 @@ function initAudioSamples() {
   const players = document.querySelectorAll("audio");
   if (players.length === 0) return;
 
+  const trackedTracks = new WeakSet();
+
   document.addEventListener(
     "play",
     (event) => {
@@ -160,6 +163,15 @@ function initAudioSamples() {
           if (card) card.classList.remove("is-playing");
         } else if (card) {
           card.classList.add("is-playing");
+          if (!trackedTracks.has(audio) && typeof window.ariosoTrack === "function") {
+            trackedTracks.add(audio);
+            const title = card.querySelector(".track-title")?.textContent?.trim() || "Unknown";
+            const composer = card.querySelector(".track-composer")?.textContent?.trim() || "";
+            window.ariosoTrack("audio_play", {
+              track_title: title,
+              track_composer: composer
+            });
+          }
         }
       }
     },
@@ -306,6 +318,32 @@ function initVenuesFilter() {
       applyVenueFilter();
     });
   }
+}
+
+/**
+ * 5c. Phone & Email Contact Click Tracking (GA4 prod-only)
+ */
+function initContactClickTracking() {
+  document.addEventListener("click", (event) => {
+    const link = event.target instanceof Element ? event.target.closest("a[href]") : null;
+    if (!link || typeof window.ariosoTrack !== "function") return;
+
+    const href = link.getAttribute("href") || "";
+    const isPhone = href.startsWith("tel:");
+    const isEmail = href.startsWith("mailto:");
+    if (!isPhone && !isEmail) return;
+
+    let location = "page";
+    if (link.closest(".utility-bar, .site-header")) location = "header";
+    else if (link.closest(".site-footer")) location = "footer";
+    else if (link.closest(".mobile-action-bar")) location = "mobile_bar";
+    else if (link.closest("#inquiry-result")) location = "inquiry_result";
+
+    window.ariosoTrack("contact_click", {
+      method: isPhone ? "phone" : "email",
+      location
+    });
+  });
 }
 
 /**
@@ -545,6 +583,13 @@ function initBookingInquiryForm() {
 
     if (summaryPreview) summaryPreview.textContent = summaryText;
     if (mailtoLink) mailtoLink.setAttribute("href", finalMailto);
+    if (typeof window.ariosoTrack === "function") {
+      window.ariosoTrack("generate_lead", {
+        ensemble,
+        duration: duration || "unspecified",
+        has_venue: Boolean(venue)
+      });
+    }
     if (resultCard) {
       resultCard.hidden = false;
       resultCard.scrollIntoView({ behavior: "smooth", block: "nearest" });

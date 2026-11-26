@@ -59,6 +59,10 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
           body.includes('application/ld+json') && body.includes('og:image'),
           `${route.path} emits JSON-LD and OpenGraph tags`
         );
+        t.ok(
+          body.includes('G-83VLJ0XRJ0') && body.includes("h !== 'ariosoquartet.com'"),
+          `${route.path} includes prod-gated GA4 snippet`
+        );
       }
 
       // 2. Legacy 301 Redirects
