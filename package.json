@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "node build-static.js",
+    "deploy:staging": "npm run build && npx -y firebase-tools@latest deploy --only hosting --project arioso-quartet-preview-c899f",
     "test": "node test.js"
   },
   "dependencies": {
