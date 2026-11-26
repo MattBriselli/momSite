@@ -35,16 +35,13 @@ function requestPath(pathname, options = {}) {
 test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent feeds', (t) => {
   child.stdout.once('data', async () => {
     try {
-      // 1. Canonical HTML pages
+      // 1. Canonical HTML pages (5-page simplified IA)
       const canonicalRoutes = [
-        { path: '/', expected: 'Arioso String Quartet', canonical: 'https://ariosoquartet.com/' },
-        { path: '/biographies', expected: 'Meet the Arioso Quartet', canonical: 'https://ariosoquartet.com/biographies' },
-        { path: '/repertoire', expected: 'Musical Repertoire', canonical: 'https://ariosoquartet.com/repertoire' },
-        { path: '/samples', expected: 'Music Samples', canonical: 'https://ariosoquartet.com/samples' },
-        { path: '/venues', expected: 'Selected Venues', canonical: 'https://ariosoquartet.com/venues' },
-        { path: '/testimonials', expected: 'Client Testimonials', canonical: 'https://ariosoquartet.com/testimonials' },
-        { path: '/rates', expected: 'At a Glance: Booking &amp; Venue Details', canonical: 'https://ariosoquartet.com/rates' },
-        { path: '/faq', expected: 'Frequently Asked Questions', canonical: 'https://ariosoquartet.com/faq' }
+        { path: '/', expected: 'Live String Music for Weddings &amp; Events', canonical: 'https://ariosoquartet.com/' },
+        { path: '/music', expected: 'Our Music', canonical: 'https://ariosoquartet.com/music' },
+        { path: '/about', expected: 'Meet the Arioso Quartet', canonical: 'https://ariosoquartet.com/about' },
+        { path: '/reviews', expected: 'Client Reviews', canonical: 'https://ariosoquartet.com/reviews' },
+        { path: '/rates', expected: 'includes personal music consultation', canonical: 'https://ariosoquartet.com/rates' }
       ];
 
       for (const route of canonicalRoutes) {
@@ -60,6 +57,10 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
           `${route.path} emits JSON-LD and OpenGraph tags`
         );
         t.ok(
+          !body.includes('aggregateRating') && !body.includes('foundingDate') && !body.includes('since 1989'),
+          `${route.path} omits aggregateRating and 1989 founding date`
+        );
+        t.ok(
           body.includes('G-83VLJ0XRJ0') && body.includes("h !== 'ariosoquartet.com'"),
           `${route.path} includes prod-gated GA4 snippet`
         );
@@ -68,8 +69,14 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
       // 2. Legacy 301 Redirects
       const redirects = [
         { from: '/index', to: '/' },
-        { from: '/FAQ', to: '/faq' },
-        { from: '/repertoire.html', to: '/repertoire' }
+        { from: '/samples', to: '/music#samples' },
+        { from: '/repertoire', to: '/music#repertoire' },
+        { from: '/repertoire.html', to: '/music#repertoire' },
+        { from: '/biographies', to: '/about' },
+        { from: '/venues', to: '/about#venues' },
+        { from: '/testimonials', to: '/reviews' },
+        { from: '/faq', to: '/rates#faq' },
+        { from: '/FAQ', to: '/rates#faq' }
       ];
       for (const r of redirects) {
         const { statusCode, headers } = await requestPath(r.from);

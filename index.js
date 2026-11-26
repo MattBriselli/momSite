@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const { SITE_URL, VENUES_DATA, REGION_META, CATEGORY_META } = require('./generate-seo-assets');
+const REVIEWS = require('./data/reviews.json');
 
 const PORT = process.env.PORT || 9000;
 const app = express();
@@ -9,30 +10,38 @@ app.locals.siteUrl = SITE_URL;
 app.locals.venuesData = VENUES_DATA;
 app.locals.regionMeta = REGION_META;
 app.locals.categoryMeta = CATEGORY_META;
+app.locals.reviews = REVIEWS;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// 1. Canonical 301 Redirects for Legacy & Duplicate Paths
+// 1. Permanent (301) redirects from every previous URL to its new home, so old links and search rankings carry over.
 const legacyRedirects = {
   '/index': '/',
   '/index.html': '/',
-  '/biographies.html': '/biographies',
-  '/repertoire.html': '/repertoire',
-  '/samples.html': '/samples',
-  '/venues.html': '/venues',
-  '/testimonials.html': '/testimonials',
-  '/rates.html': '/rates',
-  '/FAQ': '/faq',
-  '/FAQ.html': '/faq',
-  '/faq.html': '/faq'
+  '/samples': '/music#samples',
+  '/samples.html': '/music#samples',
+  '/repertoire': '/music#repertoire',
+  '/repertoire.html': '/music#repertoire',
+  '/biographies': '/about',
+  '/biographies.html': '/about',
+  '/venues': '/about#venues',
+  '/venues.html': '/about#venues',
+  '/testimonials': '/reviews',
+  '/testimonials.html': '/reviews',
+  '/FAQ': '/rates#faq',
+  '/faq': '/rates#faq',
+  '/FAQ.html': '/rates#faq',
+  '/faq.html': '/rates#faq',
+  '/rates.html': '/rates'
 };
 
 app.use((req, res, next) => {
   const target = legacyRedirects[req.path];
   if (target) {
     const qs = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
-    return res.redirect(301, `${target}${qs}`);
+    const [targetPath, hash] = target.split('#');
+    return res.redirect(301, `${targetPath}${qs}${hash ? '#' + hash : ''}`);
   }
   next();
 });
@@ -41,15 +50,12 @@ app.use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs');
 
-// 2. Canonical Page Routes
+// 2. Canonical page routes
 app.get('/', (req, res) => res.render('pages/index', { canonicalPath: '/' }));
-app.get('/biographies', (req, res) => res.render('pages/biographies', { canonicalPath: '/biographies' }));
-app.get('/repertoire', (req, res) => res.render('pages/repertoire', { canonicalPath: '/repertoire' }));
-app.get('/samples', (req, res) => res.render('pages/samples', { canonicalPath: '/samples' }));
-app.get('/venues', (req, res) => res.render('pages/venues', { canonicalPath: '/venues' }));
-app.get('/testimonials', (req, res) => res.render('pages/testimonials', { canonicalPath: '/testimonials' }));
+app.get('/music', (req, res) => res.render('pages/music', { canonicalPath: '/music' }));
+app.get('/about', (req, res) => res.render('pages/about', { canonicalPath: '/about' }));
+app.get('/reviews', (req, res) => res.render('pages/reviews', { canonicalPath: '/reviews' }));
 app.get('/rates', (req, res) => res.render('pages/rates', { canonicalPath: '/rates' }));
-app.get('/faq', (req, res) => res.render('pages/FAQ', { canonicalPath: '/faq' }));
 
 // 3. Structured Booking Inquiry Endpoint (for Web Forms & Autonomous Agents)
 app.post('/api/inquiry', (req, res) => {
@@ -95,18 +101,7 @@ app.post('/api/inquiry', (req, res) => {
     subject
   )}&body=${encodeURIComponent(summaryText)}`;
 
-  if (req.accepts('json') && !req.accepts('html')) {
-    return res.status(200).json({
-      ok: true,
-      recipient: 'carolbriselli@verizon.net',
-      phone: '+1-484-841-6445',
-      subject,
-      summary: summaryText,
-      mailtoUrl
-    });
-  }
-
-  if (req.headers['x-requested-with'] === 'fetch') {
+  if ((req.accepts('json') && !req.accepts('html')) || req.headers['x-requested-with'] === 'fetch') {
     return res.status(200).json({
       ok: true,
       recipient: 'carolbriselli@verizon.net',

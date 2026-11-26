@@ -3,7 +3,7 @@ const path = require('path');
 
 const SITE_URL = (process.env.SITE_URL || 'https://ariosoquartet.com').replace(/\/+$/, '');
 const PUBLIC_DIR = path.join(__dirname, 'public');
-const REPERTOIRE_EJS_PATH = path.join(__dirname, 'views', 'pages', 'repertoire.ejs');
+const REPERTOIRE_EJS_PATH = path.join(__dirname, 'views', 'sections', 'repertoire-explorer.ejs');
 const TODAY = new Date().toISOString().split('T')[0];
 
 /**
@@ -179,7 +179,7 @@ function parseRepertoireFromEjs() {
     categories.push({
       id,
       title,
-      url: `${SITE_URL}/repertoire#${id}`,
+      url: `${SITE_URL}/music#${id}`,
       selectionCount: categoryCount,
       groups
     });
@@ -211,7 +211,7 @@ function buildVenuesJson() {
 
   return {
     ensemble: 'Arioso String Quartet',
-    siteUrl: `${SITE_URL}/venues`,
+    siteUrl: `${SITE_URL}/about#venues`,
     updatedAt: TODAY,
     serviceAreaNote:
       'Travels up to 80 miles from Center City Philadelphia across Pennsylvania, Southern New Jersey, Delaware, and Northern Maryland. Performs at any indoor or shaded outdoor venue.',
@@ -269,13 +269,10 @@ Sitemap: ${SITE_URL}/sitemap.xml
 function buildSitemapXml() {
   const routes = [
     { path: '/', priority: '1.0', changefreq: 'monthly' },
-    { path: '/rates', priority: '0.9', changefreq: 'monthly' },
-    { path: '/repertoire', priority: '0.9', changefreq: 'monthly' },
-    { path: '/samples', priority: '0.9', changefreq: 'yearly' },
-    { path: '/biographies', priority: '0.8', changefreq: 'yearly' },
-    { path: '/testimonials', priority: '0.8', changefreq: 'monthly' },
-    { path: '/venues', priority: '0.8', changefreq: 'yearly' },
-    { path: '/faq', priority: '0.8', changefreq: 'yearly' }
+    { path: '/music', priority: '0.9', changefreq: 'monthly' },
+    { path: '/about', priority: '0.8', changefreq: 'yearly' },
+    { path: '/reviews', priority: '0.8', changefreq: 'monthly' },
+    { path: '/rates', priority: '0.9', changefreq: 'monthly' }
   ];
 
   const urlsXml = routes
@@ -299,14 +296,15 @@ ${urlsXml}
 function buildLlmsTxt(repertoireData, venuesData) {
   return `# Arioso String Quartet
 
-> Premier professional wedding and event string ensemble based in Greater Philadelphia (Chester Heights, PA), serving Pennsylvania, Southern New Jersey, and Delaware within an 80-mile radius of Center City Philadelphia since 1989.
+> Premier professional wedding and event string ensemble based in Greater Philadelphia (Chester Heights, PA), serving Pennsylvania, Southern New Jersey, and Delaware within an 80-mile radius of Center City Philadelphia.
 
 The musicians of the Arioso String Quartet hold principal, concertmaster, and section positions with Opera Philadelphia, the Philadelphia Ballet, the Chamber Orchestra of Philadelphia, and the Academy of Vocal Arts Opera Orchestra, with conservatory training from the Curtis Institute of Music, Eastman School of Music, and Temple University.
 
 ## Quick Facts & Booking Specifications
 
 - **Ensembles Offered**: String Quartet (2 violins, viola, cello), String Trio (violin, viola, cello), String Duo (violin, cello)
-- **Starting Rates**: String Quartet starts at $1,175 (1-hour minimum); String Trio starts at $925 (1-hour minimum); String Duo starts at $750 (1-hour minimum)
+- **Starting Rates**: String Quartet starts at $1,175 (1-hour minimum); String Trio starts at $925 (1-hour minimum); String Duo starts at $750 (1-hour minimum); every booking includes personal music consultation
+- **Deposit & Payment Terms**: 50% deposit of the total is due with the signing of the contract; the remaining balance is due one week before the event
 - **Overtime / Additional Time**: Scheduled in 30-minute increments; contracted rates beyond the first hour are significantly lower than the initial hour
 - **Instrument Substitutions & Add-Ons**: Flute may be substituted for one violin in quartet or trio at **no additional charge**; trumpet and/or vocalist (client's or Arioso's) can be added for ceremonies
 - **Service Area**: Up to 80 miles from Center City Philadelphia (Center City, Main Line, Chester/Delaware/Montgomery/Bucks Counties, Wilmington/Brandywine Valley DE, Southern/Central NJ & Jersey Shore)
@@ -320,13 +318,10 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 ## Canonical Pages & Machine-Readable Feeds
 
 - [Home](${SITE_URL}/): Overview of ensemble configurations, credentials, and ceremony expertise
-- [Rates, Availability & Inquiry Form](${SITE_URL}/rates): Starting rates, quick-reference logistics, and structured quote request form (\`#inquiry-form\`)
-- [Complete Repertoire (${repertoireData.totalSelections} Selections)](${SITE_URL}/repertoire): Searchable repertoire across ${repertoireData.totalCategories} genres
-- [Music Samples (10 Full MP3 Tracks + Video)](${SITE_URL}/samples): Full-length recordings of Mozart, Pachelbel, Mendelssohn, Wagner, Bach, Boccherini, Handel, and Joplin
-- [Musician Biographies](${SITE_URL}/biographies): Profiles of Igor Szwec, Barbara Jaffe, Carol Briselli, and Vivian Barton
-- [Selected Past Venues (${venuesData.totalVenuesListed} Venues)](${SITE_URL}/venues): Venues categorized by region and type
-- [Client Testimonials](${SITE_URL}/testimonials): 15+ verified 5-star wedding reviews from The Bash, WeddingWire, and Thumbtack
-- [Frequently Asked Questions](${SITE_URL}/faq): 13 detailed Q&As on attire, multi-location fees, outdoor setup, and rehearsals
+- [Our Music — Samples, Video & Repertoire (${repertoireData.totalSelections} Selections)](${SITE_URL}/music): Ten full-length recordings, embedded live demo video, and searchable repertoire across ${repertoireData.totalCategories} genres
+- [About — Musicians & Selected Past Venues (${venuesData.totalVenuesListed} Venues)](${SITE_URL}/about): Profiles of Igor Szwec, Barbara Jaffe, Carol Briselli, and Vivian Barton, plus venues by region
+- [Client Reviews](${SITE_URL}/reviews): 15 wedding and event reviews from The Bash, WeddingWire, GigMasters, and Thumbtack
+- [Rates, Availability & FAQ](${SITE_URL}/rates): Ensemble comparison table, quote request form (\`#inquiry-form\`), event planner specs, and 13 FAQs (\`#faq\`)
 - [Complete LLM Knowledge Base](${SITE_URL}/llms-full.txt): Full text of bios, FAQs, all venues by region, and all ${repertoireData.totalSelections} repertoire pieces
 - [Repertoire JSON Feed](${SITE_URL}/repertoire.json): Machine-readable JSON of all ${repertoireData.totalSelections} pieces across ${repertoireData.totalCategories} categories
 - [Venues JSON Feed](${SITE_URL}/venues.json): Machine-readable JSON of ${venuesData.totalVenuesListed} past venues with city, state, category, and region tags
@@ -342,7 +337,7 @@ function buildLlmsFullTxt(repertoireData, venuesData) {
   out += `- **Carol Briselli (Violist & Ensemble Director)**: M.M. from Temple University and B.A. from SUNY-Binghamton (studied with Toby Appel, Sol Greitzer, and Evelyn Jacobs Luise). Assistant Principal Violist of Opera Philadelphia; performs with Philadelphia Ballet, Philly Pops, and Vox Ama Deus; teaches at Bryn Mawr, Haverford, and Swarthmore Colleges (formerly Assistant Professor of Music at West Chester University).\n`;
   out += `- **Vivian Barton (Cellist)**: Graduate of the Curtis Institute of Music (studied with David Soyer). Performed with the Brandenburg Ensemble, Orpheus Chamber Orchestra, and the Philadelphia Orchestra; Assistant Principal Cellist of Opera Philadelphia (formerly Santa Fe Opera) and Principal Cellist of the Academy of Vocal Arts Opera Orchestra; Marlboro Music Festival and Prussia Cove participant.\n`;
 
-  out += `\n## Audio Samples (${SITE_URL}/samples)\n\n`;
+  out += `\n## Audio Samples (${SITE_URL}/music#samples)\n\n`;
   const samples = [
     ['Eine Kleine Nachtmusik — Wolfgang Amadeus Mozart', '/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3'],
     ['Canon in D — Johann Pachelbel', '/audio/Pachelbel_Canon.mp3'],
@@ -360,7 +355,7 @@ function buildLlmsFullTxt(repertoireData, venuesData) {
   }
   out += `- Live Demo Video (YouTube): https://www.youtube.com/watch?v=o11b5UK1TzU\n`;
 
-  out += `\n## Frequently Asked Questions (${SITE_URL}/faq)\n\n`;
+  out += `\n## Frequently Asked Questions (${SITE_URL}/rates#faq)\n\n`;
   const faqs = [
     ['What do Arioso members wear?', 'Formal concert attire: tuxedos for men and long black dresses or black skirts and blouses for women.'],
     ['Will you play in two different locations for the ceremony and reception?', 'Yes. The fee is calculated from the start time at the ceremony until the end time at the reception, with travel time between locations included in the fee.'],

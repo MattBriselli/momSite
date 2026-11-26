@@ -1,10 +1,90 @@
+<%
+  const faqItems = [
+    {
+      q: 'Why should we hire Arioso?',
+      aHtml: 'The musicians of the Arioso Quartet are among the finest in the greater Philadelphia area. We have over 25 years of experience playing weddings, parties, and concerts together, and our expertise will make your event flow perfectly. Our ceremony timings are flawless. Having live music will make a lasting impression on you and your guests. Strings provide a sophisticated sound for your event. We have a very extensive list of <a href="/music#repertoire">repertoire</a>, including the standard classical literature, show tunes, popular songs, jazz, and much more! We work closely with every client to provide you with exactly the right music.',
+      aPlain: 'The musicians of the Arioso Quartet are among the finest in the greater Philadelphia area. We have over 25 years of experience playing weddings, parties, and concerts together, and our expertise will make your event flow perfectly. Our ceremony timings are flawless. Having live music will make a lasting impression on you and your guests. Strings provide a sophisticated sound for your event. We have a very extensive list of repertoire, including the standard classical literature, show tunes, popular songs, jazz, and much more! We work closely with every client to provide you with exactly the right music.'
+    },
+    {
+      q: 'What do Arioso members wear?',
+      aHtml: 'All musicians dress in formal concert attire: tuxedos for men and black dresses or skirts and blouses for women.',
+      aPlain: 'All musicians dress in formal concert attire: tuxedos for men and black dresses or skirts and blouses for women.'
+    },
+    {
+      q: 'Will you play in two different locations for the ceremony and reception?',
+      aHtml: 'Yes. The fee is calculated from the time we start at the ceremony until the time we end at the reception. If there is travel time between the two, that is included in the fee.',
+      aPlain: 'Yes. The fee is calculated from the time we start at the ceremony until the time we end at the reception. If there is travel time between the two, that is included in the fee.'
+    },
+    {
+      q: 'What do you require at the venue?',
+      aHtml: 'Our only requirement is four armless chairs and enough space, which is roughly 8\' &times; 8\'. For outdoor weddings and events, we must have a shaded area. We have our own battery-operated lights if needed, so we do not need electricity.',
+      aPlain: "Our only requirement is four armless chairs and enough space, which is roughly 8' x 8'. For outdoor weddings and events, we must have a shaded area. We have our own battery-operated lights if needed, so we do not need electricity."
+    },
+    {
+      q: 'Do you play special requests?',
+      aHtml: 'Yes, we do, provided the music is available for purchase. There might be a fee for arranging the music for the group, depending on the complexity, so please <a href="/rates#inquiry-form">contact us</a> to discuss.',
+      aPlain: 'Yes, we do, provided the music is available for purchase. There might be a fee for arranging the music for the group, depending on the complexity, so please contact us to discuss.'
+    },
+    {
+      q: 'Do you perform outdoors?',
+      aHtml: 'Yes. However, the minimum required temperature is 65&#8457;, since the cold weather can cause damage to our expensive instruments. We cannot play if there is any rain, unless we are under a shelter, and we need a shaded area since the sun is also damaging to the instruments. There are accommodations that can be made for any of those issues to ensure that we can play outside for your special day.',
+      aPlain: 'Yes. However, the minimum required temperature is 65°F, since the cold weather can cause damage to our expensive instruments. We cannot play if there is any rain, unless we are under a shelter, and we need a shaded area since the sun is also damaging to the instruments. There are accommodations that can be made for any of those issues to ensure that we can play outside for your special day.'
+    },
+    {
+      q: 'What if one of the musicians gets sick the day of the event?',
+      aHtml: 'We have musicians of equal caliber who have played with us before. The quality of musicianship will be the same.',
+      aPlain: 'We have musicians of equal caliber who have played with us before. The quality of musicianship will be the same.'
+    },
+    {
+      q: 'How do you know when to start the music for the processional?',
+      aHtml: 'We will need a cue from the wedding coordinator, or someone from the venue who is in charge that day. Once we start the first processional, everything will flow perfectly afterwards. We are extremely experienced in wedding ceremonies, and our timing of each piece will be perfectly coordinated.',
+      aPlain: 'We will need a cue from the wedding coordinator, or someone from the venue who is in charge that day. Once we start the first processional, everything will flow perfectly afterwards. We are extremely experienced in wedding ceremonies, and our timing of each piece will be perfectly coordinated.'
+    },
+    {
+      q: 'When should the music for the ceremony be chosen?',
+      aHtml: 'We need to know your selections no later than one month before the wedding.',
+      aPlain: 'We need to know your selections no later than one month before the wedding.'
+    },
+    {
+      q: 'Do you perform with other musicians, such as organists or singers?',
+      aHtml: 'We play with other musicians all the time, so that will not be a problem. We need a 15-minute rehearsal with that musician, which typically occurs right before the ceremony.',
+      aPlain: 'We play with other musicians all the time, so that will not be a problem. We need a 15-minute rehearsal with that musician, which typically occurs right before the ceremony.'
+    },
+    {
+      q: 'Do you come to the wedding rehearsal?',
+      aHtml: 'No, there is no need for us to come to the rehearsal. We have played hundreds of weddings, and will arrive early enough to coordinate with other people involved.',
+      aPlain: 'No, there is no need for us to come to the rehearsal. We have played hundreds of weddings, and will arrive early enough to coordinate with other people involved.'
+    },
+    {
+      q: 'Do you take breaks?',
+      aHtml: 'We take breaks if the total contracted time is two hours or more. Our breaks are 10 minutes per hour, and can be coordinated with you ahead of time so that they are at mutually convenient times.',
+      aPlain: 'We take breaks if the total contracted time is two hours or more. Our breaks are 10 minutes per hour, and can be coordinated with you ahead of time so that they are at mutually convenient times.'
+    },
+    {
+      q: 'Are tips expected?',
+      aHtml: 'Tips are always greatly appreciated, but not required.',
+      aPlain: 'Tips are always greatly appreciated, but not required.'
+    }
+  ];
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.aPlain }
+    }))
+  };
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs', {
         canonicalPath: '/rates',
-        pageTitle: 'Rates, Availability & Custom Quote Request',
-        pageDescription: 'Check wedding and event pricing, logistics at a glance, and date availability for the Arioso String Quartet, String Trio, and String Duo in Greater Philadelphia.'
+        pageTitle: 'Rates, Availability & FAQ',
+        pageDescription: 'Starting rates for the Arioso String Quartet ($1,175), Trio ($925), and Duo ($750), a quick date-check and quote form, and answers to common wedding and event questions.',
+        extraJsonLd: faqSchema
     }) %>
 </head>
 <body>
@@ -13,150 +93,81 @@
     <main id="main-content">
         <section class="page-hero">
             <div class="container">
-                <span class="section-kicker">Transparent Pricing &amp; Booking</span>
+                <span class="section-kicker">Pricing &amp; Booking</span>
                 <h1 class="page-heading">Rates &amp; Availability</h1>
                 <p class="page-intro">
-                    Arioso often books dates over a year in advance. We schedule performances in half-hour increments with a one-hour minimum, and offer significantly reduced rates for additional playing time beyond the first hour.
+                    We often book dates over a year in advance, so please check your date early. We schedule performances in half-hour increments with a one-hour minimum.
                 </p>
+                <nav class="subnav" aria-label="On this page">
+                    <a href="#rates" class="chip">Rates</a>
+                    <a href="#inquiry-form" class="chip">Check your date</a>
+                    <a href="#faq" class="chip">FAQ</a>
+                </nav>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Rates comparison -->
+        <section class="section" id="rates">
             <div class="container">
-                <!-- Pricing Cards -->
-                <div class="pricing-grid">
-                    <article class="pricing-card pricing-card-featured">
-                        <div class="pricing-badge">Signature Ensemble</div>
-                        <h2 class="pricing-title">String Quartet</h2>
-                        <p class="pricing-instruments">Two Violins, Viola &amp; Cello</p>
-                        <div class="pricing-amount">
-                            <span class="pricing-label">Starting at</span>
-                            <span class="pricing-value">$1,175</span>
-                            <span class="pricing-period">first hour minimum</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li>Full, resonant four-part harmony ideal for ceremonies, cocktail hours &amp; receptions</li>
-                            <li>Optional flute substitution for one violin at <strong>no additional charge</strong></li>
-                            <li>Significantly lower contracted rates for additional half-hour increments beyond one hour</li>
-                            <li>Includes personal music consultation with Carol Briselli</li>
-                        </ul>
-                        <a href="#inquiry-form" class="btn btn-primary btn-block" data-select-ensemble="String Quartet">Select Quartet &amp; Check Date</a>
-                    </article>
+                <table class="compare-table">
+                    <caption class="visually-hidden">Starting rates by ensemble</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ensemble</th>
+                            <th scope="col">Instruments</th>
+                            <th scope="col">Starting at (first hour)</th>
+                            <th scope="col">Best for</th>
+                            <th scope="col"><span class="visually-hidden">Action</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="compare-row-featured">
+                            <th scope="row">String Quartet</th>
+                            <td data-label="Instruments">Two violins, viola &amp; cello</td>
+                            <td data-label="Starting at" class="compare-price">$1,175</td>
+                            <td data-label="Best for">Ceremonies, cocktail hours, and receptions. Our fullest sound.</td>
+                            <td><a href="#inquiry-form" class="btn btn-primary btn-sm" data-select-ensemble="String Quartet">Check date</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">String Trio</th>
+                            <td data-label="Instruments">Violin, viola &amp; cello</td>
+                            <td data-label="Starting at" class="compare-price">$925</td>
+                            <td data-label="Best for">Smaller ceremonies and intimate venues.</td>
+                            <td><a href="#inquiry-form" class="btn btn-secondary btn-sm" data-select-ensemble="String Trio">Check date</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">String Duo</th>
+                            <td data-label="Instruments">Violin &amp; cello</td>
+                            <td data-label="Starting at" class="compare-price">$750</td>
+                            <td data-label="Best for">Small gatherings and cocktail hours.</td>
+                            <td><a href="#inquiry-form" class="btn btn-secondary btn-sm" data-select-ensemble="String Duo">Check date</a></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                    <article class="pricing-card">
-                        <div class="pricing-badge">Chamber Trio</div>
-                        <h2 class="pricing-title">String Trio</h2>
-                        <p class="pricing-instruments">Violin, Viola &amp; Cello</p>
-                        <div class="pricing-amount">
-                            <span class="pricing-label">Starting at</span>
-                            <span class="pricing-value">$925</span>
-                            <span class="pricing-period">first hour minimum</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li>Rich, balanced three-part chamber sound tailored for ceremonies and receptions</li>
-                            <li>Optional flute substitution for the violin at <strong>no additional charge</strong></li>
-                            <li>Significantly lower contracted rates for additional playing time beyond the initial hour</li>
-                            <li>Includes personal music consultation with Carol Briselli</li>
-                        </ul>
-                        <a href="#inquiry-form" class="btn btn-secondary btn-block" data-select-ensemble="String Trio">Select Trio &amp; Check Date</a>
-                    </article>
+                <ul class="compare-notes">
+                    <li>Every booking <strong>includes personal music consultation</strong> to help you choose the right music for your event.</li>
+                    <li>A <strong>50% deposit</strong> of the total is due with the signing of the contract; the remaining balance is due <strong>one week before the event</strong>.</li>
+                    <li>Time beyond the first hour is billed in half-hour increments at a significantly lower rate.</li>
+                    <li>A <strong>flute</strong> can replace a violin in any group at no additional charge.</li>
+                    <li>We can add a <strong>trumpet</strong> and/or <strong>singer</strong> (ours or yours) to any wedding ceremony.</li>
+                    <li>Custom requests may carry a small arranging fee, based on the complexity of the music.</li>
+                </ul>
+            </div>
+        </section>
 
-                    <article class="pricing-card">
-                        <div class="pricing-badge">Intimate Duo</div>
-                        <h2 class="pricing-title">String Duo</h2>
-                        <p class="pricing-instruments">Violin &amp; Cello</p>
-                        <div class="pricing-amount">
-                            <span class="pricing-label">Starting at</span>
-                            <span class="pricing-value">$750</span>
-                            <span class="pricing-period">first hour minimum</span>
-                        </div>
-                        <ul class="pricing-features">
-                            <li>Warm, elegant two-instrument pairing ideal for smaller gatherings and intimate spaces</li>
-                            <li>Optional flute substitution for the violin at <strong>no additional charge</strong></li>
-                            <li>Significantly lower contracted rates for additional playing time beyond the initial hour</li>
-                            <li>Includes personal music consultation with Carol Briselli</li>
-                        </ul>
-                        <a href="#inquiry-form" class="btn btn-secondary btn-block" data-select-ensemble="String Duo">Select Duo &amp; Check Date</a>
-                    </article>
-                </div>
-
-                <!-- Ceremony Enhancements Banner -->
-                <article class="enhancements-banner">
-                    <div class="enhancements-copy">
-                        <span class="pricing-badge">Custom Additions</span>
-                        <h2 class="enhancements-title">Ceremony Enhancements &amp; Special Requests</h2>
-                        <p>
-                            Substitute a <strong>flute</strong> in any ensemble at no extra charge, add a festive <strong>trumpet</strong> and/or <strong>vocalist</strong> (of our choice or yours) to any wedding ceremony, seamlessly transition between ceremony and reception locations, or request custom arrangements tailored to your day.
-                        </p>
-                    </div>
-                    <a href="#inquiry-form" class="btn btn-secondary">Request Custom Quote</a>
-                </article>
-
-                <!-- 2.5 Editorial "At a Glance" Event Specs Card -->
-                <section class="specs-card" aria-labelledby="specs-heading">
-                    <div class="specs-card-header">
-                        <div>
-                            <span class="section-kicker">Event Planner Summary</span>
-                            <h2 id="specs-heading" class="specs-card-title">At a Glance: Booking &amp; Venue Details</h2>
-                        </div>
-                        <span class="specs-ornament" aria-hidden="true">&#10022;</span>
-                    </div>
-
-                    <dl class="specs-ledger">
-                        <div class="spec-cell">
-                            <dt>Service Radius</dt>
-                            <dd>Up to 80 miles from Center City</dd>
-                            <span class="spec-sub">PA, Southern NJ &amp; Delaware</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Minimum &amp; Billing</dt>
-                            <dd>1-Hour Minimum</dd>
-                            <span class="spec-sub">Discounted 30-min increments after</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Space &amp; Seating</dt>
-                            <dd>8&prime; &times; 8&prime; &bull; 4 Armless Chairs</dd>
-                            <span class="spec-sub">Compact footprint for any venue</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Power Requirements</dt>
-                            <dd>No Electricity Needed</dd>
-                            <span class="spec-sub">Self-powered stand lights provided</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Outdoor Ceremonies</dt>
-                            <dd>65&deg;F Minimum</dd>
-                            <span class="spec-sub">Shaded area (dry shelter if rain)</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Musician Attire</dt>
-                            <dd>Formal Concert Black</dd>
-                            <span class="spec-sub">Tuxedos &amp; long black dresses</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Music Selections Due</dt>
-                            <dd>1 Month Prior</dd>
-                            <span class="spec-sub">Guided consultation included</span>
-                        </div>
-                        <div class="spec-cell">
-                            <dt>Rehearsal Policy</dt>
-                            <dd>Day-Of Coordination</dd>
-                            <span class="spec-sub">15-min warmup with soloists/organist</span>
-                        </div>
-                    </dl>
-                </section>
-
-                <!-- 2.3 Structured Inquiry Form + Direct Contact Split -->
+        <!-- Inquiry form -->
+        <section class="section section-tinted">
+            <div class="container">
                 <div class="inquiry-layout" id="inquiry-form">
                     <div class="inquiry-form-panel">
                         <span class="section-kicker">Check Your Date</span>
-                        <h2 id="inquiry-heading" class="inquiry-title">Request Availability &amp; Custom Quote</h2>
+                        <h2 id="inquiry-heading" class="inquiry-title">Request Availability &amp; a Quote</h2>
                         <p class="inquiry-subtitle">
-                            Complete the details below to prepare a structured availability inquiry directly for Carol Briselli, or call <a href="tel:+14848416445">(484) 841-6445</a>.
+                            Fill in what you know and we'll prepare an email to Carol Briselli, or call <a href="tel:+14848416445">(484) 841-6445</a>.
                         </p>
 
                         <form action="/api/inquiry" method="POST" id="booking-inquiry-form" aria-labelledby="inquiry-heading" novalidate>
-                            <!-- Honeypot field hidden from users & assistive tech -->
                             <div class="visually-hidden" aria-hidden="true">
                                 <label for="website_url">Leave this field blank</label>
                                 <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
@@ -164,16 +175,7 @@
 
                             <div class="form-field">
                                 <label for="full_name">Full Name <span class="required-mark" aria-hidden="true">*</span></label>
-                                <input
-                                    type="text"
-                                    id="full_name"
-                                    name="full_name"
-                                    autocomplete="name"
-                                    required
-                                    maxlength="100"
-                                    enterkeyhint="next"
-                                    data-error="name-error"
-                                >
+                                <input type="text" id="full_name" name="full_name" autocomplete="name" required maxlength="100" enterkeyhint="next" data-error="name-error">
                                 <div id="name-error" class="error-msg">
                                     <span role="img" aria-label="Error">&#9888;</span> Please enter your name so Carol knows how to address you.
                                 </div>
@@ -183,19 +185,7 @@
                                 <div class="form-field">
                                     <label for="email">Email Address <span class="required-mark" aria-hidden="true">*</span></label>
                                     <span id="email-hint" class="field-hint">Format: you@example.com</span>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        autocomplete="email"
-                                        autocorrect="off"
-                                        autocapitalize="none"
-                                        spellcheck="false"
-                                        required
-                                        enterkeyhint="next"
-                                        aria-describedby="email-hint"
-                                        data-error="email-error"
-                                    >
+                                    <input type="email" id="email" name="email" autocomplete="email" autocorrect="off" autocapitalize="none" spellcheck="false" required enterkeyhint="next" aria-describedby="email-hint" data-error="email-error">
                                     <div id="email-error" class="error-msg">
                                         <span role="img" aria-label="Error">&#9888;</span> Enter a valid email address in the format you@example.com.
                                     </div>
@@ -203,38 +193,26 @@
 
                                 <div class="form-field">
                                     <label for="phone">Phone Number <span class="optional-tag">(Optional)</span></label>
-                                    <span id="phone-hint" class="field-hint">For quick availability follow-up</span>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        autocomplete="tel"
-                                        enterkeyhint="next"
-                                        aria-describedby="phone-hint"
-                                    >
+                                    <span id="phone-hint" class="field-hint">For quick follow-up</span>
+                                    <input type="tel" id="phone" name="phone" autocomplete="tel" enterkeyhint="next" aria-describedby="phone-hint">
                                 </div>
                             </div>
 
                             <div class="form-row-two">
                                 <div class="form-field">
                                     <label for="event_date">Event Date <span class="optional-tag">(If known)</span></label>
-                                    <input
-                                        type="date"
-                                        id="event_date"
-                                        name="event_date"
-                                        enterkeyhint="next"
-                                    >
+                                    <input type="date" id="event_date" name="event_date" enterkeyhint="next">
                                 </div>
 
                                 <div class="form-field">
                                     <label for="duration">Estimated Playing Time</label>
                                     <select id="duration" name="duration">
-                                        <option value="1 hour (Ceremony / Minimum)">1 hour (Ceremony / Minimum)</option>
+                                        <option value="1 hour (Ceremony / Minimum)">1 hour (ceremony / minimum)</option>
                                         <option value="1.5 hours">1.5 hours</option>
-                                        <option value="2 hours (Ceremony + Cocktail Hour)" selected>2 hours (Ceremony + Cocktail Hour)</option>
+                                        <option value="2 hours (Ceremony + Cocktail Hour)" selected>2 hours (ceremony + cocktail hour)</option>
                                         <option value="2.5 hours">2.5 hours</option>
                                         <option value="3+ hours">3+ hours</option>
-                                        <option value="Flexible / Need guidance">Flexible / Need guidance</option>
+                                        <option value="Flexible / Need guidance">Flexible / need guidance</option>
                                     </select>
                                 </div>
                             </div>
@@ -256,21 +234,14 @@
                                     </div>
                                     <div class="choice-item">
                                         <input type="radio" id="ens-unsure" name="ensemble" value="Undecided — Please Compare Ensembles">
-                                        <label for="ens-unsure">Compare Options</label>
+                                        <label for="ens-unsure">Compare options</label>
                                     </div>
                                 </div>
                             </fieldset>
 
                             <div class="form-field">
                                 <label for="venue">Venue Name &amp; Town <span class="optional-tag">(Optional)</span></label>
-                                <input
-                                    type="text"
-                                    id="venue"
-                                    name="venue"
-                                    maxlength="160"
-                                    placeholder="e.g., Cairnwood Estate, Bryn Athyn, PA"
-                                    enterkeyhint="next"
-                                >
+                                <input type="text" id="venue" name="venue" maxlength="160" placeholder="e.g., Cairnwood Estate, Bryn Athyn, PA" enterkeyhint="next">
                             </div>
 
                             <fieldset class="form-fieldset">
@@ -282,24 +253,18 @@
                                     </div>
                                     <div class="choice-item">
                                         <input type="checkbox" id="addon-trumpet" name="addons" value="Add Trumpet">
-                                        <label for="addon-trumpet">Add Trumpet</label>
+                                        <label for="addon-trumpet">Add trumpet</label>
                                     </div>
                                     <div class="choice-item">
                                         <input type="checkbox" id="addon-vocalist" name="addons" value="Add Vocalist">
-                                        <label for="addon-vocalist">Add Vocalist</label>
+                                        <label for="addon-vocalist">Add vocalist</label>
                                     </div>
                                 </div>
                             </fieldset>
 
                             <div class="form-field">
                                 <label for="notes">Event Details or Special Song Requests <span class="optional-tag">(Optional)</span></label>
-                                <textarea
-                                    id="notes"
-                                    name="notes"
-                                    rows="4"
-                                    maxlength="1500"
-                                    placeholder="Share ceremony type (e.g., outdoor garden, Catholic Mass, Jewish ceremony), start times, or favorite songs..."
-                                ></textarea>
+                                <textarea id="notes" name="notes" rows="4" maxlength="1500" placeholder="Ceremony type (outdoor garden, Catholic Mass, Jewish ceremony), start times, favorite songs..."></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-block" id="inquiry-submit-btn">
@@ -308,54 +273,110 @@
                         </form>
 
                         <div id="inquiry-result" class="inquiry-result-card" role="status" aria-live="polite" hidden>
-                            <h3 class="inquiry-result-title">Your Inquiry Summary Is Ready!</h3>
+                            <h3 class="inquiry-result-title">Your Inquiry Is Ready</h3>
                             <p class="inquiry-result-desc">
-                                Click below to open your email app pre-addressed to <strong>carolbriselli@verizon.net</strong>, or copy the formatted details if you use webmail:
+                                Open a pre-filled email to <strong>carolbriselli@verizon.net</strong>, or copy the details if you use webmail:
                             </p>
                             <pre id="inquiry-summary-preview" class="inquiry-summary-box"></pre>
                             <div class="hero-actions">
-                                <a id="inquiry-mailto-link" href="mailto:carolbriselli@verizon.net" class="btn btn-primary">
-                                    Open Pre-Filled Email &rarr;
-                                </a>
-                                <button type="button" id="inquiry-copy-btn" class="btn btn-secondary">
-                                    Copy Summary &amp; Email Address
-                                </button>
+                                <a id="inquiry-mailto-link" href="mailto:carolbriselli@verizon.net" class="btn btn-primary">Open pre-filled email &rarr;</a>
+                                <button type="button" id="inquiry-copy-btn" class="btn btn-secondary">Copy summary &amp; email address</button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Direct Contact & Photo Sidebar -->
                     <aside class="inquiry-aside-card" aria-label="Direct contact details">
-                        <img
-                            src="/img/playing-2.jpeg"
-                            alt="Arioso String Quartet performing live indoors"
-                            width="640"
-                            height="428"
-                            fetchpriority="high"
-                            class="rates-photo"
-                        >
+                        <img src="/img/playing-2.jpeg" alt="Arioso String Quartet performing live indoors" width="640" height="428" loading="lazy" class="rates-photo">
                         <div class="inquiry-aside-body">
                             <h3>Prefer to Reach Out Directly?</h3>
-                            <p>
-                                Carol Briselli responds promptly to all date checks and personally guides every client through ceremony timing and repertoire selection.
-                            </p>
                             <ul class="direct-contact-links">
-                                <li>
-                                    <strong>Phone:</strong>
-                                    <a href="tel:+14848416445">(484) 841-6445</a>
-                                </li>
-                                <li>
-                                    <strong>Email:</strong>
-                                    <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a>
-                                </li>
-                                <li>
-                                    <strong>Mailing:</strong>
-                                    <span>P.O. Box 35, Chester Heights, PA 19017</span>
-                                </li>
+                                <li><strong>Phone:</strong> <a href="tel:+14848416445">(484) 841-6445</a></li>
+                                <li><strong>Email:</strong> <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a></li>
+                                <li><strong>Mail:</strong> <span>P.O. Box 35, Chester Heights, PA 19017</span></li>
                             </ul>
                         </div>
                     </aside>
                 </div>
+            </div>
+        </section>
+
+        <!-- At a glance -->
+        <section class="section">
+            <div class="container">
+                <section class="specs-card" aria-labelledby="specs-heading">
+                    <div class="specs-card-header">
+                        <div>
+                            <span class="section-kicker">Event Planner Summary</span>
+                            <h2 id="specs-heading" class="specs-card-title">At a Glance</h2>
+                        </div>
+                        <span class="specs-ornament" aria-hidden="true">&#10022;</span>
+                    </div>
+
+                    <dl class="specs-ledger">
+                        <div class="spec-cell">
+                            <dt>Service Radius</dt>
+                            <dd>Up to 80 miles from Center City</dd>
+                            <span class="spec-sub">PA, Southern NJ &amp; Delaware</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Minimum &amp; Billing</dt>
+                            <dd>1-Hour Minimum</dd>
+                            <span class="spec-sub">Reduced rate for 30-min increments after</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Space &amp; Seating</dt>
+                            <dd>8&prime; &times; 8&prime; &bull; 4 Armless Chairs</dd>
+                            <span class="spec-sub">A small footprint works almost anywhere</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Power</dt>
+                            <dd>No Electricity Needed</dd>
+                            <span class="spec-sub">We bring battery-operated lights</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Outdoor Ceremonies</dt>
+                            <dd>65&deg;F Minimum</dd>
+                            <span class="spec-sub">Shaded area (dry shelter if rain)</span>
+                        </div>
+                        <div class="spec-cell">
+                            <dt>Music Selections Due</dt>
+                            <dd>1 Month Before</dd>
+                            <span class="spec-sub">We're happy to help you choose</span>
+                        </div>
+                    </dl>
+                </section>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section-tinted" id="faq">
+            <div class="container faq-container">
+                <div class="section-header section-header-left">
+                    <span class="section-kicker">Planning Your Event</span>
+                    <h2 class="section-title section-title-left" id="faq-heading">Frequently Asked Questions</h2>
+                    <p class="section-subtitle section-subtitle-left">
+                        Any further questions can be answered by <a href="mailto:carolbriselli@verizon.net">email</a> or phone at <a href="tel:+14848416445">(484) 841-6445</a>.
+                    </p>
+                </div>
+
+                <section class="accordion" id="faq-accordion" aria-labelledby="faq-heading">
+                    <div class="accordion-toolbar">
+                        <span class="accordion-count"><%= faqItems.length %> Questions Answered</span>
+                        <button type="button" class="btn btn-secondary btn-sm" commandfor="faq-accordion" command="--toggle-all" aria-expanded="false">
+                            <span class="expand">Expand all</span>
+                            <span class="collapse">Collapse all</span>
+                        </button>
+                    </div>
+
+                    <% faqItems.forEach((item, idx) => { %>
+                    <details <%- idx < 2 ? 'open' : '' %>>
+                        <summary><%= item.q %></summary>
+                        <div class="accordion-body">
+                            <p><%- item.aHtml %></p>
+                        </div>
+                    </details>
+                    <% }) %>
+                </section>
             </div>
         </section>
     </main>

@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initAudioSamples();
   initLazyMediaFallback();
   initVenuesFilter();
+  initReviewClamp();
   initContactClickTracking();
   initBookingInquiryForm();
 });
@@ -246,22 +247,21 @@ function initLazyMediaFallback() {
 }
 
 /**
- * 5. Venues Search + Regional & Venue-Type Filters
+ * 5. Venues Search + Regional Filter (collapsible <details> regions)
  */
 function initVenuesFilter() {
   const searchInput = document.getElementById("venue-search");
   const regionBtns = document.querySelectorAll("[data-region-filter]");
-  const typeBtns = document.querySelectorAll("[data-venue-filter]");
   const regionCards = document.querySelectorAll("[data-venue-region]");
   const noResults = document.getElementById("venue-no-results");
 
   if (!searchInput || regionCards.length === 0) return;
 
   let activeRegion = "all";
-  let activeType = "all";
 
   function applyVenueFilter() {
     const query = searchInput.value.trim().toLowerCase();
+    const isFiltering = query !== "" || activeRegion !== "all";
     let totalVisible = 0;
 
     for (const card of regionCards) {
@@ -275,11 +275,8 @@ function initVenuesFilter() {
 
       let cardVisibleCount = 0;
       for (const item of card.querySelectorAll(".venue-list li")) {
-        const itemCat = item.getAttribute("data-item-category");
-        const matchesType = activeType === "all" || activeType === itemCat;
         const text = item.textContent.toLowerCase();
-        const matchesQuery = query === "" || text.includes(query);
-        const showItem = matchesType && matchesQuery;
+        const showItem = query === "" || text.includes(query);
 
         item.hidden = !showItem;
         if (showItem) {
@@ -294,6 +291,10 @@ function initVenuesFilter() {
       }
 
       card.hidden = cardVisibleCount === 0;
+
+      if (card instanceof HTMLDetailsElement && !card.hidden) {
+        card.open = isFiltering ? true : cardRegion === "philadelphia";
+      }
     }
 
     if (noResults) {
@@ -310,13 +311,38 @@ function initVenuesFilter() {
       applyVenueFilter();
     });
   }
+}
 
-  for (const btn of typeBtns) {
-    btn.addEventListener("click", () => {
-      activeType = btn.getAttribute("data-venue-filter") || "all";
-      for (const b of typeBtns) b.classList.toggle("is-active", b === btn);
-      applyVenueFilter();
-    });
+/**
+ * 5b. Review Card Line-Clamp "Read more" Toggle
+ */
+function initReviewClamp() {
+  const clampables = document.querySelectorAll(".review-body.is-clampable");
+  if (clampables.length === 0) return;
+
+  const setup = () => {
+    for (const body of clampables) {
+      if (body.dataset.clampInit === "true") continue;
+      if (body.scrollHeight > body.clientHeight + 2) {
+        body.dataset.clampInit = "true";
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "read-more-btn";
+        btn.setAttribute("aria-expanded", "false");
+        btn.textContent = "Read more";
+        btn.addEventListener("click", () => {
+          const expanded = body.classList.toggle("is-expanded");
+          btn.setAttribute("aria-expanded", String(expanded));
+          btn.textContent = expanded ? "Show less" : "Read more";
+        });
+        body.insertAdjacentElement("afterend", btn);
+      }
+    }
+  };
+
+  setup();
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(setup);
   }
 }
 

@@ -117,6 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Quick-search "Ceremony favorites to try" chips
+  const searchChips = document.querySelectorAll("[data-search-chip]");
+  for (const chip of searchChips) {
+    chip.addEventListener("click", () => {
+      const term = chip.getAttribute("data-search-chip") || "";
+      if (searchInput) {
+        searchInput.value = term;
+      }
+      filterRepertoire(term);
+      if (term && typeof window.ariosoTrack === "function") {
+        window.ariosoTrack("repertoire_search", {
+          search_term: term,
+          source: "chip"
+        });
+      }
+      repBody.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 
   // Category sidebar / horizontal pill active state tracking
   function setActiveCategoryLink(hash) {

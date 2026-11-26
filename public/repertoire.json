@@ -9,7 +9,7 @@
     {
       "id": "classical",
       "title": "Classical Music",
-      "url": "https://ariosoquartet.com/repertoire#classical",
+      "url": "https://ariosoquartet.com/music#classical",
       "selectionCount": 117,
       "groups": [
         {
@@ -394,7 +394,7 @@
     {
       "id": "wedding",
       "title": "Wedding Ceremony Music",
-      "url": "https://ariosoquartet.com/repertoire#wedding",
+      "url": "https://ariosoquartet.com/music#wedding",
       "selectionCount": 31,
       "groups": [
         {
@@ -438,7 +438,7 @@
     {
       "id": "catholic",
       "title": "Catholic Mass Music",
-      "url": "https://ariosoquartet.com/repertoire#catholic",
+      "url": "https://ariosoquartet.com/music#catholic",
       "selectionCount": 55,
       "groups": [
         {
@@ -506,7 +506,7 @@
     {
       "id": "jazz",
       "title": "Jazz Classics",
-      "url": "https://ariosoquartet.com/repertoire#jazz",
+      "url": "https://ariosoquartet.com/music#jazz",
       "selectionCount": 29,
       "groups": [
         {
@@ -548,7 +548,7 @@
     {
       "id": "popular",
       "title": "Pop Tunes",
-      "url": "https://ariosoquartet.com/repertoire#popular",
+      "url": "https://ariosoquartet.com/music#popular",
       "selectionCount": 62,
       "groups": [
         {
@@ -623,7 +623,7 @@
     {
       "id": "showtunes",
       "title": "Show/Movie Tunes",
-      "url": "https://ariosoquartet.com/repertoire#showtunes",
+      "url": "https://ariosoquartet.com/music#showtunes",
       "selectionCount": 70,
       "groups": [
         {
@@ -706,7 +706,7 @@
     {
       "id": "beatles",
       "title": "The Beatles",
-      "url": "https://ariosoquartet.com/repertoire#beatles",
+      "url": "https://ariosoquartet.com/music#beatles",
       "selectionCount": 14,
       "groups": [
         {
@@ -733,7 +733,7 @@
     {
       "id": "jewish",
       "title": "Jewish Songs",
-      "url": "https://ariosoquartet.com/repertoire#jewish",
+      "url": "https://ariosoquartet.com/music#jewish",
       "selectionCount": 78,
       "groups": [
         {
@@ -824,7 +824,7 @@
     {
       "id": "italian",
       "title": "Italian Songs",
-      "url": "https://ariosoquartet.com/repertoire#italian",
+      "url": "https://ariosoquartet.com/music#italian",
       "selectionCount": 12,
       "groups": [
         {
@@ -849,7 +849,7 @@
     {
       "id": "hymns",
       "title": "Hymns",
-      "url": "https://ariosoquartet.com/repertoire#hymns",
+      "url": "https://ariosoquartet.com/music#hymns",
       "selectionCount": 40,
       "groups": [
         {
@@ -902,7 +902,7 @@
     {
       "id": "joplin",
       "title": "Joplin Rags",
-      "url": "https://ariosoquartet.com/repertoire#joplin",
+      "url": "https://ariosoquartet.com/music#joplin",
       "selectionCount": 14,
       "groups": [
         {
@@ -929,7 +929,7 @@
     {
       "id": "tangos",
       "title": "Tangos by Michael McLean",
-      "url": "https://ariosoquartet.com/repertoire#tangos",
+      "url": "https://ariosoquartet.com/music#tangos",
       "selectionCount": 6,
       "groups": [
         {
@@ -948,7 +948,7 @@
     {
       "id": "waltzes",
       "title": "Waltzes",
-      "url": "https://ariosoquartet.com/repertoire#waltzes",
+      "url": "https://ariosoquartet.com/music#waltzes",
       "selectionCount": 4,
       "groups": [
         {
@@ -965,7 +965,7 @@
     {
       "id": "christmas",
       "title": "Christmas Music",
-      "url": "https://ariosoquartet.com/repertoire#christmas",
+      "url": "https://ariosoquartet.com/music#christmas",
       "selectionCount": 24,
       "groups": [
         {

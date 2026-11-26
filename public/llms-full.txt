@@ -1,13 +1,14 @@
 # Arioso String Quartet
 
-> Premier professional wedding and event string ensemble based in Greater Philadelphia (Chester Heights, PA), serving Pennsylvania, Southern New Jersey, and Delaware within an 80-mile radius of Center City Philadelphia since 1989.
+> Premier professional wedding and event string ensemble based in Greater Philadelphia (Chester Heights, PA), serving Pennsylvania, Southern New Jersey, and Delaware within an 80-mile radius of Center City Philadelphia.
 
 The musicians of the Arioso String Quartet hold principal, concertmaster, and section positions with Opera Philadelphia, the Philadelphia Ballet, the Chamber Orchestra of Philadelphia, and the Academy of Vocal Arts Opera Orchestra, with conservatory training from the Curtis Institute of Music, Eastman School of Music, and Temple University.
 
 ## Quick Facts & Booking Specifications
 
 - **Ensembles Offered**: String Quartet (2 violins, viola, cello), String Trio (violin, viola, cello), String Duo (violin, cello)
-- **Starting Rates**: String Quartet starts at $1,175 (1-hour minimum); String Trio starts at $925 (1-hour minimum); String Duo starts at $750 (1-hour minimum)
+- **Starting Rates**: String Quartet starts at $1,175 (1-hour minimum); String Trio starts at $925 (1-hour minimum); String Duo starts at $750 (1-hour minimum); every booking includes personal music consultation
+- **Deposit & Payment Terms**: 50% deposit of the total is due with the signing of the contract; the remaining balance is due one week before the event
 - **Overtime / Additional Time**: Scheduled in 30-minute increments; contracted rates beyond the first hour are significantly lower than the initial hour
 - **Instrument Substitutions & Add-Ons**: Flute may be substituted for one violin in quartet or trio at **no additional charge**; trumpet and/or vocalist (client's or Arioso's) can be added for ceremonies
 - **Service Area**: Up to 80 miles from Center City Philadelphia (Center City, Main Line, Chester/Delaware/Montgomery/Bucks Counties, Wilmington/Brandywine Valley DE, Southern/Central NJ & Jersey Shore)
@@ -21,13 +22,10 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 ## Canonical Pages & Machine-Readable Feeds
 
 - [Home](https://ariosoquartet.com/): Overview of ensemble configurations, credentials, and ceremony expertise
-- [Rates, Availability & Inquiry Form](https://ariosoquartet.com/rates): Starting rates, quick-reference logistics, and structured quote request form (`#inquiry-form`)
-- [Complete Repertoire (556 Selections)](https://ariosoquartet.com/repertoire): Searchable repertoire across 14 genres
-- [Music Samples (10 Full MP3 Tracks + Video)](https://ariosoquartet.com/samples): Full-length recordings of Mozart, Pachelbel, Mendelssohn, Wagner, Bach, Boccherini, Handel, and Joplin
-- [Musician Biographies](https://ariosoquartet.com/biographies): Profiles of Igor Szwec, Barbara Jaffe, Carol Briselli, and Vivian Barton
-- [Selected Past Venues (86 Venues)](https://ariosoquartet.com/venues): Venues categorized by region and type
-- [Client Testimonials](https://ariosoquartet.com/testimonials): 15+ verified 5-star wedding reviews from The Bash, WeddingWire, and Thumbtack
-- [Frequently Asked Questions](https://ariosoquartet.com/faq): 13 detailed Q&As on attire, multi-location fees, outdoor setup, and rehearsals
+- [Our Music — Samples, Video & Repertoire (556 Selections)](https://ariosoquartet.com/music): Ten full-length recordings, embedded live demo video, and searchable repertoire across 14 genres
+- [About — Musicians & Selected Past Venues (86 Venues)](https://ariosoquartet.com/about): Profiles of Igor Szwec, Barbara Jaffe, Carol Briselli, and Vivian Barton, plus venues by region
+- [Client Reviews](https://ariosoquartet.com/reviews): 15 wedding and event reviews from The Bash, WeddingWire, GigMasters, and Thumbtack
+- [Rates, Availability & FAQ](https://ariosoquartet.com/rates): Ensemble comparison table, quote request form (`#inquiry-form`), event planner specs, and 13 FAQs (`#faq`)
 - [Complete LLM Knowledge Base](https://ariosoquartet.com/llms-full.txt): Full text of bios, FAQs, all venues by region, and all 556 repertoire pieces
 - [Repertoire JSON Feed](https://ariosoquartet.com/repertoire.json): Machine-readable JSON of all 556 pieces across 14 categories
 - [Venues JSON Feed](https://ariosoquartet.com/venues.json): Machine-readable JSON of 86 past venues with city, state, category, and region tags
@@ -39,7 +37,7 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 - **Carol Briselli (Violist & Ensemble Director)**: M.M. from Temple University and B.A. from SUNY-Binghamton (studied with Toby Appel, Sol Greitzer, and Evelyn Jacobs Luise). Assistant Principal Violist of Opera Philadelphia; performs with Philadelphia Ballet, Philly Pops, and Vox Ama Deus; teaches at Bryn Mawr, Haverford, and Swarthmore Colleges (formerly Assistant Professor of Music at West Chester University).
 - **Vivian Barton (Cellist)**: Graduate of the Curtis Institute of Music (studied with David Soyer). Performed with the Brandenburg Ensemble, Orpheus Chamber Orchestra, and the Philadelphia Orchestra; Assistant Principal Cellist of Opera Philadelphia (formerly Santa Fe Opera) and Principal Cellist of the Academy of Vocal Arts Opera Orchestra; Marlboro Music Festival and Prussia Cove participant.
 
-## Audio Samples (https://ariosoquartet.com/samples)
+## Audio Samples (https://ariosoquartet.com/music#samples)
 
 - Eine Kleine Nachtmusik — Wolfgang Amadeus Mozart: https://ariosoquartet.com/audio/Mozart_%20Eine%20Kliene%20Nachtmusik.mp3
 - Canon in D — Johann Pachelbel: https://ariosoquartet.com/audio/Pachelbel_Canon.mp3
@@ -53,7 +51,7 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 - The Entertainer — Scott Joplin: https://ariosoquartet.com/audio/The_Entertainer.mp3
 - Live Demo Video (YouTube): https://www.youtube.com/watch?v=o11b5UK1TzU
 
-## Frequently Asked Questions (https://ariosoquartet.com/faq)
+## Frequently Asked Questions (https://ariosoquartet.com/rates#faq)
 
 ### What do Arioso members wear?
 Formal concert attire: tuxedos for men and long black dresses or black skirts and blouses for women.

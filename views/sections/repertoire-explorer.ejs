@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('../partials/head.ejs', {
-        canonicalPath: '/repertoire',
-        pageTitle: 'Complete Repertoire (550+ Wedding & Event Selections)',
-        pageDescription: 'Browse and search the complete musical repertoire of the Arioso String Quartet: Classical, Wedding Ceremony, Catholic Mass, Jazz, Pop, Broadway/Film, Beatles, Jewish, Italian, and Hymns.'
-    }) %>
-    <script src="/scripts/repertoire.js" defer></script>
-</head>
-<body>
-    <%- include('../partials/header.ejs', { activePage: 'repertoire' }) %>
-
-    <main id="main-content">
-        <section class="page-hero">
-            <div class="container">
-                <span class="section-kicker">Hundreds of Selections</span>
-                <h1 class="page-heading">Musical Repertoire</h1>
-                <p class="page-intro">
-                    Explore our repertoire across 14 genres below, or search by song title, composer, or artist. Don't see your favorite song? We are happy to play special requests and custom-arrange music for your ceremony or event.
-                </p>
-
-                <search class="repertoire-search-bar searchBar" aria-label="Search repertoire">
+<section class="section repertoire-section" id="repertoire">
+    <div class="container repertoire-intro">
+        <span class="section-kicker">Hundreds of Selections</span>
+        <h2 class="section-title section-title-left">Our Repertoire</h2>
+        <p class="section-subtitle section-subtitle-left">
+            Browse 14 genres, or search by song, composer, or artist. Don't see your favorite? We are happy to play special requests and arrange new music for your event.
+        </p>
+        <search class="repertoire-search-bar searchBar" aria-label="Search repertoire">
                     <div class="search-input-wrap">
                         <svg class="icon search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Z"/></svg>
                         <input
@@ -38,10 +23,21 @@
                     </div>
                     <div id="repertoire-status" class="repertoire-status" role="status" aria-live="polite"></div>
                 </search>
-            </div>
-        </section>
-
-        <section class="section repertoire-section">
+        <div class="chip-row" aria-label="Ceremony favorites to try">
+            <span class="chip-row-label">Ceremony favorites to try:</span>
+            <button type="button" class="chip" data-search-chip="Canon">Canon in D</button>
+                    <button type="button" class="chip" data-search-chip="Bridal">Bridal Chorus</button>
+                    <button type="button" class="chip" data-search-chip="Wedding March">Wedding March</button>
+                    <button type="button" class="chip" data-search-chip="Ode to Joy">Ode to Joy</button>
+                    <button type="button" class="chip" data-search-chip="Ave Maria">Ave Maria</button>
+                    <button type="button" class="chip" data-search-chip="Jesu">Jesu, Joy of Man’s Desiring</button>
+                    <button type="button" class="chip" data-search-chip="Trumpet">Trumpet Voluntary</button>
+                    <button type="button" class="chip" data-search-chip="Amazing Grace">Amazing Grace</button>
+                    <button type="button" class="chip" data-search-chip="Hallelujah">Hallelujah</button>
+                    <button type="button" class="chip" data-search-chip="Here Comes the Sun">Here Comes the Sun</button>
+                    <button type="button" class="chip" data-search-chip="Thousand Years">A Thousand Years</button>
+        </div>
+    </div>
             <div class="container repertoire-layout">
                 <aside class="leftRep" aria-label="Repertoire categories">
                     <div class="rep-nav-title">Categories</div>
@@ -960,8 +956,3 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        <%- include('../partials/footer.ejs') %>
-    </body>
-</html>
