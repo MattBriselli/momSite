@@ -2788,3 +2788,102 @@ details.venue-category-card > .venue-list {
     margin-block-start: 0.75rem;
   }
 }
+
+/* ==========================================================================
+   Mobile Polish: Clean Header Fit & Side-by-Side Homepage CTAs
+   ========================================================================== */
+
+html,
+body {
+  overflow-x: clip;
+}
+
+.mobile-action-bar {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mobile-action-btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 40rem) {
+  .utility-inner {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 36rem) {
+  .header-inner {
+    padding-block: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .site-logo {
+    gap: 0.55rem;
+    min-inline-size: 0;
+  }
+
+  .brand-mark {
+    inline-size: 2.25rem;
+    block-size: 2.05rem;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .site-header .menu-button {
+    padding-block: 0.48rem;
+    padding-inline: 0.78rem;
+    font-size: 0.875rem;
+    gap: 0.35rem;
+  }
+
+  .eyebrow-badge {
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    padding-inline: 0.7rem;
+    line-height: 1.35;
+  }
+
+  /* Keep homepage hero & section CTAs cleanly side-by-side on mobile */
+  .hero-actions,
+  .section-cta-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .hero-actions .btn,
+  .section-cta-row .btn {
+    inline-size: 100%;
+    padding-block: 0.72rem;
+    padding-inline: 0.6rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .hero-trust-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .trust-stat strong {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .hero-actions,
+  .section-cta-row {
+    grid-template-columns: 1fr;
+  }
+}
