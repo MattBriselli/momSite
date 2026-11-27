@@ -97,14 +97,14 @@ app.post('/api/inquiry', (req, res) => {
   ].filter(Boolean);
 
   const summaryText = summaryLines.join('\n');
-  const mailtoUrl = `mailto:carolbriselli@verizon.net?subject=${encodeURIComponent(
+  const mailtoUrl = `mailto:carol@ariosoquartet.com?subject=${encodeURIComponent(
     subject
   )}&body=${encodeURIComponent(summaryText)}`;
 
   if ((req.accepts('json') && !req.accepts('html')) || req.headers['x-requested-with'] === 'fetch') {
     return res.status(200).json({
       ok: true,
-      recipient: 'carolbriselli@verizon.net',
+      recipient: 'carol@ariosoquartet.com',
       phone: '+1-484-841-6445',
       subject,
       summary: summaryText,
