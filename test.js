@@ -41,7 +41,7 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
         { path: '/music', expected: 'Our Music', canonical: 'https://ariosoquartet.com/music' },
         { path: '/about', expected: 'Meet the Arioso Quartet', canonical: 'https://ariosoquartet.com/about' },
         { path: '/reviews', expected: 'Client Reviews', canonical: 'https://ariosoquartet.com/reviews' },
-        { path: '/rates', expected: 'includes personal music consultation', canonical: 'https://ariosoquartet.com/rates' }
+        { path: '/rates', expected: 'https://formspree.io/f/xqpqjnna', canonical: 'https://ariosoquartet.com/rates' }
       ];
 
       for (const route of canonicalRoutes) {
@@ -127,7 +127,7 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
       });
       t.equal(inquiryRes.statusCode, 200, 'POST /api/inquiry returns 200');
       const inquiryData = JSON.parse(inquiryRes.body);
-      t.ok(inquiryData.ok && inquiryData.mailtoUrl.includes('carolbriselli%40verizon.net') || inquiryData.mailtoUrl.includes('carolbriselli@verizon.net'), 'POST /api/inquiry returns structured summary & mailto');
+      t.ok(inquiryData.ok && (inquiryData.mailtoUrl.includes('carol%40ariosoquartet.com') || inquiryData.mailtoUrl.includes('carol@ariosoquartet.com')), 'POST /api/inquiry returns structured summary & mailto');
     } finally {
       child.kill();
       t.end();

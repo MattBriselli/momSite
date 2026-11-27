@@ -164,13 +164,13 @@
                         <span class="section-kicker">Check Your Date</span>
                         <h2 id="inquiry-heading" class="inquiry-title">Request Availability &amp; a Quote</h2>
                         <p class="inquiry-subtitle">
-                            Fill in what you know and we'll prepare an email to Carol Briselli, or call <a href="tel:+14848416445">(484) 841-6445</a>.
+                            Fill in what you know to send an inquiry directly to Carol Briselli, or call <a href="tel:+14848416445">(484) 841-6445</a>.
                         </p>
 
-                        <form action="/api/inquiry" method="POST" id="booking-inquiry-form" aria-labelledby="inquiry-heading" novalidate>
+                        <form action="https://formspree.io/f/xqpqjnna" method="POST" id="booking-inquiry-form" aria-labelledby="inquiry-heading" novalidate>
                             <div class="visually-hidden" aria-hidden="true">
                                 <label for="website_url">Leave this field blank</label>
-                                <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+                                <input type="text" id="website_url" name="_gotcha" tabindex="-1" autocomplete="off">
                             </div>
 
                             <div class="form-field">
@@ -273,13 +273,13 @@
                         </form>
 
                         <div id="inquiry-result" class="inquiry-result-card" role="status" aria-live="polite" hidden>
-                            <h3 class="inquiry-result-title">Your Inquiry Is Ready</h3>
-                            <p class="inquiry-result-desc">
-                                Open a pre-filled email to <strong>carolbriselli@verizon.net</strong>, or copy the details if you use webmail:
+                            <h3 id="inquiry-result-title" class="inquiry-result-title">Inquiry Sent to Carol!</h3>
+                            <p id="inquiry-result-desc" class="inquiry-result-desc">
+                                Thank you — your inquiry has been emailed to Carol Briselli, who will reply to you shortly. Here is a copy of what you sent:
                             </p>
                             <pre id="inquiry-summary-preview" class="inquiry-summary-box"></pre>
-                            <div class="hero-actions">
-                                <a id="inquiry-mailto-link" href="mailto:carolbriselli@verizon.net" class="btn btn-primary">Open pre-filled email &rarr;</a>
+                            <div id="inquiry-fallback-actions" class="hero-actions" hidden>
+                                <a id="inquiry-mailto-link" href="mailto:carol@ariosoquartet.com" class="btn btn-primary">Open pre-filled email &rarr;</a>
                                 <button type="button" id="inquiry-copy-btn" class="btn btn-secondary">Copy summary &amp; email address</button>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                             <h3>Prefer to Reach Out Directly?</h3>
                             <ul class="direct-contact-links">
                                 <li><strong>Phone:</strong> <a href="tel:+14848416445">(484) 841-6445</a></li>
-                                <li><strong>Email:</strong> <a href="mailto:carolbriselli@verizon.net">carolbriselli@verizon.net</a></li>
+                                <li><strong>Email:</strong> <a href="mailto:carol@ariosoquartet.com">carol@ariosoquartet.com</a></li>
                                 <li><strong>Mail:</strong> <span>P.O. Box 35, Chester Heights, PA 19017</span></li>
                             </ul>
                         </div>
@@ -355,7 +355,7 @@
                     <span class="section-kicker">Planning Your Event</span>
                     <h2 class="section-title section-title-left" id="faq-heading">Frequently Asked Questions</h2>
                     <p class="section-subtitle section-subtitle-left">
-                        Any further questions can be answered by <a href="mailto:carolbriselli@verizon.net">email</a> or phone at <a href="tel:+14848416445">(484) 841-6445</a>.
+                        Any further questions can be answered by <a href="mailto:carol@ariosoquartet.com">email</a> or phone at <a href="tel:+14848416445">(484) 841-6445</a>.
                     </p>
                 </div>
 

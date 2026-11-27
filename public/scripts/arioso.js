@@ -523,9 +523,13 @@ function initBookingInquiryForm() {
     true
   );
 
-  // Form Submission Handler (works on both Express /api/inquiry and static hosting)
+  // Form Submission Handler (sends directly via Formspree, with mailto/copy fallback)
+  const submitBtn = document.getElementById("inquiry-submit-btn");
   const resultCard = document.getElementById("inquiry-result");
+  const resultTitle = document.getElementById("inquiry-result-title");
+  const resultDesc = document.getElementById("inquiry-result-desc");
   const summaryPreview = document.getElementById("inquiry-summary-preview");
+  const fallbackActions = document.getElementById("inquiry-fallback-actions");
   const mailtoLink = document.getElementById("inquiry-mailto-link");
   const copyBtn = document.getElementById("inquiry-copy-btn");
 
@@ -547,7 +551,7 @@ function initBookingInquiryForm() {
     }
 
     const fd = new FormData(form);
-    if (fd.get("website_url")) return; // Honeypot
+    if (fd.get("_gotcha") || fd.get("website_url")) return; // Honeypot
 
     const name = String(fd.get("full_name") || "").trim();
     const email = String(fd.get("email") || "").trim();
@@ -574,48 +578,79 @@ function initBookingInquiryForm() {
       .filter(Boolean)
       .join("\n");
 
-    let finalMailto = `mailto:carolbriselli@verizon.net?subject=${encodeURIComponent(
+    const finalMailto = `mailto:carol@ariosoquartet.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(summaryText)}`;
 
-    // Attempt server endpoint when running on Express (gracefully falls back on static hosts)
+    const originalBtnText = submitBtn ? submitBtn.textContent : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending inquiry...";
+    }
+
+    let sent = false;
     try {
-      const res = await fetch("/api/inquiry", {
+      const endpoint = form.getAttribute("action") || "https://formspree.io/f/xqpqjnna";
+      const res = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
-          "X-Requested-With": "fetch"
+          Accept: "application/json"
         },
         body: JSON.stringify({
-          full_name: name,
+          name,
           email,
-          phone,
-          event_date: eventDate,
+          _replyto: email,
+          _subject: subject,
+          phone: phone || "Not provided",
+          event_date: eventDate || "Not yet set",
           ensemble,
-          duration,
-          venue,
-          addons: fd.getAll("addons"),
-          notes
+          duration: duration || "Not specified",
+          venue: venue || "Not provided",
+          enhancements: addons || "None",
+          notes: notes || "None",
+          _gotcha: ""
         })
       });
-      if (res.ok) {
-        const json = await res.json();
-        if (json?.mailtoUrl) finalMailto = json.mailtoUrl;
-      }
+      sent = res.ok;
     } catch (_) {
-      // Static preview environment — client-constructed summary & mailto apply seamlessly
+      sent = false;
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText || "Send Availability Inquiry to Carol";
+      }
     }
 
     if (summaryPreview) summaryPreview.textContent = summaryText;
     if (mailtoLink) mailtoLink.setAttribute("href", finalMailto);
+
+    if (sent) {
+      if (resultTitle) resultTitle.textContent = "Inquiry Sent to Carol!";
+      if (resultDesc) {
+        resultDesc.textContent =
+          "Thank you — your inquiry has been emailed to Carol Briselli, who will reply to you shortly. Here is a copy of what you sent:";
+      }
+      if (fallbackActions) fallbackActions.hidden = true;
+      form.reset();
+    } else {
+      if (resultTitle) resultTitle.textContent = "Couldn't Send Automatically";
+      if (resultDesc) {
+        resultDesc.textContent =
+          "Something interrupted the automatic send. Click below to open a pre-filled email to carol@ariosoquartet.com, or copy the details:";
+      }
+      if (fallbackActions) fallbackActions.hidden = false;
+    }
+
     if (typeof window.ariosoTrack === "function") {
       window.ariosoTrack("generate_lead", {
         ensemble,
         duration: duration || "unspecified",
-        has_venue: Boolean(venue)
+        has_venue: Boolean(venue),
+        delivery: sent ? "formspree" : "mailto_fallback"
       });
     }
+
     if (resultCard) {
       resultCard.hidden = false;
       resultCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -623,12 +658,12 @@ function initBookingInquiryForm() {
 
     if (copyBtn) {
       copyBtn.onclick = async () => {
-        const copyPayload = `To: carolbriselli@verizon.net\nSubject: ${subject}\n\n${summaryText}`;
+        const copyPayload = `To: carol@ariosoquartet.com\nSubject: ${subject}\n\n${summaryText}`;
         try {
           await navigator.clipboard.writeText(copyPayload);
           copyBtn.textContent = "Copied to Clipboard!";
           setTimeout(() => {
-            copyBtn.textContent = "Copy Summary & Email Address";
+            copyBtn.textContent = "Copy summary & email address";
           }, 2500);
         } catch (_) {
           copyBtn.textContent = "Select text above to copy";
