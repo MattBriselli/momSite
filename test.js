@@ -41,7 +41,7 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
         { path: '/music', expected: 'Our Music', canonical: 'https://ariosoquartet.com/music' },
         { path: '/about', expected: 'Meet the Arioso Quartet', canonical: 'https://ariosoquartet.com/about' },
         { path: '/reviews', expected: 'Client Reviews', canonical: 'https://ariosoquartet.com/reviews' },
-        { path: '/rates', expected: 'includes personal music consultation', canonical: 'https://ariosoquartet.com/rates' }
+        { path: '/rates', expected: 'https://formspree.io/f/xqpqjnna', canonical: 'https://ariosoquartet.com/rates' }
       ];
 
       for (const route of canonicalRoutes) {
