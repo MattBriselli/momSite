@@ -2793,6 +2793,19 @@ details.venue-category-card > .venue-list {
    Mobile Polish: Clean Header Fit & Side-by-Side Homepage CTAs
    ========================================================================== */
 
+html,
+body {
+  overflow-x: clip;
+}
+
+.mobile-action-bar {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mobile-action-btn {
+  white-space: nowrap;
+}
+
 @media (max-width: 40rem) {
   .utility-inner {
     justify-content: center;
