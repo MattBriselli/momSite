@@ -578,7 +578,7 @@ function initBookingInquiryForm() {
       .filter(Boolean)
       .join("\n");
 
-    const finalMailto = `mailto:carolbriselli@verizon.net?subject=${encodeURIComponent(
+    const finalMailto = `mailto:carol@ariosoquartet.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(summaryText)}`;
 
@@ -637,7 +637,7 @@ function initBookingInquiryForm() {
       if (resultTitle) resultTitle.textContent = "Couldn't Send Automatically";
       if (resultDesc) {
         resultDesc.textContent =
-          "Something interrupted the automatic send. Click below to open a pre-filled email to carolbriselli@verizon.net, or copy the details:";
+          "Something interrupted the automatic send. Click below to open a pre-filled email to carol@ariosoquartet.com, or copy the details:";
       }
       if (fallbackActions) fallbackActions.hidden = false;
     }
@@ -658,7 +658,7 @@ function initBookingInquiryForm() {
 
     if (copyBtn) {
       copyBtn.onclick = async () => {
-        const copyPayload = `To: carolbriselli@verizon.net\nSubject: ${subject}\n\n${summaryText}`;
+        const copyPayload = `To: carol@ariosoquartet.com\nSubject: ${subject}\n\n${summaryText}`;
         try {
           await navigator.clipboard.writeText(copyPayload);
           copyBtn.textContent = "Copied to Clipboard!";

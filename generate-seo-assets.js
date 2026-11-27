@@ -313,7 +313,7 @@ The musicians of the Arioso String Quartet hold principal, concertmaster, and se
 - **Outdoor Policy**: Minimum temperature 65°F (18°C), dry conditions (shelter required if any rain), and shaded area out of direct sunlight to protect fine instruments
 - **Attire**: Formal concert black (tuxedos for men; long black dresses or black skirts/blouses for women)
 - **Booking Lead Time**: Often booked 12+ months in advance; ceremony music selections due at least 1 month prior to the wedding
-- **Direct Booking Contact**: Carol Briselli (Violist & Director) — Email: carolbriselli@verizon.net | Phone: (484) 841-6445 | Mailing: P.O. Box 35, Chester Heights, PA 19017
+- **Direct Booking Contact**: Carol Briselli (Violist & Director) — Email: carol@ariosoquartet.com | Phone: (484) 841-6445 | Mailing: P.O. Box 35, Chester Heights, PA 19017
 
 ## Canonical Pages & Machine-Readable Feeds
 
