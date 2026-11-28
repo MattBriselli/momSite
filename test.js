@@ -61,6 +61,10 @@ test('Arioso String Quartet canonical routes, 301 redirects, SEO schemas & agent
           `${route.path} omits aggregateRating and 1989 founding date`
         );
         t.ok(
+          body.includes('<title>Arioso Quartet | '),
+          `${route.path} puts Arioso Quartet before | in title`
+        );
+        t.ok(
           body.includes('G-83VLJ0XRJ0') && body.includes("h === 'ariosoquartet.com'"),
           `${route.path} includes prod-gated GA4 snippet`
         );
